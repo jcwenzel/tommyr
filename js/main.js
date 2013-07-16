@@ -11,3 +11,12 @@ var navigation = responsiveNav("#nav-js", {
 	open: function(){},   // Function: Open callback
 	close: function(){}   // Function: Close callback
 });
+
+// responsive slideshow
+$(function () {
+	$(".slideshow").responsiveSlides({
+		//maxwidth: 800,
+	 	pager: true,
+	 	speed: 500
+	});
+});	
