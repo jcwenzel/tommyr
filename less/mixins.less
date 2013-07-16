@@ -238,26 +238,26 @@
 }
 
 //	02-d fonts - change the font-family(s) based on design
-.font(@font-family: @base-font) {
-	font-weight: normal;
-	font-style: normal;
-	font-family: @font-family;
+#font {
+    .font-shorthand(@weight: 400, @style: normal, @font-family: @base-font) {
+		font-weight: @weight;
+		font-style: @style;
+		font-family: @font-family;
+    }
+	
+	.font-book() {
+		#font > .font-shorthand(300);
+	}
+	
+	.font-bold() {
+		#font > .font-shorthand(700, normal, @base-font);
+	}
+	
+	.font-handwritten() {
+		#font > .font-shorthand(400, normal, @hand-font);
+	}
 }
 
-.font-book {
-	&:extend(.font);
-	font-weight:300;
-}
-
-.font-bold {
-	&:extend(.font);
-	font-weight: 700;
-}
-
-.font-handwritten {
-	&:extend(.font);
-	font: 400;
-}
 
 
 // 02-e misc.
@@ -317,14 +317,14 @@
 //
 // 04 - example button stack - change based on design
 // -------------------------------------------------------------------------------------
-.btn(@font-color: darken(@red,25%)) {
+.btn {
 		display: block;
 		padding: 0 @sml;
 		background: @red;
 		line-height: @xl;
-		.font();
+		#font > .font-book;
 		#text-shadow > .white(@1px, 0, 0, 0.15);
-		color: @font-color;
+		color: darken(@red,25%);
 		@shadow: @1px @1px 0 hsla(0,0%,0%,0.25), -@1px -@1px 0 hsla(0,0%,0%,0.25);
 		#box-shadow > .custom(@shadow);
 		border: 1px solid fadeout(@black, 50%);
