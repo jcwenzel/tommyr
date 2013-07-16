@@ -46,7 +46,7 @@
 *	
 */
 .width(@number-columns) {
-	width: round((@number-columns/@max-columns) * 100%,3);
+	width: round((@number-columns/@columns-max) * 100%,3);
 }
 
 // 01-b spacing
@@ -73,6 +73,13 @@
 .l-absolute-left(@top, @left) {
 	position: absolute;
 	top: @top;
+	left: @left;
+}
+
+.l-absolute-bottom-right(@bottom, @right, @left) {
+	position: absolute;
+	bottom: @bottom;
+	right: @right;
 	left: @left;
 }
 

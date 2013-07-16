@@ -465,29 +465,72 @@ ol {
 //	03.6 slideshow
 //	-------------------------------------------------
 .slideshow {
-	#grid-container > .column(inline, 8, @lrg, 0);
-	float: left;
-	width: 66.665%;
+	.width(12);
 	height: auto;
 	text-align: center;
-	.slideshow-all-slides {
-		width: 100%;
-		height: 326px;
-		background: @gray-drkest;
-		border: @xsml solid @white;
-		@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
-		#box-shadow > .custom(@shadow);
+	padding: @med 0;
+	@media screen and (min-width: 49em) {
+		#grid-container > .column(inline, 8, @lrg, 0);
+		float: left;		
 	}
-	.ico-horizontal-nav {
-		
+}
+
+.slideshow-slides {
+	width: 100%;
+	border: (@1px * 4) solid @white;
+	@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
+	#box-shadow > .custom(@shadow);
+	
+	@media screen and (min-width: 37.5em) {
+		border-width: (@1px * 6);
 	}
+	
+	@media screen and (min-width: 56.25em) {
+		border-width: @xsml;
+	}
+}
+
+.slideshow-slide {
+	position: relative;
+}
+
+.slideshow-caption {
+	padding: @tiny;
+	background: hsla(0,0,0,0.65);
+	text-align: left;
+	color: @gray-lhtest;
+	
+	@media screen and (min-width: 30em) {
+		.l-absolute-bottom-right(0,0,0);
+		padding: @sml;
+	}
+	
+	@media screen and (min-width: 37.5em) {
+		.l-absolute-bottom-right(0,0,0);
+		padding: @sml;
+	}
+}
+
+.slideshow-caption > h2 {
+	display: none;
+	@media screen and (min-width: 30em) {
+		display: block;
+		font-size: @lrg;
+	}
+}
+
+.slideshow-caption > p {
+	font-size: @med;
 }
 
 
 
 
 .bucket {
-	#grid-container > .column(float, 4, @lrg, @lrg);
+	.width(12);
+	@media screen and (min-width: 49em) {
+		#grid-container > .column(float, 4, @lrg, @lrg);
+	}
 }
 
 
