@@ -163,7 +163,7 @@ ol {
 	height: @em*5; // 80/16 = 5
 	margin: 0;
 	font-size: @med; // resets em to 1em
-	@media screen and (min-width: 56.25em) {
+	@media screen and (min-width: 49em) {
 		float: left;
 	}
 	& > a {
@@ -209,11 +209,11 @@ ol {
     overflow: hidden;
     zoom: 1;
 	
-	@media screen and (min-width: 56.25em) {
+	@media screen and (min-width: 49em) {
 		float: right;
 		position: relative;
-		width: auto ;
-		margin: @lrg 0;
+		width: auto;
+		margin: .4em 0;
 		&.closed {
 			max-height: none;
 		}
@@ -265,14 +265,14 @@ ol {
 		}
 	}
 	
-	@media screen and (min-width: 56.25em) {
+	@media screen and (min-width: 49em) {
 		display: none;
 	}
 }
 
 .horizontal-nav {
 	border: @1px solid @gray-lhtest;
-	@media screen and (min-width: 56.25em) {
+	@media screen and (min-width: 49em) {
 		border: none;
 	}
 }
@@ -286,7 +286,7 @@ ol {
 		border-top: none;
 	}
 	
-	@media screen and (min-width: 56.25em) {
+	@media screen and (min-width: 49em) {
 		border-top: none;
 		display: inline-block !important;
 		width: auto !important;
@@ -303,7 +303,7 @@ ol {
 		border-bottom: @1px solid lighten(@link-color,10%);
 		color: lighten(@link-color,10%) !important;
 	}
-	@media screen and (min-width: 56.25em) {
+	@media screen and (min-width: 49em) {
 			margin: 0 0 0 @lrg;
 			padding: 0 @sml; 
 			border-bottom: @1px solid @white;
@@ -554,7 +554,7 @@ footer {
 
 /*	480px	(480/16=30)		@media screen and (min-width: 30em)		*/
 /*	600px	(600/16=37.5)	@media screen and (min-width: 37.5em)	*/
-/*	768px	(768/16=8)		@media screen and (min-width: 48em)		*/
+/*	784px	(784/16=49)		@media screen and (min-width: 49em)		*/
 /*	900px	(900/16=56.25)	@media screen and (min-width: 56.25em)	*/
 /*	1024px	(1024/16=64)	@media screen and (min-width: 64em)		*/
 /*	1280px	(1280/16=80)	@media screen and (min-width: 80em)		*/
