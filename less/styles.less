@@ -1,0 +1,726 @@
+/*
+*
+*	Site Styles
+*	This file contains the styles for the project. It imports the JumpStart base.less file.
+*
+*	Table of Contents:
+*	----------------------------------------------------------------
+*	01 - base
+*	02 - layout
+*	03 - module
+*	04 - stats
+*	05 - theme
+* 
+*	
+*/
+
+@import "base"; //This imports the base.less file
+
+/* below color styles are for development purposes only 
+--------------------------------------------------  */
+.original-colors,
+.less-colors {
+	display: block;
+	.clearfix;
+}
+
+.original-colors > div,
+.less-colors > div {
+	float: left;
+	display: block;
+	width: 60px;
+	height: 60px;
+}
+
+.original-colors {
+	.color1 { 	background: hsl(20, 77%, 61%);} // orange
+	.color2 { 	background: hsl(209, 74%, 60%);} // blue
+	.color3 { 	background: hsl(137, 58%, 57%);} // green
+	.color4 { 	background: hsl(207, 18%, 19%);} // darkest gray
+	.color5 { 	background: rgb(64,79,89);} // darker gray
+	.color6 { 	background: rgb(98,120,132);} // dark gray
+	.color7 { 	background: rgb(133,159,170);} // gray
+	.color8 { 	background: rgb(179,196,201);} // light gray
+	.color9 { 	background: rgb(208,225,229);} // lighter gray
+	.color10 { 	background: rgb(252,255,253);} // lightest gray
+	.color11 { 	background: @white;} // white
+}
+
+.less-colors {
+	.color1 { 	background: @orange;} // orange
+	.color2 { 	background: @blue;} // blue
+	.color3 { 	background: @green;} // green
+	.color4 { 	background: @gray-drkest;} // darkest gray
+	.color5 { 	background: @gray-drker;} // darker gray
+	.color6 { 	background: @gray-drk;} // dark gray
+	.color7 { 	background: @gray;} // gray
+	.color8 { 	background: @gray-lht;} // light gray
+	.color9 { 	background: @gray-lhter;} // lighter gray
+	.color10 { 	background: @gray-lhtest;} // lightest gray
+	.color11 { 	background: @white;} // white
+}
+
+
+/* 01 - base
+--------------------------------------------------  */
+body {
+	background: @gray-drker;
+	.font-book();
+	color: @gray-drker;
+	@media screen and (min-width: 88em) {
+		@base: 18;
+		font-size: @em;
+	}
+	@media screen and (min-width: 100em) {
+		@base: 19;
+		font-size: @em;
+	}
+	@media screen and (min-width: 130em) {
+		@base: 20;
+		font-size: @em;
+	}
+}
+
+header, article, footer, section, aside, div, button, form, input {
+	.box-sizing;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	margin: 0 0 @1px*4;
+	.font-book();
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+h1 {
+	color: @white;
+	#text-shadow > .black(@alpha: 1);
+	text-align: center;
+}
+
+a, a:visited {
+		color: @link-color;
+		text-decoration: underline;
+		.transition(all .25s);
+	&:hover {
+    	color: lighten(@link-color,10%);
+		text-decoration: none;
+	}
+	&:active {
+    	color: lighten(@link-color,15%);
+		text-decoration: none;
+		.transition(all .25s);
+	}
+}
+
+header {
+	position: relative;
+}
+
+nav {
+	float: right;
+	margin: @lrg 0;
+	.clearfix;
+}
+
+ol {
+	list-style: none;
+}
+
+/* 02 - layout
+--------------------------------------------------  */
+.l-full-wrapper {
+	#grid-container > .column(block, 12, @lrg, @page-gutter);
+	margin: 0;
+	.clearfix;
+}
+
+.l-stacked {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	> li { display: block;}
+	> a { display: block;}
+}
+
+.l-inline {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	.clearfix;
+	& > a,
+	& > li { 
+		float: left;
+		display: inline-block;
+	}
+}
+
+/* 03 - module
+--------------------------------------------------  */
+.logo {
+	float: left;
+	width: @em*9.5; // 152/16 = 9.5
+	height: @em*5; // 80/16 = 5
+	margin: 0;
+	font-size: @med; // resets em to 1em
+	& > a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: transparent url(../img/logo.svg) no-repeat 0 0;
+		text-indent: -999em;
+		text-decoration: none;
+	}
+}
+
+// horizontal navigation: includes global nav
+.horizontal-nav > a,
+.horizontal-nav > a:visited {
+	@media screen and (min-width: 56.25em) {
+			margin: 0 0 0 @lrg;
+			padding: 0 @sml; 
+			color: @gray-lht;
+			text-decoration: none;
+			border-bottom: @1px solid @white;
+			.transition(all .3s);
+		&:hover {
+			border-bottom: @1px solid @link-color;
+			color: @link-color;
+		}
+		&:active {
+			border-bottom: @1px solid lighten(@link-color,10%);
+			color: lighten(@link-color,10%) !important;
+		}
+	}
+	&:first-child {
+		margin: 0;
+	}
+}
+
+
+// icon horizontal nav: includes top share section and slideshow navigation
+.ico-horizontal-nav {
+	padding: @1px*6 @xsml;
+	background: @gray-lht;
+	.clearfix;
+	.ico-h-nav-title {
+		float: left;
+		margin: 0 @xsml 0 0;
+		padding: @1px/@sml 0 0;
+		font-size: @sml;
+		line-height: 1;
+		color: @gray;
+	}
+	.ico-h-nav-link {
+		width: @med;
+		height: @med;
+		margin-left: @xsml;
+		background: @gray;
+		border: 1px solid @gray-drk;
+		line-height: 0;
+		text-indent: -999em;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.is-active {
+		background: saturate(spin(@red, 353), 1%);
+		border-color: fadeout(@black, 50%);
+	}
+}
+
+header > .ico-horizontal-nav {
+	background: @gray-lhtest;
+	.l-absolute(0, @page-gutter);
+}
+
+.slideshow {
+	#grid-container > .column(inline, 8, @lrg, 0);
+	float: left;
+	width: 66.665%;
+	height: auto;
+	text-align: center;
+	.slideshow-all-slides {
+		width: 100%;
+		height: 326px;
+		background: @gray-drkest;
+		border: @xsml solid @white;
+		@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
+		#box-shadow > .custom(@shadow);
+	}
+	.ico-horizontal-nav {
+		margin: 0 auto;
+		padding: @tiny @xsml;
+		#box-shadow > .black(@1px*4);
+	}
+}
+
+.bucket {
+	#grid-container > .column(float, 4, @lrg, @lrg);
+}
+
+
+
+
+/* 04 - state
+--------------------------------------------------  */
+.is-hidden {
+	display: none;
+}
+
+.is-visible {
+	display: block;
+}
+
+
+/* 05 - theme
+--------------------------------------------------  */
+.white {
+	background: @white;	
+}
+
+.gray-lhtest {
+	background: @gray-lhtest;
+}
+
+/*
+*
+*  Three-column grid active
+*  ----------------------------------------------------
+*  Margin       | #  1       2       3   | Margin
+*  7.142857143% | %  33.332  66.665  100 | 7.142857143%
+*	
+*/
+
+/* 480px (480/16=30) */
+@media screen and (min-width: 30em) {
+	
+}
+
+
+/*
+*
+*  Six-column grid active
+*  ----------------------------------------------------------------------------
+*  Margin       | #  1       2        3    4        5       6   | Margin
+*  7.142857143% | %  16.665  33.332   50   66.665   83.332  100 | 7.142857143%
+*	
+*/
+
+/* 600px (600/16=37.5) */
+@media screen and (min-width: 37.5em) {
+	
+}
+
+/* 768px (768/16=8) */
+@media screen and (min-width: 48em) {
+	/* generic top banner styles
+	--------------------------------------------------  */
+		#top-banner {
+			padding: @xl @page-gutter;
+			border-bottom: @1px solid @gray-lht;
+			.clearfix;
+			h1 {
+				margin: 0 0 @sml;
+				#text-shadow > .black;
+				color: @white;
+				text-align: center;
+			}
+		}
+
+	/* homepage slideshow styles
+	--------------------------------------------------  */
+
+
+	/* content to the right of the slideshow on the homepage
+	--------------------------------------------------  */	
+		#top-banner-right-content {
+			width: 33.332%;
+			margin-left: 66.665%;
+		}
+
+		#content-highlight {
+			margin: 0 0 @xl;
+			h2 {
+				margin-top: @1px*4;
+				#text-shadow > .black;
+				color: @white;
+				 -webkit-text-stroke: 0;
+				 -webkit-font-smoothing: antialiased;
+			}
+			p {
+				color: @gray-lhter;
+			}
+		}
+
+		.join-email {
+			padding: @xsml @sml;
+			background: @gray-drkest;
+			background-color: hsla(0,0%,0%,0.25);
+			border: @1px solid @black;
+			@shadow: inset 0 0 @1px*5 hsla(0,0%,0%,0.35), inset 0 0 @1px*5 hsla(0,0%,0%,0.35);
+			#box-shadow > .custom(@shadow);
+			h2 {
+				color: @blue;
+				#text-shadow > .black;
+			}
+			form {
+				width: 100%;
+				span {
+					display: block;
+					overflow: hidden;
+				}
+				input {
+					width: 100%;
+					line-height: @lrg;
+				}
+			}
+		}
+
+	/* main-content styles
+	--------------------------------------------------  */
+		#main-content {
+			#grid-container > .column(block, 12, @2xl, @page-gutter);
+			background: @gray-lhtest;
+			.clearfix;
+		}
+
+	/* homepage main-content buckets
+	--------------------------------------------------  */
+		#facebook-feed,
+		#hours-homepage,
+		#contact-homepage {
+			width: 33.332%;
+			color: @gray-drk;
+			h2 {
+				font-size: @lrg;
+				color: @gray-drker;
+				margin-bottom: @sml;
+				#text-shadow > .white;
+			}
+			h4 {
+				margin-bottom: @1px*4;
+			}
+		}
+
+		#feed {
+			height: 10em; // for development purposes only
+			background: @gray;
+		}
+
+		#contact-homepage {
+			p {
+				font-size: @sml;
+				color: @gray-lht;
+			}
+		}
+
+		#hours-homepage {
+			float: right;
+		}
+
+		#contact-homepage li,
+		#hours-homepage li {
+			margin: 0 @med @sml 0; 
+		}
+
+		#facebook-feed {
+			#box-shadow > .inset-black(0, 0, @med, 0.3);
+			margin: @lrg 0;
+			background: lighten(@gray-lht, 16%);
+
+			h2 {
+				color: @white;
+				#text-shadow > .black;
+			}
+
+			.feed {
+				p { margin: 0 0 @sml; }
+				span { color: @gray-lhtest; }
+				li { 
+					padding: @sml 0;
+					&:first-child { border-bottom: 1px solid @gray-lhtest; }
+				}
+			}
+		}
+
+		.bucket-body-labels {
+			float: left;
+			color: @gray-lht;
+		}
+
+	/* footer styles
+	--------------------------------------------------  */
+		footer {
+			padding: @xl @page-gutter;
+
+			.join-email {
+				float: left;
+				width: 16.665%;
+			}
+
+			.footer-bucket {
+				#grid-container > .column(float, 2, @lrg, @lrg);
+			}
+
+			h4 {
+				margin: 0 0 @1px*4 0;
+				color: @gray;
+			}
+
+			nav {
+				float: none;
+				margin: 0;
+			}
+
+			a,
+			a:visited {
+				float: none;
+				display: block;
+				margin: 0 0 @1px*4 0;
+				color: @gray-lht;
+				text-decoration: none;
+				border: none;
+				&:hover,
+				&:active {
+					border: none;
+				}
+				&:first-child {
+					margin: 0 0 @1px*4 0;
+				}
+			}
+
+			.join-email {
+				width: 33.332%;
+			}
+		}
+}
+
+
+/* 900px (900/16=56.25) */
+@media screen and (min-width: 56.25em) {
+	
+/* generic top banner styles
+--------------------------------------------------  */
+	#top-banner {
+		padding: @xl @page-gutter;
+		border-bottom: @1px solid @gray-lht;
+		.clearfix;
+		h1 {
+			margin: 0 0 @sml;
+			#text-shadow > .black;
+			color: @white;
+			text-align: center;
+		}
+	}
+	
+/* homepage slideshow styles
+--------------------------------------------------  */
+	
+
+/* content to the right of the slideshow on the homepage
+--------------------------------------------------  */	
+	#top-banner-right-content {
+		width: 33.332%;
+		margin-left: 66.665%;
+	}
+	
+	#content-highlight {
+		margin: 0 0 @xl;
+		h2 {
+			margin-top: @1px*4;
+			#text-shadow > .black;
+			color: @white;
+			 -webkit-text-stroke: 0;
+			 -webkit-font-smoothing: antialiased;
+		}
+		p {
+			color: @gray-lhter;
+		}
+	}
+	
+	.join-email {
+		padding: @xsml @sml;
+		background: @gray-drkest;
+		background-color: hsla(0,0%,0%,0.25);
+		border: @1px solid @black;
+		@shadow: inset 0 0 @1px*5 hsla(0,0%,0%,0.35), inset 0 0 @1px*5 hsla(0,0%,0%,0.35);
+		#box-shadow > .custom(@shadow);
+		h2 {
+			color: @blue;
+			#text-shadow > .black;
+		}
+		form {
+			width: 100%;
+			span {
+				display: block;
+				overflow: hidden;
+			}
+			input {
+				width: 100%;
+				line-height: @lrg;
+			}
+		}
+	}
+
+/* main-content styles
+--------------------------------------------------  */
+	#main-content {
+		#grid-container > .column(block, 12, @2xl, @page-gutter);
+		background: @gray-lhtest;
+		.clearfix;
+	}
+	
+/* homepage main-content buckets
+--------------------------------------------------  */
+	#facebook-feed,
+	#hours-homepage,
+	#contact-homepage {
+		width: 33.332%;
+		color: @gray-drk;
+		h2 {
+			font-size: @lrg;
+			color: @gray-drker;
+			margin-bottom: @sml;
+			#text-shadow > .white;
+		}
+		h4 {
+			margin-bottom: @1px*4;
+		}
+	}
+	
+	#feed {
+		height: 10em; // for development purposes only
+		background: @gray;
+	}
+	
+	#contact-homepage {
+		p {
+			font-size: @sml;
+			color: @gray-lht;
+		}
+	}
+	
+	#hours-homepage {
+		float: right;
+	}
+	
+	#contact-homepage li,
+	#hours-homepage li {
+		margin: 0 @med @sml 0; 
+	}
+	
+	#facebook-feed {
+		#box-shadow > .inset-black(0, 0, @med, 0.3);
+		margin: @lrg 0;
+		background: lighten(@gray-lht, 16%);
+		
+		h2 {
+			color: @white;
+			#text-shadow > .black;
+		}
+	
+		.feed {
+			p { margin: 0 0 @sml; }
+			span { color: @gray-lhtest; }
+			li { 
+				padding: @sml 0;
+				&:first-child { border-bottom: 1px solid @gray-lhtest; }
+			}
+		}
+	}
+	
+	.bucket-body-labels {
+		float: left;
+		color: @gray-lht;
+	}
+	
+/* footer styles
+--------------------------------------------------  */
+	footer {
+		padding: @xl @page-gutter;
+		
+		.join-email {
+			float: left;
+			width: 16.665%;
+		}
+		
+		.footer-bucket {
+			#grid-container > .column(float, 2, @lrg, @lrg);
+		}
+		
+		h4 {
+			margin: 0 0 @1px*4 0;
+			color: @gray;
+		}
+		
+		nav {
+			float: none;
+			margin: 0;
+		}
+		
+		a,
+		a:visited {
+			float: none;
+			display: block;
+			margin: 0 0 @1px*4 0;
+			color: @gray-lht;
+			text-decoration: none;
+			border: none;
+			&:hover,
+			&:active {
+				border: none;
+			}
+			&:first-child {
+				margin: 0 0 @1px*4 0;
+			}
+		}
+		
+		.join-email {
+			width: 33.332%;
+		}
+	}
+}
+
+
+/*
+*
+*  Twelve-column grid active - 100/14 = 7.142857143 (which equals the margin for everything)
+*  -----------------------------------------------------------------------------------------------------------------------
+*  Margin       | #  1      2       3       4       5       6   7       8       9       10      11      12  |   Margin
+*  7.142857143% | %  8.332  16.665  24.998  33.332  41.665  50  58.332  66.665  74.998  83.332  91.665  100 | 7.142857143%
+*	
+*	
+*/
+
+/* 1024px (1024/16=64) */
+@media screen and (min-width: 64em) {
+	
+}
+
+/* 1280px (1280/16=80) */
+@media screen and (min-width: 80em) {
+
+}
+
+/* -- break point of 1408px (1408/16=88) -- */
+@media screen and (min-width: 88em) {
+
+}
+
+/* @media screen and (min-width: 1600px) */
+@media screen and (min-width: 100em) {
+
+}
+
+/* @media screen and (min-width: 2080px) */
+@media screen and (min-width: 130em) {
+}
+
+
+
+
+
+
+
