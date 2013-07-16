@@ -132,6 +132,11 @@ ol {
 	#grid-container > .column(block, 12, @lrg, @page-gutter);
 	margin: 0;
 	.clearfix;
+	
+	@media screen and (min-width: 88em) {
+		max-width: 88em;
+		margin: 0 auto;
+	}
 }
 
 .l-stacked {
@@ -157,6 +162,9 @@ ol {
 
 /* 03 - module
 --------------------------------------------------  */
+
+//	03.1 logo 
+//	-------------------------------------------------
 .logo {
 	float: right;
 	width: @em*9.5; // 152/16 = 9.5
@@ -176,7 +184,11 @@ ol {
 	}
 }
 
-// horizontal navigation: includes global nav
+
+
+
+//	03.2 quick responsive nav (this is going to be replaced by a better solution)
+//	-------------------------------------------------
 #nav-js,
 #nav-js ul {
 	.box-sizing();
@@ -270,6 +282,54 @@ ol {
 	}
 }
 
+
+
+//	03.3 buttons
+//	-------------------------------------------------
+.join-email {
+	padding: @xsml @sml;
+	background: @gray-drkest;
+	background-color: hsla(0,0%,0%,0.25);
+	border: @1px solid @black;
+	@shadow: inset 0 0 @1px*5 hsla(0,0%,0%,0.35), inset 0 0 @1px*5 hsla(0,0%,0%,0.35);
+	#box-shadow > .custom(@shadow);
+	h2 {
+		color: @blue;
+		#text-shadow > .black;
+	}
+	form {
+		width: 100%;
+		span {
+			display: block;
+			overflow: hidden;
+		}
+		input {
+			width: 100%;
+			line-height: @lrg;
+		}
+	}
+}
+
+
+
+//	03.4 font icons global
+//	-------------------------------------------------
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+
+//	03.3 horizontal navigation: includes global nav but will need to be redone when new navigation is implemented
+//	-------------------------------------------------
 .horizontal-nav {
 	border: @1px solid @gray-lhtest;
 	@media screen and (min-width: 49em) {
@@ -321,42 +381,89 @@ ol {
 }
 
 
-// icon horizontal nav: includes top share section and slideshow navigation
+
+
+//	03.5 icon horizontal nav: includes top share section and slideshow navigation
+//	-------------------------------------------------
 .ico-horizontal-nav {
-	padding: @1px*6 @xsml;
+	margin: 0 auto;
+	padding: @tiny @xsml;
 	background: @gray-lht;
+	#box-shadow > .black(@1px*4);
 	.clearfix;
-	.ico-h-nav-title {
-		float: left;
-		margin: 0 @xsml 0 0;
-		padding: @1px/@sml 0 0;
-		font-size: @sml;
-		line-height: 1;
-		color: @gray;
-	}
-	.ico-h-nav-link {
-		width: @med;
-		height: @med;
-		margin-left: @xsml;
-		background: @gray;
-		border: 1px solid @gray-drk;
-		line-height: 0;
-		text-indent: -999em;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
+	
 	.is-active {
 		background: saturate(spin(@red, 353), 1%);
 		border-color: fadeout(@black, 50%);
 	}
 }
 
-header > .ico-horizontal-nav {
-	background: @gray-lhtest;
-	.l-absolute(0, @page-gutter);
+.ico-horizontal-nav-share {
+	&:extend(.ico-horizontal-nav);
+	#box-shadow > .black(0);
+	display: none;
+
+	@media screen and (min-width: 49em) {
+		.l-absolute-right(0, @page-gutter);
+		display: block;
+		padding: @1px*6 @xsml;
+		background: @gray-lhtest;
+	}
 }
 
+.ico-h-nav-title {
+	float: left;
+	margin: 0 @xsml 0 0;
+	padding: @1px/@sml 0 0;
+	font-size: @sml;
+	line-height: 1;
+	color: @gray;
+}
+
+.ico-h-nav-link {
+	width: @med;
+	height: @med;
+	margin-left: @xsml;
+	background: @gray;
+	border: @1px solid @gray-drk;
+	text-decoration: none;
+	font-size: @med;
+	line-height: 0;
+	text-indent: -9999em;
+	color: @white;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.ico-h-nav-link-email {
+	&:extend(.ico-h-nav-link);
+	padding: (@1px*2);
+	text-indent: 0;
+	background: @purple;
+}
+
+.ico-h-nav-link-tweet {
+	&:extend(.ico-h-nav-link);
+	padding: (@1px*2);
+	text-indent: 0;
+	background: @twitter-blue;
+}
+
+.ico-h-nav-link-facebook {
+	&:extend(.ico-h-nav-link);
+	padding: (@1px*2);
+	text-indent: 0;
+	background: @facebook-blue;
+}
+
+
+
+
+
+
+//	03.6 slideshow
+//	-------------------------------------------------
 .slideshow {
 	#grid-container > .column(inline, 8, @lrg, 0);
 	float: left;
@@ -372,11 +479,12 @@ header > .ico-horizontal-nav {
 		#box-shadow > .custom(@shadow);
 	}
 	.ico-horizontal-nav {
-		margin: 0 auto;
-		padding: @tiny @xsml;
-		#box-shadow > .black(@1px*4);
+		
 	}
 }
+
+
+
 
 .bucket {
 	#grid-container > .column(float, 4, @lrg, @lrg);
@@ -406,29 +514,7 @@ header > .ico-horizontal-nav {
 	background: @gray-lhtest;
 }
 
-.join-email {
-	padding: @xsml @sml;
-	background: @gray-drkest;
-	background-color: hsla(0,0%,0%,0.25);
-	border: @1px solid @black;
-	@shadow: inset 0 0 @1px*5 hsla(0,0%,0%,0.35), inset 0 0 @1px*5 hsla(0,0%,0%,0.35);
-	#box-shadow > .custom(@shadow);
-	h2 {
-		color: @blue;
-		#text-shadow > .black;
-	}
-	form {
-		width: 100%;
-		span {
-			display: block;
-			overflow: hidden;
-		}
-		input {
-			width: 100%;
-			line-height: @lrg;
-		}
-	}
-}
+
 
 /* main-content styles
 --------------------------------------------------  */
