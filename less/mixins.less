@@ -333,11 +333,12 @@
 .btn {
 		display: block;
 		padding: 0 @sml;
-		background: @red;
+		background-color: @red;
+		#gradient > .vertical(100, 0%, 100%, 0.15, 0);
 		line-height: @xl;
 		#font > .font-book;
 		#text-shadow > .white(@1px, 0, 0, 0.15);
-		color: darken(@red,25%);
+		color: darken(@red,38%);
 		@shadow: @1px @1px 0 hsla(0,0%,0%,0.25), -@1px -@1px 0 hsla(0,0%,0%,0.25);
 		#box-shadow > .custom(@shadow);
 		border: 1px solid fadeout(@black, 50%);
@@ -347,17 +348,15 @@
 		.transition(all .25s);
 	}
 	&:hover {
-		background-color: @blue;
-		color: @white !important;
-		#text-shadow > .white(-@1px);
-		#box-shadow > .black(-@1px, 0, 0, 0.25);
+		background-color: darken(@red,10%);
+		#gradient > .vertical(100, 0%, 100%, 0.20, 0);
+		color: darken(@red,45%);
 		.transition(all .25s);
 	}
 	&:active {
-		background-color: lighten(@blue, 10%);
-		color: @white !important;
-		#text-shadow > .white(-@1px, 0, 0, 0.35);
-		#box-shadow > .black(-@1px, 0, 0, 0.45);
+		background-color: darken(@red,15%);
+		#gradient > .vertical(100, 0%, 100%, 0.25, 0);
+		color: darken(@red,50%);
 		.transition(all .15s);
 	}
 	&:first-child {
