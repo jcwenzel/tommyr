@@ -331,6 +331,7 @@
 // 04 - example button stack - change based on design
 // -------------------------------------------------------------------------------------
 .btn {
+		.box-sizing;
 		display: block;
 		padding: 0 @sml;
 		background-color: @red;
@@ -373,10 +374,9 @@
 .join-btn {
 	&:extend(.btn);
 	float: right;
-	line-height: @em*1.75;
-	background: @gray-lhtest;
-	border-left: @1px solid @gray;
-	color: @gray-lht;
+	background-color: @gray-lhtest;
+	#gradient > .vertical(100, 0%, 100%, 0.15, 0);
+	color: @gray;
 	#text-shadow > .white;
 }
 
