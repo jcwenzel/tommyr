@@ -147,6 +147,14 @@ ol {
 	> a { display: block;}
 }
 
+.l-float-right {
+	float: right;
+}
+
+.l-float-left {
+	float: right;
+}
+
 .l-inline {
 	display: inline-block;
 	margin: 0;
@@ -310,22 +318,20 @@ h2 {
 	@media screen and (min-width: 25em) {
 		margin: @sml 0 0;
 	}
-	span {
-		display: block;
-		overflow: hidden;
-	}
 }
 
 .join-email-input {
 	width: 100%;
 	height: @xl;
+	margin: 0 0 @sml;
+	padding: 0 @tiny;
 	line-height: @xl;
 	border: 1px solid fadeout(@black, 50%);
 }
 
 .join-btn {
 	height: @xl;
-	
+	margin: 0 auto;
 }
 
 
@@ -517,7 +523,7 @@ h2 {
 	height: auto;
 	text-align: center;
 	padding: @med 0;
-	@media screen and (min-width: 49em) {
+	@media screen and (min-width: 56.25em) {
 		#grid-container > .column(inline, 8, @lrg, 0);
 		float: left;		
 	}
@@ -527,6 +533,7 @@ h2 {
 	position: relative;
 	width: 100%;
 	border: (@1px * 4) solid @white;
+	overflow: hidden;
 	@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
 	#box-shadow > .custom(@shadow);
 	
@@ -540,12 +547,23 @@ h2 {
 }
 
 .slideshow-slide {
+	max-height: 400px;
+	background: @white;
+	
+	@media screen and (min-width: 80em) {
+		max-height: 450px;
+	}
+}
+
+.slideshow-img {
+	@media screen and (min-width: 80em) {
+		margin: 0 auto;
+	}
 }
 
 .slideshow-caption {
 	padding: @tiny;
 	background: hsla(0,0,0,0.65);
-	text-align: left;
 	color: @gray-lhtest;
 	
 	@media screen and (min-width: 30em) {
@@ -574,17 +592,44 @@ h2 {
 
 .bucket {
 	.width(12);
-	@media screen and (min-width: 49em) {
+	@media screen and (min-width: 56.25em) {
 		#grid-container > .column(float, 4, @lrg, @lrg);
 	}
 }
 
-.content-highlight > .content-highlight-title {
+.bucket-title {
+	font-size: @lrg;
+	color: @gray-drker;
+	margin-bottom: @sml;
+	#text-shadow > .white;
+}
+
+.bucket-sub-title {
+	margin-bottom: (@1px*4);
+}
+
+.content-highlight {
 	text-align: center;
+	@media screen and (min-width: 40em) {
+		.width(8);
+		margin: 0 auto;
+	}
+	
+	@media screen and (min-width: 56.25em) {
+		#grid-container > .column(float, 4, @lrg, @lrg);
+	}
+}
+
+
+.content-highlight > .content-highlight-title {
 	color: @white;
 	#text-shadow > .black;
-	@media screen and (min-width: 49em) {
-		text-align: left;
+	@media screen and (min-width: 25em) {
+		font-size: @xl;
+	}
+	
+	@media screen and (min-width: 56.25em) {
+		font-size: @lrg;
 	}
 }
 
@@ -633,25 +678,10 @@ h2 {
 
 /* homepage main-content buckets
 --------------------------------------------------  */
-#facebook-feed,
 #hours-homepage,
 #contact-homepage {
 	width: 33.332%;
 	color: @gray-drk;
-	h2 {
-		font-size: @lrg;
-		color: @gray-drker;
-		margin-bottom: @sml;
-		#text-shadow > .white;
-	}
-	h4 {
-		margin-bottom: (@1px*4);
-	}
-}
-
-#feed {
-	height: 10em; // for development purposes only
-	background: @gray;
 }
 
 #contact-homepage {
@@ -670,12 +700,12 @@ h2 {
 	margin: 0 @med @sml 0; 
 }
 
-#facebook-feed {
+.bucket-facebook {
 	#box-shadow > .inset-black(0, 0, @med, 0.3);
 	margin: @lrg 0;
 	background: lighten(@gray-lht, 16%);
 
-	h2 {
+	.bucket-title {
 		color: @white;
 		#text-shadow > .black;
 	}
