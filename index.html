@@ -53,11 +53,11 @@
 		</div> -->
 		
 		
-		<div class="white">
+		<div class="m-main-header">
 			<header class="l-full-wrapper">
 				<h1 class="logo"><a href="index.html" title="back to the homepage">Tommy R&rsquo;s Catering</a></h1>
 				<nav id="nav-js">
-					<ul class="horizontal-nav">
+					<ul class="m-nav">
 						<li><a href="menus/index.html" title="view our menus">Menus</a></li>
 						<li><a href="events/index.html" title="learn about our events">Events</a></li>
 						<li><a href="to-go/index.html" title="view our to-go menu">To-Go</a></li>
@@ -66,45 +66,37 @@
 						<li><a href="contact.html" title="drop us a line">Contact</a></li>
 					</ul>
 				</nav>
-				<div class="l-inline ico-horizontal-nav-share">
-					<p class="ico-h-nav-title">Share:</p>
-					<a class="ico-h-nav-link-email"		data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
-					<a class="ico-h-nav-link-tweet"		data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
-					<a class="ico-h-nav-link-facebook"	data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
+				<div class="l-inline m-nav--share">
+					<p class="m-nav__title">Share:</p>
+					<a class="m-nav__link--email"		data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
+					<a class="m-nav__link--tweet"		data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
+					<a class="m-nav__link--facebook"	data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
 				</div>
 			</header>
 		</div>
 		
-		<section class="l-full-wrapper">
-			<!-- ><h1>Create the perfect event with Tommy R&rsquo;s.</h1> -->
-			<div class="slideshow">
-				<div class="slideshow-slides">
-					<figure class="slideshow-slide">
-						<img class="slideshow-img" src="img/slideshow/slide1.jpg" />
-						<figcaption class="slideshow-caption">
-							<h2>Tommy Romano knows food</h2>
-							<p>Tommy has been cooking for the Chicagoland area for over 20 years. <a href="" class="slideshow-link">Learn more about Tommy R&rsquo;s</a>.</p>
-						</figcaption>
-					</figure>
-				</div>
-				<ul class="l-inline ico-horizontal-nav">
-					<li class="ico-h-nav-link is-active"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-				</ul>
+		<div class="m-slideshow--full-screen">
+			<div class="m-slideshow--full-screen__slides-container">
+				<figure class="m-slide--full-screen">
+					<img class="m-slide__img--full-screen" src="img/slideshow/slide1.jpg" />
+					<figcaption class="m-slide__caption--full-screen">
+						<h2 class="m-slide__title">Tommy Romano knows food</h2>
+						<p class="m-slide__description">Tommy has been cooking for the Chicagoland area for over 20 years. <a href="" class="m-slide__link">Learn more about Tommy R&rsquo;s</a>.</p>
+					</figcaption>
+				</figure>
 			</div>
-			
-			<div class="bucket content-highlight">
-				<h2 class="content-highlight-title">It&rsquo;s WEDDING Season!</h2>
-				<p class="content-highlight-content">Are you looking for the best catering in town for your special day? Get a <a href="contact/index.html" title="link to our form">free estimate</a> today.</p>
+		</div>
+		
+		<section class="l-full-wrapper">
+			<div class="m-site-higlht">
+				<h2 class="m-site-higlht__title">It&rsquo;s WEDDING Season!</h2>
+				<p class="m-site-higlht__content">Are you looking for the best catering in town for your special day? Get a <a href="contact/index.html" title="link to our form">free estimate</a> today.</p>
 				<button type="button" data-btn="highlight-btn" class="btn">Sample Wedding Menu</button>
-				<div class="join-email">
-					<h2 class="join-email-title">Get Updates Via Email</h2>
-					<form class="join-email-form">
-						<input class="join-email-input" placeholder="Type your email..."></input>
-						<button type="submit" data-btn="join-btn" class="join-btn">Join Now</button>
+				<div class="m-join-email">
+					<h2 class="m-join-email__title">Get Updates Via Email</h2>
+					<form class="m-join-email__form">
+						<input class="m-join-email__input" placeholder="Type your email..."></input>
+						<button class="m-join-email__join-btn" type="submit" data-btn="join-btn">Join Now</button>
 					</form>
 				</div>
 			</div>
