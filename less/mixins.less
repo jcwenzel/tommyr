@@ -365,18 +365,12 @@
 	}
 }
 
-.highlight-btn {
+.btn--join {
 	&:extend(.btn);
-	#gradient > .custom-vertical-three-colors(hsla(0,100%,100%,0.1), @red, 50%, hsla(0,100%,100%,0.1));
-	margin: 0 auto;
-}
-
-.join-btn {
-	&:extend(.btn);
-	background-color: @gray-lhtest;
+	background-color: @blue;
 	#gradient > .vertical(100, 0%, 100%, 0.15, 0);
-	color: @gray;
-	#text-shadow > .white;
+	color: darken(@blue,38%);
+	#text-shadow > .white(@1px, 0, 0, 0.15);
 }
 
 .contact-form-footer-btn {
