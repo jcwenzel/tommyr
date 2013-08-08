@@ -12,11 +12,18 @@ var navigation = responsiveNav("#nav-js", {
 	close: function(){}   // Function: Close callback
 });
 
-// responsive slideshow
-$(function () {
-	$(".slideshow").responsiveSlides({
-		//maxwidth: 800,
-	 	pager: true,
-	 	speed: 500
-	});
-});	
+// // responsive slideshow
+// $(function () {
+// 	$(".slideshow").responsiveSlides({
+// 		//maxwidth: 800,
+// 	 	pager: true,
+// 	 	speed: 500
+// 	});
+// });	
+
+// Can also be used with $(document).ready()
+$(document).ready(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
