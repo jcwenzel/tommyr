@@ -175,8 +175,12 @@ ol {
 //	-------------------------------------------------
 
 .m-main-header {
-	background: hsla(100, 0%, 100%, 0.9);
+	background: @white;
 	border-bottom: @1px solid @gray-drker;
+	
+	@media screen and (min-width: 49em) { // 784
+		background: hsla(100, 0%, 100%, 0.9);
+	}
 }
 
 .logo {
@@ -185,7 +189,7 @@ ol {
 	height: @em*5; // 80/16 = 5
 	margin: 0;
 	font-size: @med; // resets em to 1em
-	@media screen and (min-width: 49em) {
+	@media screen and (min-width: 49em) { // 784
 		float: left;
 	}
 	& > a {
@@ -617,18 +621,18 @@ h2 {
 
 /* FlexSlider Necessary Styles
 *********************************/
-.flexslider {
+.m-slideshow--full {
 	margin: 0; 
 	padding: 0;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides > li {
+.m-slideshow--full .slides > li {
 	display: none; 
 	-webkit-backface-visibility: hidden;
 } 
 
-.flexslider .slides img {
+.m-slideshow--full .slides img {
 	width: 100%;
 	display: block;
 }
@@ -663,7 +667,7 @@ html[xmlns] .slides {
 	transition: all 1s ease;
 }
 
-.flexslider .slides { 
+.m-slideshow--full .slides { 
 	zoom: 1;
 }
 
