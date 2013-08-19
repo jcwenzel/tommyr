@@ -312,8 +312,15 @@ h2 {
 .m-join-email {
 	width: 100%;
 	margin: @tiny 0 0;
+	
 	@media screen and (min-width: 25em) {
 		margin: @sml 0 0;
+	}
+
+	& > .btn--blue {
+		height: @xl;
+		margin: 0 auto;
+		text-align: center;
 	}
 }
 
@@ -326,11 +333,7 @@ h2 {
 	border: 1px solid fadeout(@black, 50%);
 }
 
-.btn--join {
-	height: @xl;
-	margin: 0 auto;
-	text-align: center;
-}
+
 
 
 
@@ -676,77 +679,77 @@ html[xmlns] .slides {
 
 //	03.6 slideshow
 //	-------------------------------------------------
-.slideshow {
-	.width(12);
-	height: auto;
-	text-align: center;
-	padding: @med 0;
-	@media screen and (min-width: 56.25em) {
-		#grid-container > .column(inline, 8, @lrg, 0);
-		float: left;		
-	}
-}
+// .slideshow {
+// 	.width(12);
+// 	height: auto;
+// 	text-align: center;
+// 	padding: @med 0;
+// 	@media screen and (min-width: 56.25em) {
+// 		#grid-container > .column(inline, 8, @lrg, 0);
+// 		float: left;		
+// 	}
+// }
 
-.slideshow-slides {
-	position: relative;
-	width: 100%;
-	border: (@1px * 4) solid @white;
-	overflow: hidden;
-	@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
-	#box-shadow > .custom(@shadow);
+// .slideshow-slides {
+// 	position: relative;
+// 	width: 100%;
+// 	border: (@1px * 4) solid @white;
+// 	overflow: hidden;
+// 	@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
+// 	#box-shadow > .custom(@shadow);
 	
-	@media screen and (min-width: 37.5em) {
-		border-width: (@1px * 6);
-	}
+// 	@media screen and (min-width: 37.5em) {
+// 		border-width: (@1px * 6);
+// 	}
 	
-	@media screen and (min-width: 56.25em) {
-		border-width: @xsml;
-	}
-}
+// 	@media screen and (min-width: 56.25em) {
+// 		border-width: @xsml;
+// 	}
+// }
 
-.slideshow-slide {
-	max-height: 400px;
-	background: @white;
+// .slideshow-slide {
+// 	max-height: 400px;
+// 	background: @white;
 	
-	@media screen and (min-width: 80em) {
-		max-height: 450px;
-	}
-}
+// 	@media screen and (min-width: 80em) {
+// 		max-height: 450px;
+// 	}
+// }
 
-.slideshow-img {
-	@media screen and (min-width: 80em) {
-		margin: 0 auto;
-	}
-}
+// .slideshow-img {
+// 	@media screen and (min-width: 80em) {
+// 		margin: 0 auto;
+// 	}
+// }
 
-.slideshow-caption {
-	padding: @tiny;
-	background: hsla(0,0,0,0.65);
-	color: @gray-lhtest;
+// .slideshow-caption {
+// 	padding: @tiny;
+// 	background: hsla(0,0,0,0.65);
+// 	color: @gray-lhtest;
 	
-	@media screen and (min-width: 30em) {
-		.l-absolute-bottom-right(0,0,0);
-		padding: @sml;
-	}
+// 	@media screen and (min-width: 30em) {
+// 		.l-absolute-bottom-right(0,0,0);
+// 		padding: @sml;
+// 	}
 	
-	@media screen and (min-width: 37.5em) {
-		.l-absolute-bottom-right(0,0,0);
-		padding: @sml;
-	}
-}
+// 	@media screen and (min-width: 37.5em) {
+// 		.l-absolute-bottom-right(0,0,0);
+// 		padding: @sml;
+// 	}
+// }
 
-.slideshow-caption > h2 {
-	display: none;
-	@media screen and (min-width: 30em) {
-		display: block;
-		font-size: @lrg;
-		color: @white;
-	}
-}
+// .slideshow-caption > h2 {
+// 	display: none;
+// 	@media screen and (min-width: 30em) {
+// 		display: block;
+// 		font-size: @lrg;
+// 		color: @white;
+// 	}
+// }
 
-.slideshow-caption > p {
-	font-size: @med;
-}
+// .slideshow-caption > p {
+// 	font-size: @med;
+// }
 
 
 //	03.6 mod
@@ -754,7 +757,7 @@ html[xmlns] .slides {
 .m-mod {
 	.width(12);
 	margin: 0 0 @lrg;
-	
+
 	&:last-child {
 		margin: 0;
 	}
@@ -771,7 +774,7 @@ html[xmlns] .slides {
 }
 
 .m-mod__sub-title {
-	margin-bottom: (@1px*4);
+	color: @gray-drk;
 }
 
 .m-mod__body > button {
@@ -806,6 +809,25 @@ html[xmlns] .slides {
 	}
 }
 
+.m-mod--footer {
+	&:extend(.m-mod);
+
+	/*	480px	(480/16=30)		*/
+	@media screen and (min-width: 30em) {
+		.width(6);
+		padding-right: @sml;
+	}
+}
+
+.m-mod--footer--join {
+	&:extend(.m-mod--footer);
+
+	/*	480px	(480/16=30)		*/
+	@media screen and (min-width: 30em) {
+		.width(12);
+	}
+}
+
 .m-fb-feed {
 	padding: 0 @sml @sml;
 	
@@ -823,6 +845,10 @@ html[xmlns] .slides {
 		&:first-child {
 			padding-top: 0;
 			border-bottom: 1px solid @gray-lhtest;
+		}
+
+		&:last-child {
+			padding-bottom: (@1px*4);
 		}
 	}
 }
@@ -918,7 +944,7 @@ html[xmlns] .slides {
 footer {
 	padding: @xl @page-gutter;
 
-	.join-email {
+	& > .m-join-email {
 		float: left;
 		width: 16.665%;
 	}
