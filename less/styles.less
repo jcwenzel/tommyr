@@ -147,12 +147,12 @@ ol {
 	> a { display: block;}
 }
 
-.l-float-right {
+.l-right {
 	float: right;
 }
 
-.l-float-left {
-	float: right;
+.l-left {
+	float: left
 }
 
 .l-inline {
@@ -309,7 +309,7 @@ h2 {
 	#text-shadow > .black;
 }
 
-.m-join-email__form {
+.m-join-email {
 	width: 100%;
 	margin: @tiny 0 0;
 	@media screen and (min-width: 25em) {
@@ -326,7 +326,7 @@ h2 {
 	border: 1px solid fadeout(@black, 50%);
 }
 
-.m-join-email__btn {
+.btn--join {
 	height: @xl;
 	margin: 0 auto;
 	text-align: center;
@@ -748,24 +748,92 @@ html[xmlns] .slides {
 	font-size: @med;
 }
 
-.bucket {
+
+//	03.6 mod
+//	-------------------------------------------------
+.m-mod {
 	.width(12);
+	margin: 0 0 @lrg;
+	
+	&:last-child {
+		margin: 0;
+	}
 	@media screen and (min-width: 56.25em) {
 		#grid-container > .column(float, 4, @lrg, @lrg);
 	}
 }
 
-.bucket-title {
+.m-mod__title {
 	font-size: @lrg;
 	color: @gray-drker;
-	margin-bottom: @sml;
+	margin-bottom: @xsml/@lrg;
 	#text-shadow > .white;
 }
 
-.bucket-sub-title {
+.m-mod__sub-title {
 	margin-bottom: (@1px*4);
 }
 
+.m-mod__body > button {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.m-mod__body__label {
+	margin: 0 @med @sml 0;
+	color: @gray-lht;
+}
+
+.m-mod__body__value {
+	margin: 0 0 @sml 0;
+}
+
+.m-mod__note {
+	font-size: @sml;
+	color: @gray-lht;
+}
+
+.m-mod--facebook {
+	&:extend(.m-mod);
+	#box-shadow > .inset-black(0, 0, @med, 0.3);
+	margin: @lrg 0;
+	background: lighten(@gray-lht, 16%);
+
+	& > .m-mod__title {
+		color: @white;
+		padding: (@sml/@lrg) 0 0 (@sml/@lrg);
+		#text-shadow > .black;
+	}
+}
+
+.m-fb-feed {
+	padding: 0 @sml @sml;
+	
+	p {
+		margin: 0 0 @sml;
+	}
+	
+	span {
+		color: @gray-lhtest;
+	}
+	
+	li { 
+		padding: @sml 0;
+
+		&:first-child {
+			padding-top: 0;
+			border-bottom: 1px solid @gray-lhtest;
+		}
+	}
+}
+
+
+
+
+
+
+//	03.6 site highlht
+//	-------------------------------------------------
 .m-site-higlht {
 	padding: @xsml @sml;
 	@shadow: inset 0 0 @1px*5 hsla(0,0%,0%,0.35), inset 0 0 @1px*5 hsla(0,0%,0%,0.35);
@@ -844,54 +912,6 @@ html[xmlns] .slides {
 	.clearfix;
 }
 
-/* homepage main-content buckets
---------------------------------------------------  */
-#hours-homepage,
-#contact-homepage {
-	width: 33.332%;
-	color: @gray-drk;
-}
-
-#contact-homepage {
-	p {
-		font-size: @sml;
-		color: @gray-lht;
-	}
-}
-
-#hours-homepage {
-	float: right;
-}
-
-#contact-homepage li,
-#hours-homepage li {
-	margin: 0 @med @sml 0; 
-}
-
-.bucket-facebook {
-	#box-shadow > .inset-black(0, 0, @med, 0.3);
-	margin: @lrg 0;
-	background: lighten(@gray-lht, 16%);
-
-	.bucket-title {
-		color: @white;
-		#text-shadow > .black;
-	}
-
-	.feed {
-		p { margin: 0 0 @sml; }
-		span { color: @gray-lhtest; }
-		li { 
-			padding: @sml 0;
-			&:first-child { border-bottom: 1px solid @gray-lhtest; }
-		}
-	}
-}
-
-.bucket-body-labels {
-	float: left;
-	color: @gray-lht;
-}
 
 /* footer styles
 --------------------------------------------------  */
