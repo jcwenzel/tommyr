@@ -132,11 +132,38 @@ ol {
 	#grid-container > .column(block, 12, @lrg, @page-gutter);
 	margin: 0;
 	.clearfix;
+	border-bottom: @1px solid @gray-drkest;
 	
 	@media screen and (min-width: 88em) {
 		max-width: 88em;
 		margin: 0 auto;
 	}
+}
+
+.l-full-wrapper--home-banner {
+	&:extend(.l-full-wrapper);
+	border: @1px solid @gray-drkest;
+	border-width: @1px 0 0;
+
+	/*	840px	(840/16=52.5)	*/
+	@media screen and (min-width: 52.5em) {
+		padding: 0;
+	}
+}
+
+.l-mod-group {
+	.clearfix;
+	// margin has to match single mod styles
+	margin: 0 0 @lrg;
+
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		margin: 0 0 @xl;
+	}
+}
+
+.l-relative {
+	position: relative;
 }
 
 .l-stacked {
@@ -174,13 +201,12 @@ ol {
 //	03.1 main header 
 //	-------------------------------------------------
 
-.m-main-header {
+.m-header {
 	background: @white;
-	border-bottom: @1px solid @gray-drker;
 	
-	@media screen and (min-width: 49em) { // 784
-		background: hsla(100, 0%, 100%, 0.9);
-	}
+	// @media screen and (min-width: 49em) { // 784
+	// 	background: hsla(100, 0%, 100%, 0.9);
+	// }
 }
 
 .logo {
@@ -318,7 +344,6 @@ h2 {
 	}
 
 	& > .btn--blue {
-		height: @xl;
 		margin: 0 auto;
 		text-align: center;
 	}
@@ -519,31 +544,9 @@ h2 {
 //	03.6 slideshow
 //	-------------------------------------------------
 .m-slideshow {
-	.width(12);
 	height: auto;
 	text-align: center;
 	padding: @med 0;
-	@media screen and (min-width: 56.25em) {
-		#grid-container > .column(inline, 8, @lrg, 0);
-		float: left;		
-	}
-}
-
-.m-slideshow__slides-container {
-	position: relative;
-	width: 100%;
-	border: (@1px * 4) solid @white;
-	overflow: hidden;
-	@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
-	#box-shadow > .custom(@shadow);
-	
-	@media screen and (min-width: 37.5em) {
-		border-width: (@1px * 6);
-	}
-	
-	@media screen and (min-width: 56.25em) {
-		border-width: @xsml;
-	}
 }
 
 .m-slide {
@@ -562,32 +565,41 @@ h2 {
 }
 
 .m-slide__caption {
-	padding: @tiny;
-	background: hsla(0,0,0,0.65);
+	padding: @tiny @med;
+	background: @gray-drker;
+	border: @1px solid (@gray-drkest);
+	border-width: 0 0 @1px 0;
 	color: @gray-lhtest;
-	
+
+	/*	480px	(480/16=30)		*/
 	@media screen and (min-width: 30em) {
-		.l-absolute-bottom-right(0,0,0);
-		padding: @sml;
+		padding: @sml @lrg;
 	}
-	
-	@media screen and (min-width: 37.5em) {
-		.l-absolute-bottom-right(0,0,0);
-		padding: @sml;
+
+	/*	720px	(720/16=45) 	*/
+	@media screen and (min-width: 45em) {
+		.width(7);
+		position: absolute;
+			bottom: @2xl;
+			left: 0;
+		color: @gray-drker;
+		text-align: left;
+		background: hsla(100,0,100%,0.85);
+		border-width: @1px @1px @1px 0;
+	}
+
+	/*	840px	(840/16=52.5)	*/
+	@media screen and (min-width: 52.5em) {
+		.width(5);
 	}
 }
 
-.m-slide__title {
-	display: none;
-	@media screen and (min-width: 30em) {
-		display: block;
-		font-size: @lrg;
-		color: @white;
-	}
-}
-
-.m-slide__description {
+.m-slide__caption__content {
 	font-size: @med;
+	/*	480px	(480/16=30)		*/
+	@media screen and (min-width: 30em) {
+		font-size: (@med*1.2);
+	}
 }
 
 .m-slideshow--full-screen {
@@ -625,14 +637,24 @@ h2 {
 /* FlexSlider Necessary Styles
 *********************************/
 .m-slideshow--full {
+	&:extend(.m-slideshow);
+	.width(12);
 	margin: 0; 
 	padding: 0;
+
+	/*	1280px	(1280/16=80) */
+	@media screen and (min-width: 80em) {
+		max-width: 80em;
+		margin: 0 auto;
+	}
+
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .m-slideshow--full .slides > li {
 	display: none; 
 	-webkit-backface-visibility: hidden;
+	position: relative;
 } 
 
 .m-slideshow--full .slides img {
@@ -761,6 +783,12 @@ html[xmlns] .slides {
 	&:last-child {
 		margin: 0;
 	}
+
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		margin: 0 0 @xl;
+	}
+
 	@media screen and (min-width: 56.25em) {
 		#grid-container > .column(float, 4, @lrg, @lrg);
 	}
@@ -796,47 +824,116 @@ html[xmlns] .slides {
 	color: @gray-lht;
 }
 
+
+//	03.6 mod extensions
+//	-------------------------------------------------
+
+// mod-facebook extensions
 .m-mod--facebook {
 	&:extend(.m-mod);
-	#box-shadow > .inset-black(0, 0, @med, 0.3);
+	#box-shadow > .inset-black(0, 0, @med, 0.7);
 	margin: @lrg 0;
-	background: lighten(@gray-lht, 16%);
+	background: @gray-drker;
+	color: @gray-lht;
 
 	& > .m-mod__title {
 		color: @white;
 		padding: (@sml/@lrg) 0 0 (@sml/@lrg);
 		#text-shadow > .black;
+
+		/*	600px	(600/16=37.5)	*/
+		@media screen and (min-width: 37.5em) {
+			padding: (@lrg/@lrg) 0 0 (@lrg/@lrg);
+		}
 	}
 }
 
+.m-mod--home {
+	&:extend(.m-mod);
+	
+	/*	720px	(720/16=45)	*/
+	@media screen and (min-width: 45em) {
+		.width(6);
+		padding-right: @xl;
+
+		&:last-of-type {
+			padding-right: 0;
+			padding-left: @xl;
+		}
+
+		& > .m-mod__title {
+			text-align: center;
+		}
+	}
+}
+
+
+// mod-footer extensions
 .m-mod--footer {
 	&:extend(.m-mod);
+	margin: 0;
 
 	/*	480px	(480/16=30)		*/
 	@media screen and (min-width: 30em) {
 		.width(6);
 		padding-right: @sml;
+
+		&:last-of-type{
+			padding-right: 0;
+		}
 	}
+
+	/*	720px	(720/16=45)	*/
+	@media screen and (min-width: 45em) {
+		.width(3);
+	}
+}
+
+.m-mod__title--footer {
+	margin: 0 0 @1px*4 0;
+	font-size: @lrg;
+	color: @blue;
 }
 
 .m-mod--footer--join {
 	&:extend(.m-mod--footer);
+	background: hsla(0, 0, 0, 0.85);
+	padding: @sml;
 
 	/*	480px	(480/16=30)		*/
 	@media screen and (min-width: 30em) {
 		.width(12);
 	}
+
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		padding: @lrg @2xl;
+	}
+
+	/*	840px	(840/16=52.5)	*/
+	@media screen and (min-width: 52.5em) {
+		.width(8);
+		margin: 0 auto;
+	}
 }
 
+
+//	03.6 facebook feed styles
+//	-------------------------------------------------
 .m-fb-feed {
 	padding: 0 @sml @sml;
+
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		padding: 0 @lrg @lrg;
+	}
 	
 	p {
 		margin: 0 0 @sml;
 	}
 	
 	span {
-		color: @gray-lhtest;
+		color: @gray;
 	}
 	
 	li { 
@@ -844,7 +941,7 @@ html[xmlns] .slides {
 
 		&:first-child {
 			padding-top: 0;
-			border-bottom: 1px solid @gray-lhtest;
+			border-bottom: 1px solid @gray-drkest;
 		}
 
 		&:last-child {
@@ -875,11 +972,20 @@ html[xmlns] .slides {
 		padding: @med @lrg;
 	}
 	
-	@media screen and (min-width: 40em) {
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
 		.width(8);
 		margin: 0 auto;
 	}
 	
+	/*	840px	(840/16=52.5)	*/
+	@media screen and (min-width: 52.5em) {
+		position: absolute;
+			top: @xl;
+			right: @xl;
+		.width(5);
+		margin: 0;
+	}
 	@media screen and (min-width: 56.25em) {
 		#grid-container > .column(float, 4, @lrg, @lrg);
 	}
@@ -929,39 +1035,10 @@ html[xmlns] .slides {
 }
 
 
-
-/* main-content styles
---------------------------------------------------  */
-#main-content {
-	#grid-container > .column(block, 12, @2xl, @page-gutter);
-	background: @gray-lhtest;
-	.clearfix;
-}
-
-
 /* footer styles
 --------------------------------------------------  */
 footer {
 	padding: @xl @page-gutter;
-
-	& > .m-join-email {
-		float: left;
-		width: 16.665%;
-	}
-
-	.footer-bucket {
-		#grid-container > .column(float, 2, @lrg, @lrg);
-	}
-
-	h4 {
-		margin: 0 0 @1px*4 0;
-		color: @gray;
-	}
-
-	nav {
-		float: none;
-		margin: 0;
-	}
 
 	a,
 	a:visited {
@@ -979,25 +1056,22 @@ footer {
 			margin: 0 0 @1px*4 0;
 		}
 	}
-
-	.join-email {
-		width: 33.332%;
-	}
 }
 
 
 
 
-/*	400px	(400/16=25)		@media screen and (min-width: 25em)		*/
-/*	480px	(480/16=30)		@media screen and (min-width: 30em)		*/
-/*	600px	(600/16=37.5)	@media screen and (min-width: 37.5em)	*/
-/*	784px	(784/16=49)		@media screen and (min-width: 49em)		*/
+/*	400px	(400/16=25)			@media screen and (min-width: 25em)			*/
+/*	480px	(480/16=30)			@media screen and (min-width: 30em)			*/
+/*	600px	(600/16=37.5)		@media screen and (min-width: 37.5em)		*/
+/*	720px	(720/16=45)			@media screen and (min-width: 45em)			*/
+/*	840px	(840/16=52.5)		@media screen and (min-width: 52.5em)		*/
 /*	900px	(900/16=56.25)	@media screen and (min-width: 56.25em)	*/
-/*	1024px	(1024/16=64)	@media screen and (min-width: 64em)		*/
-/*	1280px	(1280/16=80)	@media screen and (min-width: 80em)		*/
-/*	1408px	(1408/16=88)	@media screen and (min-width: 88em)		*/
-/*	1600px	(1600/16=100)	@media screen and (min-width: 100em)	*/
-/*	2080px	(2080/16=130)	@media screen and (min-width: 130em)	*/
+/*	1024px	(1024/16=64)	@media screen and (min-width: 64em)			*/
+/*	1280px	(1280/16=80)	@media screen and (min-width: 80em)			*/
+/*	1408px	(1408/16=88)	@media screen and (min-width: 88em)			*/
+/*	1600px	(1600/16=100)	@media screen and (min-width: 100em)		*/
+/*	2080px	(2080/16=130)	@media screen and (min-width: 130em)		*/
 
 
 

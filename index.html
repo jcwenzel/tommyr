@@ -51,7 +51,7 @@
 		</div> -->
 		
 		
-		<div class="m-main-header">
+		<div class="m-header">
 			<header class="l-full-wrapper">
 				<h1 class="logo"><a href="index.html" title="back to the homepage">Tommy R&rsquo;s Catering</a></h1>
 
@@ -84,7 +84,7 @@
 
 				<!--	full screen slideshow (until 1400px viewport): max of 5 slides
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<div style="position: relative;">
+		<div class="l-relative">
 	    <div class="m-slideshow--full">
 	      <ul class="slides">
 
@@ -93,7 +93,7 @@
 					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	        <li>
 						<div class="m-slide__caption--full-screen">
-							<p class="m-slide__description">Tommy has been cooking for the Chicagoland area for over 20 years. <a href="" class="m-slide__link">Learn more about Tommy R</a>.</p>
+							<p class="m-slide__caption__content">Tommy has been cooking for the Chicagoland area for over 20 years. <a href="" class="m-slide__link">Learn more about Tommy R</a>.</p>
 						</div>
 		    		<img src="img/slideshow/slide1.jpg" />
 					</li>
@@ -103,7 +103,7 @@
 					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	  			<li>
 						<div class="m-slide__caption--full-screen">
-							<p class="m-slide__description">We cater to events of all sizes. <a href="" class="m-slide__link">Learn more</a> about events by Tommy R&rsquo;s Catering.</p>
+							<p class="m-slide__caption__content">We cater to events of all sizes. <a href="" class="m-slide__link">Learn more</a> about events by Tommy R&rsquo;s Catering.</p>
 						</div>
 	    	    <img src="img/slideshow/slide2.jpg" />
 	    		</li>
@@ -113,7 +113,7 @@
 					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	    		<li>
 	    			<div class="m-slide__caption--full-screen">
-							<p class="m-slide__description">Make sure you have the wedding of your dreams. <a href="" class="m-slide__link">Learn more</a> about weddings by Tommy R&rsquo;s.</p>
+							<p class="m-slide__caption__content">Make sure you have the wedding of your dreams. <a href="" class="m-slide__link">Learn more</a> about weddings by Tommy R&rsquo;s.</p>
 						</div>
 	    	    <img src="img/slideshow/slide1.jpg" />
 	    		</li>
@@ -123,7 +123,7 @@
 					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	    		<li>
 	    			<div class="m-slide__caption--full-screen">
-							<p class="m-slide__description">Are you sold on Tommy R&rsquo;s? <a href="" class="m-slide__link">Contact us</a>  today for more information.</p>
+							<p class="m-slide__caption__content">Are you sold on Tommy R&rsquo;s? <a href="" class="m-slide__link">Contact us</a>  today for more information.</p>
 						</div>
 	    	    <img src="img/slideshow/slide2.jpg" />
 	    		</li>
@@ -133,7 +133,7 @@
 
 			<!--	site highlight main call-to-action
 			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-			<section class="l-full-wrapper">
+			<section class="l-full-wrapper--home-banner">
 				<div class="m-site-higlht">
 					<h2 class="m-site-higlht__title">It&rsquo;s WEDDING Season!</h2>
 					<p class="m-site-higlht__content">Are you looking for the best catering in town for your special day? Get a <a href="contact/index.html" title="link to our form">free estimate</a> today.</p>
@@ -162,7 +162,7 @@
 
 				<!--	facebook feed: max 2 showing at a time NO PICTURES
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-				<div class="m-mod--facebook">
+				<div class="m-mod--facebook l-left">
 					<h2 class="m-mod__title">Latest Facebook Chatter</h2>
 					<div id="facebook-feed" class="m-fb-feed">
 						<ol>
@@ -181,7 +181,7 @@
 
 				<!--	contact information
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-				<div class="m-mod">
+				<div class="m-mod--home l-left">
 					<h2 class="m-mod__title">Drop Us A Line</h2>
 					<div class="m-mod__body">
 						<ul class="l-stacked l-left">
@@ -204,7 +204,7 @@
 
 				<!--	hours
 					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-				<div class="m-mod l-right">
+				<div class="m-mod--home l-left">
 					<h2 class="m-mod__title">Our Hours</h2>
 					
 					<h4 class="m-mod__sub-title">To-Go Hours</h4>
@@ -233,7 +233,7 @@
 							<li class="m-mod__body__value">8:00am - 12:00am</li>
 							<li class="m-mod__body__value">7:00am - 9:00pm</li>
 						</ul>
-						<p class="m-mod__note">Hours not working for you? Contact us and we can talk.</p>
+						<p class="m-mod__note">Hours not working for you? <a href="" title="">Contact us</a> and we can talk.</p>
 					</div>		
 				</div>
 			</section>
@@ -244,52 +244,53 @@
 	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	<footer class="l-full-wrapper">
 
+		<div class="l-mod-group">
+			<!--	main links
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Main Nav</h4>
+				<a href="events/index.html" title="info on general events">Events</a>
+				<a href="to-go/index.html" title="info on Tommy's To-Go">To-Go</a>
+				<a href="weddings/index.html" title="info on wedding events">Weddings</a>
+				<a href="corporate/index.html" title="info on corporate events">Corporate</a>
+			</div>
 
-		<!--	main links
-		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<div class="m-mod--footer l-left">
-			<h4 class="m-mod__title--footer">Main Nav</h4>
-			<a href="events/index.html" title="info on general events">Events</a>
-			<a href="to-go/index.html" title="info on Tommy's To-Go">To-Go</a>
-			<a href="weddings/index.html" title="info on wedding events">Weddings</a>
-			<a href="corporate/index.html" title="info on corporate events">Corporate</a>
+
+			<!--	secondary links
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Other Links</h4>
+				<a href="menus/index.html" title="view all of our menus">Menus</a>
+				<a href="specials/index.html" title="see our specials">Specials</a>
+				<a href="about/index.html" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
+				<a href="emails/index.html" title="view recent newsletters and promotions">Email Archive</a>
+				<a href="#" title="Piccolo" target="_blank">Piccolo</a>
+			</div>
+
+
+			<!--	contact info
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Contact</h4>
+				<a href="tel:630-323-1441" title="call us">630.323.1441</a>
+				<a href="mailto:info@tommyrs.com" title="email us">info@tommyrs.com</a>
+				<button type="button" data-btn="contact form btn" class="btn--blue">Our Form</button>
+			</div>
+
+			
+			<!--	social links
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Socialize</h4>
+				<a href="#" title="view us on Twitter">Twitter</a>
+				<a href="#" title="view us on Facebook">Facebook</a>
+			</div>
 		</div>
 
 
-		<!--	secondary links
-		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<div class="m-mod--footer l-left">
-			<h4 class="m-mod__title--footer">Other Links</h4>
-			<a href="menus/index.html" title="view all of our menus">Menus</a>
-			<a href="specials/index.html" title="see our specials">Specials</a>
-			<a href="about/index.html" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
-			<a href="emails/index.html" title="view recent newsletters and promotions">Email Archive</a>
-			<a href="#" title="Piccolo" target="_blank">Piccolo</a>
-		</div>
-
-
-		<!--	contact info
-		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<div class="m-mod--footer l-left">
-			<h4 class="m-mod__title--footer">Contact</h4>
-			<a href="tel:630-323-1441" title="call us">630.323.1441</a>
-			<a href="mailto:info@tommyrs.com" title="email us">info@tommyrs.com</a>
-			<button type="button" data-btn="contact form btn" class="btn--blue">Our Form</button>
-		</div>
-
-		
-		<!--	social links
-		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<div class="m-mod--footer l-left">
-			<h4 class="m-mod__title--footer">Socialize</h4>
-			<a href="#" title="view us on Twitter">Twitter</a>
-			<a href="#" title="view us on Facebook">Facebook</a>
-		</div>
-
-		
 		<!--	join e-newsletter in the footer
 		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<div class="m-mod--footer--join l-left">
+		<div class="m-mod--footer--join">
 			<h4 class="m-mod__title--footer">Join our email list to receive updates</h4>
 			<form class="m-join-email">
 				<input class="m-join-email__input" placeholder="Type your email..."></input>
