@@ -14,8 +14,6 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="assets/icon.png"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/styles.css"/>
-		<!-- <link rel="stylesheet/less" href="less/styles.less"/>
-		<script src="js/less.js"></script> -->
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
 		<script src="js/modernizr-latest.js"></script>
 	</head>
@@ -56,6 +54,10 @@
 		<div class="m-main-header">
 			<header class="l-full-wrapper">
 				<h1 class="logo"><a href="index.html" title="back to the homepage">Tommy R&rsquo;s Catering</a></h1>
+
+
+				<!--	responsive navigation
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 				<nav id="nav-js">
 					<ul class="m-nav">
 						<li><a href="menus/index.html" title="view our menus">Menus</a></li>
@@ -66,6 +68,10 @@
 						<li><a href="contact.html" title="drop us a line">Contact</a></li>
 					</ul>
 				</nav>
+
+
+				<!--	sharing navigation
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 				<div class="l-inline m-nav--share">
 					<p class="m-nav__title">Share:</p>
 					<a class="m-nav__link--email"		data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
@@ -74,27 +80,47 @@
 				</div>
 			</header>
 		</div>
+
+
+				<!--	full screen slideshow (until 1400px viewport): max of 5 slides
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 		<div style="position: relative;">
 	    <div class="m-slideshow--full">
 	      <ul class="slides">
+
+
+	      	<!--	slide 1
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	        <li>
 						<div class="m-slide__caption--full-screen">
 							<p class="m-slide__description">Tommy has been cooking for the Chicagoland area for over 20 years. <a href="" class="m-slide__link">Learn more about Tommy R</a>.</p>
 						</div>
 		    		<img src="img/slideshow/slide1.jpg" />
 					</li>
+
+
+					<!--	slide 2
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	  			<li>
 						<div class="m-slide__caption--full-screen">
 							<p class="m-slide__description">We cater to events of all sizes. <a href="" class="m-slide__link">Learn more</a> about events by Tommy R&rsquo;s Catering.</p>
 						</div>
 	    	    <img src="img/slideshow/slide2.jpg" />
 	    		</li>
+
+
+	    		<!--	slide 3
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	    		<li>
 	    			<div class="m-slide__caption--full-screen">
 							<p class="m-slide__description">Make sure you have the wedding of your dreams. <a href="" class="m-slide__link">Learn more</a> about weddings by Tommy R&rsquo;s.</p>
 						</div>
 	    	    <img src="img/slideshow/slide1.jpg" />
 	    		</li>
+
+
+	    		<!--	slide 4
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	    		<li>
 	    			<div class="m-slide__caption--full-screen">
 							<p class="m-slide__description">Are you sold on Tommy R&rsquo;s? <a href="" class="m-slide__link">Contact us</a>  today for more information.</p>
@@ -103,25 +129,39 @@
 	    		</li>
 	      </ul>
 	    </div>
-		
+			
+
+			<!--	site highlight main call-to-action
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 			<section class="l-full-wrapper">
 				<div class="m-site-higlht">
 					<h2 class="m-site-higlht__title">It&rsquo;s WEDDING Season!</h2>
 					<p class="m-site-higlht__content">Are you looking for the best catering in town for your special day? Get a <a href="contact/index.html" title="link to our form">free estimate</a> today.</p>
 					<button type="button" data-btn="btn--higlht" class="btn">Sample Wedding Menu</button>
+					
+
+					<!--	join e-newsletter
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 					<div class="m-join-email">
 						<h2 class="m-join-email__title">Get Updates Via Email</h2>
 						<form class="m-join-email">
 							<input class="m-join-email__input" placeholder="Type your email..."></input>
-							<button class="btn--join" type="submit" data-btn="join-btn">Join Now</button>
+							<button class="btn--blue" type="submit" data-btn="join-btn">Join Now</button>
 						</form>
 					</div>
 				</div>
 			</section>
 		</div>
 
+
+		<!--	main content
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 		<div class="gray-lhtest">
 			<section class="l-full-wrapper">
+				
+
+				<!--	facebook feed: max 2 showing at a time NO PICTURES
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 				<div class="m-mod--facebook">
 					<h2 class="m-mod__title">Latest Facebook Chatter</h2>
 					<div id="facebook-feed" class="m-fb-feed">
@@ -137,6 +177,10 @@
 						</ol>					
 					</div>
 				</div>
+				
+
+				<!--	contact information
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 				<div class="m-mod">
 					<h2 class="m-mod__title">Drop Us A Line</h2>
 					<div class="m-mod__body">
@@ -146,6 +190,7 @@
 							<li class="m-mod__body__label">Email</li>
 							<li class="m-mod__body__label">Mail</li>
 						</ul>
+						
 						<ul class="l-stacked">
 							<li class="m-mod__body__value">630.323.1441</li>
 							<li class="m-mod__body__value">630.323.2876</li>
@@ -155,19 +200,26 @@
 						<button type="button" data-btn="contact form btn" class="btn">Free Estimate</button>
 					</div>
 				</div>
+				
+
+				<!--	hours
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 				<div class="m-mod l-right">
 					<h2 class="m-mod__title">Our Hours</h2>
+					
 					<h4 class="m-mod__sub-title">To-Go Hours</h4>
 					<div class="m-mod__body">
 						<ul class="l-stacked l-left">
 							<li class="m-mod__body__label">Mon-Thu</li>
 							<li class="m-mod__body__label">Fri-Sat</li>
 						</ul>
+						
 						<ul class="l-stacked">
 							<li class="m-mod__body__value">10:00am - 8:00pm</li>
 							<li class="m-mod__body__value">9:00am - 8:00pm</li>
 						</ul>
 					</div>
+					
 					<h4 class="m-mod__sub-title">Catering Hours</h4>
 					<div class="m-mod__body">
 						<ul class="l-stacked l-left">
@@ -175,6 +227,7 @@
 							<li class="m-mod__body__label">Fri-Sat</li>
 							<li class="m-mod__body__label">Sun</li>
 						</ul>
+
 						<ul class="l-stacked">
 							<li class="m-mod__body__value">8:00am - 10:00pm</li>
 							<li class="m-mod__body__value">8:00am - 12:00am</li>
@@ -186,51 +239,68 @@
 			</section>
 		</div>
 
+
+	<!--	footer
+	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	<footer class="l-full-wrapper">
-		<div class="m-mod--footer">
+
+
+		<!--	main links
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+		<div class="m-mod--footer l-left">
 			<h4 class="m-mod__title--footer">Main Nav</h4>
-			<div class="l-stacked">
-				<a class="m-footer__link" href="events/index.html" title="info on general events">Events</a>
-				<a class="m-footer__link" href="to-go/index.html" title="info on Tommy's To-Go">To-Go</a>
-				<a class="m-footer__link" href="weddings/index.html" title="info on wedding events">Weddings</a>
-				<a class="m-footer__link" href="corporate/index.html" title="info on corporate events">Corporate</a>
-			</div>
+			<a href="events/index.html" title="info on general events">Events</a>
+			<a href="to-go/index.html" title="info on Tommy's To-Go">To-Go</a>
+			<a href="weddings/index.html" title="info on wedding events">Weddings</a>
+			<a href="corporate/index.html" title="info on corporate events">Corporate</a>
 		</div>
-		<div class="m-mod--footer">
+
+
+		<!--	secondary links
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+		<div class="m-mod--footer l-left">
 			<h4 class="m-mod__title--footer">Other Links</h4>
-			<div class="l-stacked">
-				<a class="m-footer__link" href="menus/index.html" title="view all of our menus">Menus</a>
-				<a class="m-footer__link" href="specials/index.html" title="see our specials">Specials</a>
-				<a class="m-footer__link" href="about/index.html" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
-				<a class="m-footer__link" href="emails/index.html" title="view recent newsletters and promotions">Email Archive</a>
-				<a class="m-footer__link" href="#" title="Piccolo" target="_blank">Piccolo</a>
-			</div>
+			<a href="menus/index.html" title="view all of our menus">Menus</a>
+			<a href="specials/index.html" title="see our specials">Specials</a>
+			<a href="about/index.html" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
+			<a href="emails/index.html" title="view recent newsletters and promotions">Email Archive</a>
+			<a href="#" title="Piccolo" target="_blank">Piccolo</a>
 		</div>
-		<div class="m-mod--footer">
+
+
+		<!--	contact info
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+		<div class="m-mod--footer l-left">
 			<h4 class="m-mod__title--footer">Contact</h4>
-			<div class="l-stacked">
-				<a class="m-footer__link" href="tel:630-323-1441" title="call us">630.323.1441</a>
-				<a class="m-footer__link" href="mailto:info@tommyrs.com" title="email us">info@tommyrs.com</a>
-				<button type="button" data-btn="contact form btn" class="contact-form-btn">Our Form</button>
-				<!-- <a href="#" title="fill out our contact form" class="contact-form-footer-btn">Our Form</a> -->
-			</div>
+			<a href="tel:630-323-1441" title="call us">630.323.1441</a>
+			<a href="mailto:info@tommyrs.com" title="email us">info@tommyrs.com</a>
+			<button type="button" data-btn="contact form btn" class="btn--blue">Our Form</button>
 		</div>
-		<div class="m-mod--footer">
+
+		
+		<!--	social links
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+		<div class="m-mod--footer l-left">
 			<h4 class="m-mod__title--footer">Socialize</h4>
-			<div class="l-stacked">
-				<a class="m-footer__link" href="#" title="view us on Twitter">Twitter</a>
-				<a class="m-footer__link" href="#" title="view us on Facebook">Facebook</a>
-			</div>
+			<a href="#" title="view us on Twitter">Twitter</a>
+			<a href="#" title="view us on Facebook">Facebook</a>
 		</div>
-		<div class="join-email">
+
+		
+		<!--	join e-newsletter in the footer
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+		<div class="m-mod--footer--join l-left">
 			<h4 class="m-mod__title--footer">Join our email list to receive updates</h4>
-			<form class="m-join-email--footer">
+			<form class="m-join-email">
 				<input class="m-join-email__input" placeholder="Type your email..."></input>
-				<button class="m-join-email__btn--join" type="submit" data-btn="join-btn">Join Now</button>
+				<button class="btn--blue" type="submit" data-btn="join-btn">Join Now</button>
 			</form>
 		</div>
 	</footer>
 
+
+	<!--	js files try to combine into one minified file
+	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	<script src="js/responsive-nav.min.js"></script>
 	<!-- <script src="js/responsiveslides.min.js"></script> -->
 	<script src="js/jquery.flexslider.js"></script>
