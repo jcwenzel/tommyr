@@ -608,7 +608,7 @@ h2 {
 	/*	900px	(900/16=56.25) */
 	@media screen and (min-width: 56.25em) {
 		.width(6);
-		bottom: @5xl;
+		bottom: @4xl;
 	}
 }
 
@@ -941,7 +941,7 @@ html[xmlns] .slides {
 	@shadow: inset 0 0 @1px*5 hsla(0,0%,0%,0.35), inset 0 0 @1px*5 hsla(0,0%,0%,0.35);
 	#box-shadow > .custom(@shadow);
 	text-align: center;
-	background: hsla(0, 0%, 0%, 0.86);
+	background: hsla(0, 0%, 0%, 0.85);
 	
 	@media screen and (min-width: 25em) {
 		padding: @sml @med;
@@ -964,9 +964,16 @@ html[xmlns] .slides {
 			right: @xl;
 		.width(5);
 		margin: 0;
+
+		// moves the site-highlight on top of the slideshow
+		z-index: 2;
 	}
+
+	/*	900px	(900/16=56.25) */
 	@media screen and (min-width: 56.25em) {
-		#grid-container > .column(float, 4, @lrg, @lrg);
+		top: @2xl;
+		right: @2xl;
+		.width(4);
 	}
 }
 
