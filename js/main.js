@@ -15,7 +15,7 @@ var navigation = responsiveNav("#nav-js", {
 // Can also be used with $(document).ready()
 $(document).ready(function() {
   $('.m-slideshow--full').flexslider({
-    animation: "slide",
+    animation: "fade",
 		controlNav: false,
 		directionNav: false
   });
