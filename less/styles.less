@@ -133,6 +133,11 @@ ol {
 	margin: 0;
 	.clearfix;
 	border-bottom: @1px solid @gray-drkest;
+
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		padding: @2xl @page-gutter;
+	}
 	
 	@media screen and (min-width: 88em) {
 		max-width: 88em;
@@ -140,14 +145,25 @@ ol {
 	}
 }
 
-.l-full-wrapper--home-banner {
+.l-full-wrapper--no-padding {
 	&:extend(.l-full-wrapper);
+	.clearfix;
 	border: @1px solid @gray-drkest;
 	border-width: @1px 0 0;
 
 	/*	840px	(840/16=52.5)	*/
 	@media screen and (min-width: 52.5em) {
 		padding: 0;
+	}
+}
+
+.l-full-wrapper--small-padding {
+	&:extend(.l-full-wrapper);
+	.clearfix;
+
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		padding: @lrg @page-gutter;
 	}
 }
 
@@ -203,10 +219,6 @@ ol {
 
 .m-header {
 	background: @white;
-	
-	// @media screen and (min-width: 49em) { // 784
-	// 	background: hsla(100, 0%, 100%, 0.9);
-	// }
 }
 
 .logo {
@@ -328,14 +340,9 @@ ol {
 
 
 
-//	03.3 buttons
+//	03.3 e-newsletter signup
 //	-------------------------------------------------
-h2 {
-	color: @blue;
-	#text-shadow > .black;
-}
-
-.m-join-email {
+.m-signup {
 	width: 100%;
 	margin: @tiny 0 0;
 	
@@ -349,7 +356,12 @@ h2 {
 	}
 }
 
-.m-join-email__input {
+.m-signup__title {
+	color: @blue;
+	#text-shadow > .black;
+}
+
+.m-signup__input {
 	width: 100%;
 	height: @xl;
 	margin: 0 0 @sml;
@@ -766,11 +778,7 @@ html[xmlns] .slides {
 	/*	600px	(600/16=37.5)	*/
 	@media screen and (min-width: 37.5em) {
 		margin: 0 0 @xl;
-	}
-
-	@media screen and (min-width: 56.25em) {
-		#grid-container > .column(float, 4, @lrg, @lrg);
-	}
+	}		
 }
 
 .m-mod__title {
@@ -815,6 +823,12 @@ html[xmlns] .slides {
 	background: @gray-drker;
 	color: @gray-lht;
 
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		.width(4);
+		margin: 0;
+	}
+
 	& > .m-mod__title {
 		color: @white;
 		padding: (@sml/@lrg) 0 0 (@sml/@lrg);
@@ -823,6 +837,11 @@ html[xmlns] .slides {
 		/*	600px	(600/16=37.5)	*/
 		@media screen and (min-width: 37.5em) {
 			padding: (@lrg/@lrg) 0 0 (@lrg/@lrg);
+		}
+
+		/*	900px	(900/16=56.25) */
+		@media screen and (min-width: 56.25em) {
+			padding: (@med/@lrg) 0 0 (@med/@lrg);
 		}
 	}
 }
@@ -844,6 +863,19 @@ html[xmlns] .slides {
 			text-align: center;
 		}
 	}
+
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		.width(4);
+		margin: 0;
+		padding: 0 0 0 @xl;
+	}
+
+	/*	1080px	(1080/16=67.5) */
+	@media screen and (min-width: 67.5em) {
+		padding: 0 0 0 @2xl;
+	}
+
 }
 
 
@@ -854,17 +886,16 @@ html[xmlns] .slides {
 
 	/*	480px	(480/16=30)		*/
 	@media screen and (min-width: 30em) {
-		.width(6);
-		padding-right: @sml;
-
-		&:last-of-type{
-			padding-right: 0;
-		}
+		.width(4);
 	}
 
 	/*	720px	(720/16=45)	*/
 	@media screen and (min-width: 45em) {
-		.width(3);
+		padding: 0 0 0 @xl;
+
+		&:first-of-type {
+			padding: 0;
+		}
 	}
 }
 
@@ -874,7 +905,7 @@ html[xmlns] .slides {
 	color: @blue;
 }
 
-.m-mod--footer--join {
+.m-mod--footer--signup {
 	&:extend(.m-mod--footer);
 	background: hsla(0, 0, 0, 0.85);
 	padding: @sml;
@@ -905,6 +936,11 @@ html[xmlns] .slides {
 	/*	600px	(600/16=37.5)	*/
 	@media screen and (min-width: 37.5em) {
 		padding: 0 @lrg @lrg;
+	}
+
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		padding: 0 @med @med;
 	}
 	
 	p {
@@ -1054,6 +1090,7 @@ footer {
 /*	840px	(840/16=52.5)		@media screen and (min-width: 52.5em)		*/
 /*	900px	(900/16=56.25)	@media screen and (min-width: 56.25em)	*/
 /*	1024px	(1024/16=64)	@media screen and (min-width: 64em)			*/
+/*	1080px	(1080/16=67.5)@media screen and (min-width: 67.5em)		*/
 /*	1280px	(1280/16=80)	@media screen and (min-width: 80em)			*/
 /*	1408px	(1408/16=88)	@media screen and (min-width: 88em)			*/
 /*	1600px	(1600/16=100)	@media screen and (min-width: 100em)		*/
