@@ -96,8 +96,7 @@
 */
 /* line 333, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/mixins.less */
 .btn,
-.btn--blue,
-.contact-form-footer-btn {
+.btn--blue {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -193,12 +192,6 @@
   background-repeat: repeat-x;
   color: #0a2a52;
   text-shadow: 0 0.0625em 0 rgba(255, 255, 255, 0.15);
-}
-/* line 376, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/mixins.less */
-.contact-form-footer-btn {
-  background: #3686e7;
-  width: 100%;
-  line-height: 1.5em;
 }
 /*
 * 
