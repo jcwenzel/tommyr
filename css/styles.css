@@ -30,12 +30,12 @@
 * 
 */
 /*
-* 
-* 
+*
+*
 *	SaaSquatch JumpStart Variable Less file: This contains all of the vital variables.
 * 	JumpStart is an adaptation of:
 *	Golden Grid System (created by Joni Korpi http://goldengridsystem.com/)
-* 
+*
 *	Table of Contents:
 *	----------------------------------------------------------------
 *	01 - page gutter and em definition
@@ -45,8 +45,8 @@
 *		03-b grays - has elements that need to be addressed each project
 *		03-c project specific colors - has elements that need to be addressed each project
 *	04 - font(s) - needs to be changed per project
-* 
-* 
+*
+*
 */
 @font-face {
   font-family: 'icomoon';
@@ -641,7 +641,8 @@ aside,
 div,
 button,
 form,
-input {
+input,
+span {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1048,7 +1049,9 @@ ol {
   color: #3686e7;
 }
 .m-nav > li > a:active,
-.m-nav > li > a:visited:active {
+.m-nav > li > a:visited:active,
+.m-nav > li > a.s-is-current,
+.m-nav > li > a:visited.s-is-current {
   border-bottom: 0.0625em solid #64a1ed;
   color: #64a1ed !important;
 }
@@ -1343,6 +1346,17 @@ html[xmlns] .slides {
 .m-slideshow--full .slides {
   zoom: 1;
 }
+.m-carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  /*	720px	(720/16=45) 	*/
+
+}
+@media screen and (min-width: 45em) {
+  .m-carousel-container {
+    width: 66.667%;
+  }
+}
 .m-carousel {
   zoom: 1;
   display: none;
@@ -1357,25 +1371,35 @@ html[xmlns] .slides {
   clear: both;
   content: ".";
 }
-.m-carousel .owl-wrapper {
+.m-carousel > .item > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.owl-wrapper {
   display: none;
   position: relative;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -webkit-perspective: 1000;
 }
-.m-carousel .owl-wrapper-outer {
+.owl-wrapper-outer {
   overflow: hidden;
   position: relative;
   width: 100%;
+  margin-bottom: -2.25em;
 }
-.m-carousel .owl-item {
+.owl-item {
   float: left;
 }
-.owl-controlls .owl-page,
-.owl-controlls .owl-buttons div {
+.owl-page,
+.owl-buttons > div {
   cursor: pointer;
 }
 .owl-controlls {
+  position: relative;
+  z-index: 1;
+  height: 2.25em;
+  text-align: center;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -1383,76 +1407,45 @@ html[xmlns] .slides {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.owl-controlls .owl-page {
+  display: inline-block;
+  zoom: 1;
+}
+.owl-controlls .owl-page span {
+  display: block;
+  width: 0.8125em;
+  height: 0.8125em;
+  margin: 0 0.5em;
+  padding: 0;
+  -webkit-border-radius: 1.625em;
+  -moz-border-radius: 1.625em;
+  border-radius: 1.625em;
+  border: 0.125em solid #ffffff;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.owl-controlls .owl-page.active span,
+.owl-controlls .owl-page:hover span {
+  background: #3686e7;
+  border-width: 0.0625em;
+  border-color: #196cd2;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  transition: all 0.35s;
+}
 /* mouse grab icon */
 .grabbing {
   cursor: url(grabbing.png) 8 8, move;
 }
 /* fix */
-.m-carousel .owl-wrapper,
-.m-carousel .owl-item {
+.owl-wrapper,
+.owl-item {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-}
-#m-carousel .item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.m-carousel .owl-controlls {
-  margin-top: 10px;
-  text-align: center;
-}
-/* Styling Next and Prev buttons */
-.m-carousel .owl-controlls .owl-buttons div {
-  color: #FFF;
-  display: inline-block;
-  zoom: 1;
-  margin: 5px;
-  padding: 3px 10px;
-  font-size: 12px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  background: #869791;
-  opacity: 0.5;
-}
-/* Clickable class fix problem with hover on touch devices */
-/* Use it for non-touch hover action */
-.m-carousel .owl-controlls.clickable .owl-buttons div:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-/* Styling Pagination*/
-.m-carousel .owl-controlls .owl-page {
-  display: inline-block;
-  zoom: 1;
-}
-.m-carousel .owl-controlls .owl-page span {
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin: 5px 7px;
-  opacity: 0.5;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  background: #869791;
-}
-.m-carousel .owl-controlls .owl-page.active span,
-.m-carousel .owl-controlls.clickable .owl-page:hover span {
-  opacity: 1;
-}
-/* If PaginationNumbers is true */
-.m-carousel .owl-controlls .owl-page span.owl-numbers {
-  height: auto;
-  width: auto;
-  color: #FFF;
-  padding: 2px 10px;
-  font-size: 12px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
 }
 .m-mod,
 .m-mod--facebook,
@@ -1726,10 +1719,10 @@ html[xmlns] .slides {
 }
 /* 04 - state
 --------------------------------------------------  */
-.is-hidden {
+.s-is-hidden {
   display: none;
 }
-.is-visible {
+.s-is-visible {
   display: block;
 }
 /* 05 - theme
