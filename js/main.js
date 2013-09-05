@@ -12,11 +12,29 @@ var navigation = responsiveNav("#nav-js", {
 	close: function(){}   // Function: Close callback
 });
 
-// Can also be used with $(document).ready()
 $(document).ready(function() {
   $('.m-slideshow--full').flexslider({
     animation: "fade",
 		controlNav: false,
 		directionNav: false
   });
+});
+
+$(document).ready(function() {
+  $('#m-carousel').owlCarousel({
+  baseClass: 'm-carousel',
+  theme: 'm-carousel',
+
+  autoPlay: false,
+	slideSpeed : 600,
+  paginationSpeed : 400,
+
+  items : 1,
+  itemsDesktop : false,
+  itemsDesktopSmall : false,
+  itemsTablet: false,
+  itemsMobile : false
+
+  });
+
 });

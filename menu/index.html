@@ -13,51 +13,23 @@
 		<link rel="shortcut icon" href="favicon.png"/>
 		<link rel="apple-touch-icon" sizes="114x114" href="assets/icon.png"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/styles.css"/>
+		<link rel="stylesheet" href="../css/styles.css"/>
 		<!-- <link rel="stylesheet/less" href="less/styles.less"/>
 		<script src="js/less.js"></script> -->
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
-		<script src="js/modernizr-latest.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="../js/modernizr-latest.js"></script>
 	</head>
-	
+
 	<body lang="en">
-		
-<!--	the below color divs are for development use only
-		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-		<!-- <div class="original-colors">
-			<div class="color1"></div>
-			<div class="color2"></div>
-			<div class="color3"></div>
-			<div class="color4"></div>
-			<div class="color5"></div>
-			<div class="color6"></div>
-			<div class="color7"></div>
-			<div class="color8"></div>
-			<div class="color9"></div>
-			<div class="color10"></div>
-			<div class="color11"></div>
-		</div>
-			
-		<div class="less-colors">
-			<div class="color1"></div>
-			<div class="color2"></div>
-			<div class="color3"></div>
-			<div class="color4"></div>
-			<div class="color5"></div>
-			<div class="color6"></div>
-			<div class="color7"></div>
-			<div class="color8"></div>
-			<div class="color9"></div>
-			<div class="color10"></div>
-			<div class="color11"></div>
-		</div> -->
-		
-		
-		<div class="white">
-			<header class="l-full-wrapper">
+		<div class="m-header">
+			<header class="l-full-wrapper--small-padding">
 				<h1 class="logo"><a href="index.html" title="back to the homepage">Tommy R&rsquo;s Catering</a></h1>
+
+
+				<!--	responsive navigation
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 				<nav id="nav-js">
-					<ul class="horizontal-nav">
+					<ul class="m-nav">
 						<li><a href="menus/index.html" title="view our menus">Menus</a></li>
 						<li><a href="events/index.html" title="learn about our events">Events</a></li>
 						<li><a href="to-go/index.html" title="view our to-go menu">To-Go</a></li>
@@ -66,55 +38,49 @@
 						<li><a href="contact.html" title="drop us a line">Contact</a></li>
 					</ul>
 				</nav>
-				<div class="l-inline ico-horizontal-nav-share">
-					<p class="ico-h-nav-title">Share:</p>
-					<a class="ico-h-nav-link-email"		data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
-					<a class="ico-h-nav-link-tweet"		data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
-					<a class="ico-h-nav-link-facebook"	data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
+
+
+				<!--	sharing navigation
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div class="l-inline m-nav--share">
+					<p class="m-nav__title">Share:</p>
+					<a class="m-nav__link--email" data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
+					<a class="m-nav__link--tweet" data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
+					<a class="m-nav__link--facebook" data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
 				</div>
 			</header>
 		</div>
-		
-		<section class="l-full-wrapper">
-			<!-- ><h1>Create the perfect event with Tommy R&rsquo;s.</h1> -->
-			<div class="slideshow">
-				<div class="slideshow-slides">
-					<figure class="slideshow-slide">
-						<img class="slideshow-img" src="img/slideshow/slide1.jpg" />
-						<figcaption class="slideshow-caption">
-							<h2>Tommy Romano knows food</h2>
-							<p>Tommy has been cooking for the Chicagoland area for over 20 years. <a href="" class="slideshow-link">Learn more about Tommy R&rsquo;s</a>.</p>
-						</figcaption>
-					</figure>
-				</div>
-				<ul class="l-inline ico-horizontal-nav">
-					<li class="ico-h-nav-link is-active"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-					<li class="ico-h-nav-link"><a herf="#">1</a></li>
-				</ul>
-			</div>
-			
-			<div class="bucket content-highlight">
-				<h2 class="content-highlight-title">It&rsquo;s WEDDING Season!</h2>
-				<p class="content-highlight-content">Are you looking for the best catering in town for your special day? Get a <a href="contact/index.html" title="link to our form">free estimate</a> today.</p>
-				<button type="button" data-btn="highlight-btn" class="btn">Sample Wedding Menu</button>
-				<div class="join-email">
-					<h2 class="join-email-title">Get Updates Via Email</h2>
-					<form class="join-email-form">
-						<input class="join-email-input" placeholder="Type your email..."></input>
-						<button type="submit" data-btn="join-btn" class="join-btn">Join Now</button>
-					</form>
-				</div>
-			</div>
-		</section>
 
+
+		<!--	interior top carousel: max of 5 slides
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="m-carousel" class="m-carousel">
+        <div class="item">
+        	<img src="../img/slideshow/slide1.jpg" />
+        </div>
+  			<div class="item">
+        	<img src="../img/slideshow/slide2.jpg" />
+        </div>
+    		<div class="item">
+        	<img src="../img/slideshow/slide1.jpg" />
+        </div>
+    		<div class="item">
+        	<img src="../img/slideshow/slide2.jpg" />
+        </div>
+    </div>
+
+
+		<!--	main content
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<div class="gray-lhtest">
 			<section class="l-full-wrapper">
-				<div class="bucket bucket-facebook">
-					<h2>Latest Facebook Chatter</h2>
-					<div id="facebook-feed" class="feed">
+
+
+				<!--	facebook feed: max 2 showing at a time NO PICTURES
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div class="m-mod--facebook l-left">
+					<h2 class="m-mod__title">Latest Facebook Chatter</h2>
+					<div id="facebook-feed" class="m-fb-feed">
 						<ol>
 							<li>
 								<p>Praesent lobortis <a href="#" title="molestie">molestie</a> ligula quis gravida. Nullam nec facilisis metus. nec varius mi.</p>
@@ -124,105 +90,131 @@
 								<p>Praesent lobortis <a href="#" title="molestie">molestie</a> ligula quis gravida. Nullam nec facilisis metus. nec varius mi.</p>
 								<span>00:00:00 00/00/00</span>
 							</li>
-						</ol>					
+						</ol>
 					</div>
 				</div>
-				<div class="bucket">
-					<h2 class="bucket-title">Drop Us A Line</h2>
-					<div class="bucket-body">
-						<ul class="l-stacked bucket-body-labels">
-							<li>Phone</li>
-							<li>Fax</li>
-							<li>Email</li>
-							<li>Mail</li>
+
+
+				<!--	contact information
+				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div class="m-mod--home l-left">
+					<h2 class="m-mod__title">Drop Us A Line</h2>
+					<div class="m-mod__body">
+						<ul class="l-stacked l-left">
+							<li class="m-mod__body__label">Phone</li>
+							<li class="m-mod__body__label">Fax</li>
+							<li class="m-mod__body__label">Email</li>
+							<li class="m-mod__body__label">Mail</li>
 						</ul>
-						<ul class="l-stacked bucket-body-values">
-							<li>630.323.1441</li>
-							<li>630.323.2876</li>
-							<li><a href="#" title="Email us at: info@tommyrs.com">info@tommyrs.com</a></li>
-							<li>825 W. 75th St, Unit D Willowbrook, IL 60527</li>
+
+						<ul class="l-stacked">
+							<li class="m-mod__body__value">630.323.1441</li>
+							<li class="m-mod__body__value">630.323.2876</li>
+							<li class="m-mod__body__value"><a href="#" title="Email us at: info@tommyrs.com">info@tommyrs.com</a></li>
+							<li class="m-mod__body__value">825 W. 75th St, Unit D Willowbrook, IL 60527</li>
 						</ul>
-						<p>For a free estimates fill out our:</p>
-						<button type="button" data-btn="contact form btn" class="contact-form-btn">Easy Contact Form</button>
+						<button type="button" data-btn="contact form btn" class="btn">Get a Free Estimate</button>
 					</div>
 				</div>
-				<div class="bucket">
-					<h2 class="bucket-title">Our Hours</h2>
-					<h4 class="bucket-sub-title">To-Go Hours</h4>
-					<div class="bucket-body">
-						<ul class="l-stacked bucket-body-labels">
-							<li>Mon-Thu</li>
-							<li>Fri-Sat</li>
+
+
+				<!--	hours
+					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<div class="m-mod--home l-left">
+					<h2 class="m-mod__title">Our Hours</h2>
+
+					<h4 class="m-mod__sub-title">To-Go Hours</h4>
+					<div class="m-mod__body">
+						<ul class="l-stacked l-left">
+							<li class="m-mod__body__label">Mon-Thu</li>
+							<li class="m-mod__body__label">Fri-Sat</li>
 						</ul>
-						<ul class="l-stacked bucket-body-values">
-							<li>10:00am - 8:00pm</li>
-							<li>9:00am - 8:00pm</li>
+
+						<ul class="l-stacked">
+							<li class="m-mod__body__value">10:00am - 8:00pm</li>
+							<li class="m-mod__body__value">9:00am - 8:00pm</li>
 						</ul>
 					</div>
-					<h4 class="bucket-sub-title">Catering Hours</h4>
-					<div class="bucket-body">
-						<ul class="l-stacked bucket-body-labels">
-							<li>Mon-Thu</li>
-							<li>Fri-Sat</li>
-							<li>Sun</li>
+
+					<h4 class="m-mod__sub-title">Catering Hours</h4>
+					<div class="m-mod__body">
+						<ul class="l-stacked l-left">
+							<li class="m-mod__body__label">Mon-Thu</li>
+							<li class="m-mod__body__label">Fri-Sat</li>
+							<li class="m-mod__body__label">Sun</li>
 						</ul>
-						<ul class="l-stacked home-bucket-body-values">
-							<li>8:00am - 10:00pm</li>
-							<li>8:00am - 12:00am</li>
-							<li>7:00am - 9:00pm</li>
+
+						<ul class="l-stacked">
+							<li class="m-mod__body__value">8:00am - 10:00pm</li>
+							<li class="m-mod__body__value">8:00am - 12:00am</li>
+							<li class="m-mod__body__value">7:00am - 9:00pm</li>
 						</ul>
-						<p>Hours not working for you? Contact us and we can talk.</p>
-					</div>		
+						<p class="m-mod__note">Hours not working for you? <a href="" title="">Contact us</a> and we can talk.</p>
+					</div>
 				</div>
 			</section>
 		</div>
 
+
+	<!--	footer
+	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<footer class="l-full-wrapper">
-		<div class="footer-bucket">
-			<h4>Main Nav</h4>
-			<div class="l-stacked">
+
+		<div class="l-mod-group">
+			<!--	main links
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Main Nav</h4>
 				<a href="events/index.html" title="info on general events">Events</a>
 				<a href="to-go/index.html" title="info on Tommy's To-Go">To-Go</a>
 				<a href="weddings/index.html" title="info on wedding events">Weddings</a>
 				<a href="corporate/index.html" title="info on corporate events">Corporate</a>
 			</div>
-		</div>
-		<div class="footer-bucket">
-			<h4>Other Links</h4>
-			<div class="l-stacked">
+
+
+			<!--	secondary links
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Other Links</h4>
 				<a href="menus/index.html" title="view all of our menus">Menus</a>
 				<a href="specials/index.html" title="see our specials">Specials</a>
 				<a href="about/index.html" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
 				<a href="emails/index.html" title="view recent newsletters and promotions">Email Archive</a>
 				<a href="#" title="Piccolo" target="_blank">Piccolo</a>
 			</div>
-		</div>
-		<div class="footer-bucket">
-			<h4>Contact</h4>
-			<div class="l-stacked">
+
+
+			<!--	contact info
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<div class="m-mod--footer l-left">
+				<h4 class="m-mod__title--footer">Contact</h4>
+				<button type="button" data-btn="contact form btn" class="btn--blue">Fill Out Our Form</button>
 				<a href="tel:630-323-1441" title="call us">630.323.1441</a>
 				<a href="mailto:info@tommyrs.com" title="email us">info@tommyrs.com</a>
-				<button type="button" data-btn="contact form btn" class="contact-form-btn">Our Form</button>
-				<!-- <a href="#" title="fill out our contact form" class="contact-form-footer-btn">Our Form</a> -->
-			</div>
-		</div>
-		<div class="footer-bucket">
-			<h4>Socialize</h4>
-			<div class="l-stacked">
 				<a href="#" title="view us on Twitter">Twitter</a>
 				<a href="#" title="view us on Facebook">Facebook</a>
 			</div>
 		</div>
-		<div class="join-email">
-			<h4>Join our email list to receive updates</h4>
-			<form>
-				<button type="submit" data-btn="join btn" class="join-btn">Join Now</button>
-				<span><input></input></span>
+
+
+		<!-- e-newsletter signup in the footer
+		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div class="m-mod--footer--signup">
+			<h4 class="m-mod__title--footer">Join our email list to receive updates</h4>
+			<form class="m-signup">
+				<input class="m-signup__input" placeholder="Type your email..."></input>
+				<button class="btn--blue" type="submit" data-btn="signup-btn">Sign Me Up</button>
 			</form>
 		</div>
 	</footer>
-	<script src="js/responsive-nav.min.js"></script>
+
+
+	<!--	js files try to combine into one minified file
+	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="../js/responsive-nav.min.js"></script>
 	<!-- <script src="js/responsiveslides.min.js"></script> -->
-	<script src="js/main.js"></script>
+	<script src="../js/jquery.flexslider.js"></script>
+	<script src="../js/owl.carousel.js"></script>
+	<script src="../js/main.js"></script>
 	</body>
 </html>

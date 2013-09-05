@@ -10,13 +10,14 @@
 *	03 - module
 *	04 - stats
 *	05 - theme
-* 
-*	
+*
+*
 */
 
-@import "base"; //This imports the base.less file
+@import 'base'; 				//	Imports the base.less file
+@import 'm-carousel';		//	Imports m-carousel owl carousel styles
 
-/* below color styles are for development purposes only 
+/* below color styles are for development purposes only
 --------------------------------------------------  */
 .original-colors,
 .less-colors {
@@ -85,7 +86,7 @@ header, article, footer, section, aside, div, button, form, input {
 	.box-sizing;
 }
 
-h1, h2, h3, h4, h5, h6 { 
+h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 @1px*4;
 	#font > .font-book();
 	-webkit-font-smoothing: antialiased;
@@ -138,7 +139,7 @@ ol {
 	@media screen and (min-width: 56.25em) {
 		padding: @2xl @page-gutter;
 	}
-	
+
 	@media screen and (min-width: 88em) {
 		max-width: 88em;
 		margin: 0 auto;
@@ -205,7 +206,7 @@ ol {
 	list-style-type: none;
 	.clearfix;
 	& > a,
-	& > li { 
+	& > li {
 		float: left;
 		display: inline-block;
 	}
@@ -214,7 +215,7 @@ ol {
 /* 03 - module
 --------------------------------------------------  */
 
-//	03.1 main header 
+//	03.1 main header
 //	-------------------------------------------------
 
 .m-header {
@@ -254,14 +255,14 @@ ol {
 	padding: 0;
 	list-style: none;
 	width: 100%;
-	
+
 	& > li {
 		.box-sizing();
 		float: left;
 		width: 100%;
 		display: 100%;
 	}
-	
+
 	&.opened {
 		max-height: 9999px;
 	}
@@ -276,7 +277,7 @@ ol {
 	margin: 0 0 @med;
     overflow: hidden;
     zoom: 1;
-	
+
 	@media screen and (min-width: 49em) {
 		float: right;
 		position: relative;
@@ -300,13 +301,13 @@ ol {
 	border: (@1px * 4) solid @gray;
 	border-width: (@1px * 4) 0;
 	.transition(all .25s);
-	
+
     -webkit-touch-callout: none;
       -webkit-user-select: none;
     	 -moz-user-select: none;
     	  -ms-user-select: none;
     	  	  user-select: none;
-			  
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -316,7 +317,7 @@ ol {
 		height: (@1px * 4);
 		background: @gray;
 	}
-	
+
 	&:hover {
 		border-color: @link-color;
 		.transition(all .25s);
@@ -324,7 +325,7 @@ ol {
 			background: @link-color;
 		}
 	}
-	
+
 	&:active {
 		border-color: darken(@link-color,25%);
 		.transition(all .25s);
@@ -332,7 +333,7 @@ ol {
 			background: darken(@link-color,25%);
 		}
 	}
-	
+
 	@media screen and (min-width: 49em) {
 		display: none;
 	}
@@ -345,7 +346,7 @@ ol {
 .m-signup {
 	width: 100%;
 	margin: @tiny 0 0;
-	
+
 	@media screen and (min-width: 25em) {
 		margin: @sml 0 0;
 	}
@@ -407,7 +408,7 @@ ol {
 	&:first-child {
 		border-top: none;
 	}
-	
+
 	@media screen and (min-width: 49em) {
 		border-top: none;
 		display: inline-block !important;
@@ -427,7 +428,7 @@ ol {
 	}
 	@media screen and (min-width: 49em) {
 			margin: 0 0 0 @lrg;
-			padding: 0 @sml; 
+			padding: 0 @sml;
 			border-bottom: @1px solid hsla(100, 0%, 100%, 0);
 			.transition(all .3s);
 		&:hover {
@@ -453,7 +454,7 @@ ol {
 	background: @gray-lht;
 	#box-shadow > .black(@1px*4);
 	.clearfix;
-	
+
 	.is-active {
 		background: saturate(spin(@red, 353), 1%);
 		border-color: fadeout(@black, 50%);
@@ -583,7 +584,7 @@ ol {
 	padding: 0;
 	display: block;
 	z-index: -1;
-	
+
 	@media screen and (min-width: 56.25em) {
 		.width(12);
 	}
@@ -630,7 +631,7 @@ ol {
 .m-slideshow--full {
 	&:extend(.m-slideshow);
 	.width(12);
-	margin: 0; 
+	margin: 0;
 	padding: 0;
 
 	/*	1280px	(1280/16=80) */
@@ -643,10 +644,10 @@ ol {
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .m-slideshow--full .slides > li {
-	display: none; 
+	display: none;
 	-webkit-backface-visibility: hidden;
 	position: relative;
-} 
+}
 
 .m-slideshow--full .slides img {
 	width: 100%;
@@ -655,11 +656,11 @@ ol {
 
 /* Clearfix for the .slides element */
 .slides:after {
-	content: "\0020"; 
-	display: block; 
-	clear: both; 
-	visibility: hidden; 
-	line-height: 0; 
+	content: "\0020";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
 	height: 0;
 }
 
@@ -675,94 +676,139 @@ html[xmlns] .slides {
 	display: block;
 }
 
-.flex-viewport { 
-	max-height: 2000px; 
-	-webkit-transition: all 1s ease; 
-	-moz-transition: all 1s ease; 
-	-o-transition: all 1s ease; 
+.flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
-.m-slideshow--full .slides { 
+.m-slideshow--full .slides {
 	zoom: 1;
 }
 
 
+.m-carousel {
+  .clearfix;
+  display: none;
+  position: relative;
+  .width(12);
+  -ms-touch-action: pan-y;
+}
 
+.m-carousel .owl-wrapper{
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -webkit-perspective: 1000;
+}
 
-//	03.6 slideshow
-//	-------------------------------------------------
-// .slideshow {
-// 	.width(12);
-// 	height: auto;
-// 	text-align: center;
-// 	padding: @med 0;
-// 	@media screen and (min-width: 56.25em) {
-// 		#grid-container > .column(inline, 8, @lrg, 0);
-// 		float: left;		
-// 	}
-// }
+.m-carousel .owl-wrapper-outer{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
 
-// .slideshow-slides {
-// 	position: relative;
-// 	width: 100%;
-// 	border: (@1px * 4) solid @white;
-// 	overflow: hidden;
-// 	@shadow: inset @1px @1px 0 @gray-lht, inset -@1px -@1px 0 @gray-lht, 0 @1px*4 0 hsla(0,0%,0%,0.25);
-// 	#box-shadow > .custom(@shadow);
-	
-// 	@media screen and (min-width: 37.5em) {
-// 		border-width: (@1px * 6);
-// 	}
-	
-// 	@media screen and (min-width: 56.25em) {
-// 		border-width: @xsml;
-// 	}
-// }
+.m-carousel .owl-item{
+  float: left;
+}
 
-// .slideshow-slide {
-// 	max-height: 400px;
-// 	background: @white;
-	
-// 	@media screen and (min-width: 80em) {
-// 		max-height: 450px;
-// 	}
-// }
+.owl-controlls .owl-page,
+.owl-controlls .owl-buttons div{
+  cursor: pointer;
+}
 
-// .slideshow-img {
-// 	@media screen and (min-width: 80em) {
-// 		margin: 0 auto;
-// 	}
-// }
+.owl-controlls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-// .slideshow-caption {
-// 	padding: @tiny;
-// 	background: hsla(0,0,0,0.65);
-// 	color: @gray-lhtest;
-	
-// 	@media screen and (min-width: 30em) {
-// 		.l-absolute-bottom-right(0,0,0);
-// 		padding: @sml;
-// 	}
-	
-// 	@media screen and (min-width: 37.5em) {
-// 		.l-absolute-bottom-right(0,0,0);
-// 		padding: @sml;
-// 	}
-// }
+/* mouse grab icon */
+.grabbing {
+    cursor:url(grabbing.png) 8 8, move;
+}
 
-// .slideshow-caption > h2 {
-// 	display: none;
-// 	@media screen and (min-width: 30em) {
-// 		display: block;
-// 		font-size: @lrg;
-// 		color: @white;
-// 	}
-// }
+/* fix */
+.m-carousel  .owl-wrapper,
+.m-carousel  .owl-item{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+}
 
-// .slideshow-caption > p {
-// 	font-size: @med;
-// }
+#m-carousel .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.m-carousel .owl-controlls{
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.m-carousel .owl-controlls .owl-buttons div{
+  color: #FFF;
+  display: inline-block;
+  zoom: 1;
+  margin: 5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background: #869791;
+  opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.m-carousel .owl-controlls.clickable .owl-buttons div:hover{
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.m-carousel .owl-controlls .owl-page{
+  display: inline-block;
+  zoom: 1;
+}
+.m-carousel .owl-controlls .owl-page span{
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 5px 7px;
+  opacity: 0.5;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #869791;
+}
+
+.m-carousel .owl-controlls .owl-page.active span,
+.m-carousel .owl-controlls.clickable .owl-page:hover span{
+  opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.m-carousel .owl-controlls .owl-page span.owl-numbers{
+  height: auto;
+  width: auto;
+  color: #FFF;
+  padding: 2px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
 
 
 //	03.6 mod
@@ -778,7 +824,7 @@ html[xmlns] .slides {
 	/*	600px	(600/16=37.5)	*/
 	@media screen and (min-width: 37.5em) {
 		margin: 0 0 @xl;
-	}		
+	}
 }
 
 .m-mod__title {
@@ -848,7 +894,7 @@ html[xmlns] .slides {
 
 .m-mod--home {
 	&:extend(.m-mod);
-	
+
 	/*	720px	(720/16=45)	*/
 	@media screen and (min-width: 45em) {
 		.width(6);
@@ -942,16 +988,16 @@ html[xmlns] .slides {
 	@media screen and (min-width: 56.25em) {
 		padding: 0 @med @med;
 	}
-	
+
 	p {
 		margin: 0 0 @sml;
 	}
-	
+
 	span {
 		color: @gray;
 	}
-	
-	li { 
+
+	li {
 		padding: @sml 0;
 
 		&:first-child {
@@ -978,21 +1024,21 @@ html[xmlns] .slides {
 	#box-shadow > .custom(@shadow);
 	text-align: center;
 	background: hsla(0, 0%, 0%, 0.85);
-	
+
 	@media screen and (min-width: 25em) {
 		padding: @sml @med;
 	}
-	
+
 	@media screen and (min-width: 30em) {
 		padding: @med @lrg;
 	}
-	
+
 	/*	600px	(600/16=37.5)	*/
 	@media screen and (min-width: 37.5em) {
 		.width(8);
 		margin: 0 auto;
 	}
-	
+
 	/*	840px	(840/16=52.5)	*/
 	@media screen and (min-width: 52.5em) {
 		position: absolute;
@@ -1020,7 +1066,7 @@ html[xmlns] .slides {
 	@media screen and (min-width: 25em) {
 		font-size: @xl;
 	}
-	
+
 	@media screen and (min-width: 56.25em) {
 		font-size: @lrg;
 	}
@@ -1028,7 +1074,7 @@ html[xmlns] .slides {
 
 .m-site-higlht__content {
 	color: @gray-lht;
-} 
+}
 
 .m-site-higlht > .btn {
 	margin: 0 auto @xl;
