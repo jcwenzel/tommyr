@@ -65,7 +65,7 @@
 /* 01 - base
 --------------------------------------------------  */
 body {
-	background: @gray-drker;
+	background: @gray-lhtest;
 	#font > .font-book();
 	color: @gray-drker;
 	@media screen and (min-width: 88em) {
@@ -129,27 +129,28 @@ ol {
 
 /* 02 - layout
 --------------------------------------------------  */
-.l-full-wrapper {
-	#grid-container > .column(block, 12, @lrg, @page-gutter);
+.l-wrapper {
+	.width(12);
 	margin: 0;
+	padding: @lrg @page-gutter;
 	.clearfix;
-	border-bottom: @1px solid @gray-drkest;
+	border: @1px solid @gray-drkest;
+	border-width: 0 0 @1px;
 
 	/*	900px	(900/16=56.25) */
 	@media screen and (min-width: 56.25em) {
 		padding: @2xl @page-gutter;
 	}
 
+	/*	1408px	(1408/16=88)	*/
 	@media screen and (min-width: 88em) {
-		max-width: 88em;
-		margin: 0 auto;
+		max-width: 130em;
+		padding: @2xl (@page-gutter*2);
 	}
 }
 
-.l-full-wrapper--no-padding {
-	&:extend(.l-full-wrapper);
-	.clearfix;
-	border: @1px solid @gray-drkest;
+.l-wrapper--no-padding {
+	&:extend(.l-wrapper);
 	border-width: @1px 0 0;
 
 	/*	840px	(840/16=52.5)	*/
@@ -158,13 +159,19 @@ ol {
 	}
 }
 
-.l-full-wrapper--small-padding {
-	&:extend(.l-full-wrapper);
+.l-wrapper--header {
+	&:extend(.l-wrapper);
 	.clearfix;
+	background: @white;
 
 	/*	900px	(900/16=56.25) */
 	@media screen and (min-width: 56.25em) {
-		padding: @lrg @page-gutter;
+		padding: @med @page-gutter;
+	}
+
+	/*	1408px	(1408/16=88)	*/
+	@media screen and (min-width: 88em) {
+		padding: @med (@page-gutter*2);
 	}
 }
 
@@ -217,11 +224,6 @@ ol {
 
 //	03.1 main header
 //	-------------------------------------------------
-
-.m-header {
-	background: @white;
-}
-
 .logo {
 	float: right;
 	width: @em*9.5; // 152/16 = 9.5
@@ -374,29 +376,28 @@ ol {
 
 
 
-
-//	03.4 font icons global
-//	-------------------------------------------------
-[data-icon]:before {
-	font-family: 'icomoon';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-
-
-
 //	03.3 horizontal navigation: includes global nav but will need to be redone when new navigation is implemented
 //	-------------------------------------------------
 .m-nav {
 	border: @1px solid @gray-lhtest;
+
+	/*	784px	(784/16=49)		*/
 	@media screen and (min-width: 49em) {
 		border: none;
+	}
+}
+
+.m-nav--share {
+	&:extend(.ico-horizontal-nav);
+	#box-shadow > .black(0);
+	display: none;
+
+	/*	784px	(784/16=49)		*/
+	@media screen and (min-width: 49em) {
+		.l-absolute-right(-@med, 0);
+		display: block;
+		padding: @1px*6 @xsml;
+		background: @gray-lhtest;
 	}
 }
 
@@ -409,14 +410,16 @@ ol {
 		border-top: none;
 	}
 
+	/*	784px	(784/16=49)		*/
 	@media screen and (min-width: 49em) {
 		border-top: none;
 		display: inline-block !important;
 		width: auto !important;
 	}
 }
-.m-nav > li > a,
-.m-nav > li > a:visited {
+
+.m-nav__link,
+.m-nav__link:visited {
 	color: @gray-lht;
 	text-decoration: none;
 	&:hover {
@@ -427,9 +430,11 @@ ol {
 		border-bottom: @1px solid lighten(@link-color,10%);
 		color: lighten(@link-color,10%) !important;
 	}
+
+	/*	784px	(784/16=49)		*/
 	@media screen and (min-width: 49em) {
 			margin: 0 0 0 @lrg;
-			padding: 0 @sml;
+			padding: 0 @sml (@1px*4);
 			border-bottom: @1px solid hsla(100, 0%, 100%, 0);
 			.transition(all .3s);
 		&:hover {
@@ -444,47 +449,7 @@ ol {
 	}
 }
 
-
-
-
-//	03.5 icon horizontal nav: includes top share section and slideshow navigation
-//	-------------------------------------------------
-.m-nav--slideshow {
-	margin: 0 auto;
-	padding: @tiny @xsml;
-	background: @gray-lht;
-	#box-shadow > .black(@1px*4);
-	.clearfix;
-
-	.is-active {
-		background: saturate(spin(@red, 353), 1%);
-		border-color: fadeout(@black, 50%);
-	}
-}
-
-.m-nav--share {
-	&:extend(.ico-horizontal-nav);
-	#box-shadow > .black(0);
-	display: none;
-
-	@media screen and (min-width: 49em) {
-		.l-absolute-right(0, @page-gutter);
-		display: block;
-		padding: @1px*6 @xsml;
-		background: @gray-lhtest;
-	}
-}
-
-.m-nav__title {
-	float: left;
-	margin: 0 @xsml 0 0;
-	padding: @1px/@sml 0 0;
-	font-size: @sml;
-	line-height: 1.5em;
-	color: @gray;
-}
-
-.m-nav__link {
+.m-nav__link--icon {
 	width: @med;
 	height: @med;
 	margin-left: @xsml;
@@ -493,7 +458,6 @@ ol {
 	text-decoration: none;
 	font-size: @med;
 	line-height: 0;
-	text-indent: -9999em;
 	color: @white;
 	&:first-child {
 		margin-left: 0;
@@ -506,8 +470,31 @@ ol {
 	}
 }
 
-.m-nav__link--email,
-.m-nav__link--email:visited {
+.m-nav__title {
+	float: left;
+	margin: 0 @xsml 0 0;
+	padding: @1px/@sml 0 0;
+	font-size: @sml;
+	line-height: 1.5em;
+	color: @gray;
+}
+
+
+//	03.4 font icons global
+//	-------------------------------------------------
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.i-email,
+.i-email:visited {
 	&:extend(.m-nav__link all);
 	padding: (@1px*2);
 	text-indent: 0;
@@ -521,8 +508,8 @@ ol {
 	}
 }
 
-.m-nav__link--tweet,
-.m-nav__link--tweet:visited {
+.i-tweet,
+.i-tweet:visited {
 	&:extend(.m-nav__link all);
 	padding: (@1px*2);
 	text-indent: 0;
@@ -536,8 +523,8 @@ ol {
 	}
 }
 
-.m-nav__link--facebook,
-.m-nav__link--facebook:visited {
+.i-facebook,
+.i-facebook:visited {
 	&:extend(.m-nav__link all);
 	padding: (@1px*2);
 	text-indent: 0;
@@ -555,147 +542,45 @@ ol {
 
 
 
-//	03.6 slideshow
+//	03.5 carousel styles
 //	-------------------------------------------------
-.m-slideshow {
-	height: auto;
-	text-align: center;
-	padding: @med 0;
-	.transition(all .35s);
-}
-
-.m-slide__caption {
-	padding: @tiny @med;
-	background: @gray-drker;
-}
-
-.m-slide__caption__content {
-	font-size: @med;
-	/*	480px	(480/16=30)		*/
-	@media screen and (min-width: 30em) {
-		font-size: (@med*1.2);
-	}
-}
-
-.m-slideshow--full-screen {
-	&:extend(.m-slideshow);
-	float: none;
-	position: absolute;
-	top: 0;
-	padding: 0;
-	display: block;
-	z-index: -1;
-
-	@media screen and (min-width: 56.25em) {
-		.width(12);
-	}
-}
-
-.m-slide__caption--full-screen {
-	&:extend(.m-slide__caption);
-	border: @1px solid (@gray-drkest);
-	border-width: 0 0 @1px 0;
-	color: @gray-lhtest;
-
-	/*	480px	(480/16=30)		*/
-	@media screen and (min-width: 30em) {
-		padding: @sml @lrg;
-	}
-
-	/*	720px	(720/16=45) 	*/
-	@media screen and (min-width: 45em) {
-		.width(7);
-		position: absolute;
-			bottom: @2xl;
-			left: 0;
-		color: @gray-drker;
-		text-align: left;
-		background: hsla(100,0,100%,0.85);
-		border-width: @1px @1px @1px 0;
-	}
-
-	/*	840px	(840/16=52.5)	*/
-	@media screen and (min-width: 52.5em) {
-		.width(5);
-	}
-
-	/*	900px	(900/16=56.25) */
-	@media screen and (min-width: 56.25em) {
-		.width(6);
-		bottom: @4xl;
-	}
-}
-
-
-/* FlexSlider Necessary Styles
-*********************************/
-.m-slideshow--full {
-	&:extend(.m-slideshow);
-	.width(12);
-	margin: 0;
-	padding: 0;
-
-	/*	1280px	(1280/16=80) */
-	@media screen and (min-width: 80em) {
-		max-width: 80em;
-		margin: 0 auto;
-	}
-
-}
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-.m-slideshow--full .slides > li {
-	display: none;
-	-webkit-backface-visibility: hidden;
-	position: relative;
-}
-
-.m-slideshow--full .slides img {
-	width: 100%;
-	display: block;
-}
-
-/* Clearfix for the .slides element */
-.slides:after {
-	content: "\0020";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-html[xmlns] .slides {
-	display: block;
-}
-
-* html .slides {
-	height: 1%;
-}
-
-.no-js .slides > li:first-child {
-	display: block;
-}
-
-.flex-viewport {
-	max-height: 2000px;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-
-.m-slideshow--full .slides {
-	zoom: 1;
-}
-
 .m-carousel-container {
 	.width(12);
 	margin: 0 auto;
+	border: (@sml/2) solid @white;
+	border-width: 0 (@sml/2) (@sml/2);
 
 	/*	720px	(720/16=45) 	*/
 	@media screen and (min-width: 45em) {
 		.width(8);
+	}
+}
+
+.m-carousel-container--full {
+	&:extend(.m-carousel-container );
+	border-width: 0;
+
+	& > .m-carousel {
+		border-width: 0;
+
+		/*	1120px	(1120/16=70)	*/
+	  @media screen and (min-width: 70em) {
+	  	max-width: 70em;
+	  	border: @1px solid @gray-drkest;
+			border-width: 0 @1px @1px;
+	  }
+	}
+
+	/*	720px	(720/16=45) 	*/
+	@media screen and (min-width: 45em) {
+		.width(12);
+	}
+
+	/*	1120px	(1120/16=70)	*/
+	@media screen and (min-width: 70em) {
+		max-width: 70em;
+		border: (@sml/2) solid @white;
+		border-width: 0 (@sml/2) (@sml/2);
 	}
 }
 
@@ -704,13 +589,32 @@ html[xmlns] .slides {
   display: none;
   position: relative;
   .width(12);
+  border: @1px solid @gray-drkest;
+	border-width: 0 @1px @1px;
   -ms-touch-action: pan-y;
 
-  & > .item > img {
-	  display: block;
-	  width: 100%;
-	  height: auto;
-	}
+  /*	1120px	(1120/16=70)	*/
+  @media screen and (min-width: 70em) {
+  	max-width: 70em;
+  }
+}
+
+.m-carousel__caption {
+	position: absolute;
+	.width(12);
+	padding: @med;
+	background: fade(@black, 24%);
+	color: @white;
+
+
+}
+
+.m-carousel__caption__title {
+	font-size: @lrg;
+}
+
+.m-carousel__link {
+	color: @red;
 }
 
 .owl-wrapper {
@@ -729,6 +633,16 @@ html[xmlns] .slides {
 
 .owl-item {
   float: left;
+
+  & > .item {
+  	position: relative;
+  }
+
+  & > .item > img {
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
 }
 
 .owl-page,
@@ -741,6 +655,8 @@ html[xmlns] .slides {
 	z-index: 1;
 	height: @xl;
   text-align: center;
+  background: hsla(0,0%,0%,0.25);
+  box-shadow: 0 -(@sml/2) @sml hsla(0,0%,0%,0.25);
 
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -748,6 +664,11 @@ html[xmlns] .slides {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /*	1120px	(1120/16=70)	*/
+  @media screen and (min-width: 70em) {
+  	max-width: 70em;
+  }
 
   & .owl-page {
 	  display: inline-block;
@@ -1013,25 +934,6 @@ html[xmlns] .slides {
 		.width(8);
 		margin: 0 auto;
 	}
-
-	/*	840px	(840/16=52.5)	*/
-	@media screen and (min-width: 52.5em) {
-		position: absolute;
-			top: @xl;
-			right: @xl;
-		.width(5);
-		margin: 0;
-
-		// moves the site-highlight on top of the slideshow
-		z-index: 2;
-	}
-
-	/*	900px	(900/16=56.25) */
-	@media screen and (min-width: 56.25em) {
-		top: @2xl;
-		right: @2xl;
-		.width(4);
-	}
 }
 
 
@@ -1077,15 +979,12 @@ html[xmlns] .slides {
 /* 05 - theme
 --------------------------------------------------  */
 
-.gray-lhtest {
-	background: @gray-lhtest;
-}
-
 
 /* footer styles
 --------------------------------------------------  */
 footer {
 	padding: @xl @page-gutter;
+	background: @gray-drker;
 
 	a,
 	a:visited {
@@ -1116,6 +1015,7 @@ footer {
 /*	900px	(900/16=56.25)	@media screen and (min-width: 56.25em)	*/
 /*	1024px	(1024/16=64)	@media screen and (min-width: 64em)			*/
 /*	1080px	(1080/16=67.5)@media screen and (min-width: 67.5em)		*/
+/*	1120px	(1120/16=70)	@media screen and (min-width: 70em)			*/
 /*	1280px	(1280/16=80)	@media screen and (min-width: 80em)			*/
 /*	1408px	(1408/16=88)	@media screen and (min-width: 88em)			*/
 /*	1600px	(1600/16=100)	@media screen and (min-width: 100em)		*/

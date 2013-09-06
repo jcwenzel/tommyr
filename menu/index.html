@@ -21,8 +21,8 @@
 	</head>
 
 	<body lang="en">
-		<div class="m-header">
-			<header class="l-full-wrapper--small-padding">
+		<div class="l-wrapper--header">
+			<header>
 				<h1 class="logo"><a href="index.html" title="back to the homepage">Tommy R&rsquo;s Catering</a></h1>
 
 
@@ -30,23 +30,23 @@
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 				<nav id="nav-js">
 					<ul class="m-nav">
-						<li><a class="s-is-current" href="menus/index.html" title="view our menus">Menus</a></li>
-						<li><a href="events/index.html" title="learn about our events">Events</a></li>
-						<li><a href="to-go/index.html" title="view our to-go menu">To-Go</a></li>
-						<li><a href="weddings/index.html" title="learn about our wedding events">Weddings</a></li>
-						<li><a href="corporate/index.html" title="learn about our corporate offerings">Corporate</a></li>
-						<li><a href="contact.html" title="drop us a line">Contact</a></li>
+						<li><a class="m-nav__link s-is-current" href="menus/index.html" title="view our menus">Menus</a></li>
+						<li><a class="m-nav__link" href="events/index.html" title="learn about our events">Events</a></li>
+						<li><a class="m-nav__link" href="to-go/index.html" title="view our to-go menu">To-Go</a></li>
+						<li><a class="m-nav__link" href="weddings/index.html" title="learn about our wedding events">Weddings</a></li>
+						<li><a class="m-nav__link" href="corporate/index.html" title="learn about our corporate offerings">Corporate</a></li>
+						<li><a class="m-nav__link" href="contact.html" title="drop us a line">Contact</a></li>
 					</ul>
 				</nav>
 
 
 				<!--	sharing navigation
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="l-inline m-nav--share">
+				<div class="l-inline m-nav--share s-is-hidden">
 					<p class="m-nav__title">Share:</p>
-					<a class="m-nav__link--email" data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
-					<a class="m-nav__link--tweet" data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
-					<a class="m-nav__link--facebook" data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
+					<a class="m-nav__link--icon i-email" data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
+					<a class="m-nav__link--icon i-tweet" data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
+					<a class="m-nav__link--icon i-facebook" data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
 				</div>
 			</header>
 		</div>
@@ -74,93 +74,91 @@
 
 		<!--	main content
 		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div class="gray-lhtest">
-			<section class="l-full-wrapper">
+		<section class="l-wrapper">
 
 
-				<!--	facebook feed: max 2 showing at a time NO PICTURES
+			<!--	facebook feed: max 2 showing at a time NO PICTURES
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<div class="m-mod--facebook l-left">
+				<h2 class="m-mod__title">Latest Facebook Chatter</h2>
+				<div id="facebook-feed" class="m-fb-feed">
+					<ol>
+						<li>
+							<p>Praesent lobortis <a href="#" title="molestie">molestie</a> ligula quis gravida. Nullam nec facilisis metus. nec varius mi.</p>
+							<span>00:00:00 00/00/00</span>
+						</li>
+						<li>
+							<p>Praesent lobortis <a href="#" title="molestie">molestie</a> ligula quis gravida. Nullam nec facilisis metus. nec varius mi.</p>
+							<span>00:00:00 00/00/00</span>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+
+			<!--	contact information
+			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<div class="m-mod--home l-left">
+				<h2 class="m-mod__title">Drop Us A Line</h2>
+				<div class="m-mod__body">
+					<ul class="l-stacked l-left">
+						<li class="m-mod__body__label">Phone</li>
+						<li class="m-mod__body__label">Fax</li>
+						<li class="m-mod__body__label">Email</li>
+						<li class="m-mod__body__label">Mail</li>
+					</ul>
+
+					<ul class="l-stacked">
+						<li class="m-mod__body__value">630.323.1441</li>
+						<li class="m-mod__body__value">630.323.2876</li>
+						<li class="m-mod__body__value"><a href="#" title="Email us at: info@tommyrs.com">info@tommyrs.com</a></li>
+						<li class="m-mod__body__value">825 W. 75th St, Unit D Willowbrook, IL 60527</li>
+					</ul>
+					<button type="button" data-btn="contact form btn" class="btn">Get a Free Estimate</button>
+				</div>
+			</div>
+
+
+			<!--	hours
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="m-mod--facebook l-left">
-					<h2 class="m-mod__title">Latest Facebook Chatter</h2>
-					<div id="facebook-feed" class="m-fb-feed">
-						<ol>
-							<li>
-								<p>Praesent lobortis <a href="#" title="molestie">molestie</a> ligula quis gravida. Nullam nec facilisis metus. nec varius mi.</p>
-								<span>00:00:00 00/00/00</span>
-							</li>
-							<li>
-								<p>Praesent lobortis <a href="#" title="molestie">molestie</a> ligula quis gravida. Nullam nec facilisis metus. nec varius mi.</p>
-								<span>00:00:00 00/00/00</span>
-							</li>
-						</ol>
-					</div>
+			<div class="m-mod--home l-left">
+				<h2 class="m-mod__title">Our Hours</h2>
+
+				<h4 class="m-mod__sub-title">To-Go Hours</h4>
+				<div class="m-mod__body">
+					<ul class="l-stacked l-left">
+						<li class="m-mod__body__label">Mon-Thu</li>
+						<li class="m-mod__body__label">Fri-Sat</li>
+					</ul>
+
+					<ul class="l-stacked">
+						<li class="m-mod__body__value">10:00am - 8:00pm</li>
+						<li class="m-mod__body__value">9:00am - 8:00pm</li>
+					</ul>
 				</div>
 
+				<h4 class="m-mod__sub-title">Catering Hours</h4>
+				<div class="m-mod__body">
+					<ul class="l-stacked l-left">
+						<li class="m-mod__body__label">Mon-Thu</li>
+						<li class="m-mod__body__label">Fri-Sat</li>
+						<li class="m-mod__body__label">Sun</li>
+					</ul>
 
-				<!--	contact information
-				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="m-mod--home l-left">
-					<h2 class="m-mod__title">Drop Us A Line</h2>
-					<div class="m-mod__body">
-						<ul class="l-stacked l-left">
-							<li class="m-mod__body__label">Phone</li>
-							<li class="m-mod__body__label">Fax</li>
-							<li class="m-mod__body__label">Email</li>
-							<li class="m-mod__body__label">Mail</li>
-						</ul>
-
-						<ul class="l-stacked">
-							<li class="m-mod__body__value">630.323.1441</li>
-							<li class="m-mod__body__value">630.323.2876</li>
-							<li class="m-mod__body__value"><a href="#" title="Email us at: info@tommyrs.com">info@tommyrs.com</a></li>
-							<li class="m-mod__body__value">825 W. 75th St, Unit D Willowbrook, IL 60527</li>
-						</ul>
-						<button type="button" data-btn="contact form btn" class="btn">Get a Free Estimate</button>
-					</div>
+					<ul class="l-stacked">
+						<li class="m-mod__body__value">8:00am - 10:00pm</li>
+						<li class="m-mod__body__value">8:00am - 12:00am</li>
+						<li class="m-mod__body__value">7:00am - 9:00pm</li>
+					</ul>
+					<p class="m-mod__note">Hours not working for you? <a href="" title="">Contact us</a> and we can talk.</p>
 				</div>
-
-
-				<!--	hours
-					––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="m-mod--home l-left">
-					<h2 class="m-mod__title">Our Hours</h2>
-
-					<h4 class="m-mod__sub-title">To-Go Hours</h4>
-					<div class="m-mod__body">
-						<ul class="l-stacked l-left">
-							<li class="m-mod__body__label">Mon-Thu</li>
-							<li class="m-mod__body__label">Fri-Sat</li>
-						</ul>
-
-						<ul class="l-stacked">
-							<li class="m-mod__body__value">10:00am - 8:00pm</li>
-							<li class="m-mod__body__value">9:00am - 8:00pm</li>
-						</ul>
-					</div>
-
-					<h4 class="m-mod__sub-title">Catering Hours</h4>
-					<div class="m-mod__body">
-						<ul class="l-stacked l-left">
-							<li class="m-mod__body__label">Mon-Thu</li>
-							<li class="m-mod__body__label">Fri-Sat</li>
-							<li class="m-mod__body__label">Sun</li>
-						</ul>
-
-						<ul class="l-stacked">
-							<li class="m-mod__body__value">8:00am - 10:00pm</li>
-							<li class="m-mod__body__value">8:00am - 12:00am</li>
-							<li class="m-mod__body__value">7:00am - 9:00pm</li>
-						</ul>
-						<p class="m-mod__note">Hours not working for you? <a href="" title="">Contact us</a> and we can talk.</p>
-					</div>
-				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 
 
 	<!--	footer
 	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<footer class="l-full-wrapper">
+	<footer class="l-wrapper">
 
 		<div class="l-mod-group">
 			<!--	main links
@@ -214,8 +212,6 @@
 	<!--	js files try to combine into one minified file
 	––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<script src="../js/responsive-nav.min.js"></script>
-	<!-- <script src="js/responsiveslides.min.js"></script> -->
-	<script src="../js/jquery.flexslider.js"></script>
 	<script src="../js/owl.carousel.js"></script>
 	<script src="../js/main.js"></script>
 	</body>

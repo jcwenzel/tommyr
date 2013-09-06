@@ -12,13 +12,13 @@ var navigation = responsiveNav("#nav-js", {
 	close: function(){}   // Function: Close callback
 });
 
-$(document).ready(function() {
-  $('.m-slideshow--full').flexslider({
-    animation: "fade",
-		controlNav: false,
-		directionNav: false
-  });
-});
+// $(document).ready(function() {
+//   $('.m-slideshow--full').flexslider({
+//     animation: "fade",
+// 		controlNav: false,
+// 		directionNav: false
+//   });
+// });
 
 $(document).ready(function() {
   $('#m-carousel').owlCarousel({
@@ -34,7 +34,22 @@ $(document).ready(function() {
   itemsDesktopSmall : false,
   itemsTablet: false,
   itemsMobile : false
-
   });
+});
 
+$(document).ready(function() {
+  $('#m-carousel--full').owlCarousel({
+  baseClass: 'm-carousel--full',
+  theme: 'm-carousel--full',
+
+  autoPlay: false,
+  slideSpeed : 600,
+  paginationSpeed : 400,
+
+  items : 1,
+  itemsDesktop : false,
+  itemsDesktopSmall : false,
+  itemsTablet: false,
+  itemsMobile : false
+  });
 });
