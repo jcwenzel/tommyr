@@ -12,14 +12,7 @@ var navigation = responsiveNav("#nav-js", {
 	close: function(){}   // Function: Close callback
 });
 
-// $(document).ready(function() {
-//   $('.m-slideshow--full').flexslider({
-//     animation: "fade",
-// 		controlNav: false,
-// 		directionNav: false
-//   });
-// });
-
+// owl carousel
 $(document).ready(function() {
   $('#m-carousel').owlCarousel({
   baseClass: 'm-carousel',
