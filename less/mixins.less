@@ -342,10 +342,10 @@
 		color: darken(@red,38%);
 		@shadow: @1px @1px 0 hsla(0,0%,0%,0.25), -@1px -@1px 0 hsla(0,0%,0%,0.25);
 		#box-shadow > .custom(@shadow);
-		border: 1px solid fadeout(@black, 50%);
+		border: 1px solid fadeout(black, 50%);
 		.transition(all .35s);
 	&:visited {
-		color: @white !important;
+		color: white !important;
 		.transition(all .35s);
 	}
 	&:hover {
@@ -365,6 +365,11 @@
 	}
 }
 
+.btn--secondary {
+	&:extend(.btn);
+	background-color: @gray;
+}
+
 .btn--blue {
 	&:extend(.btn);
 	background-color: @blue;
@@ -372,3 +377,10 @@
 	color: darken(@blue,38%);
 	#text-shadow > .white(@1px, 0, 0, 0.15);
 }
+
+
+
+
+
+
+
