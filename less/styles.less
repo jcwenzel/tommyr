@@ -96,6 +96,12 @@ nav {
 	}
 }
 
+//	text related fonts
+//	-------------------------------------------------
+.t-bold {
+	font-weight: @t-bold;
+}
+
 //	03.3 e-newsletter signup
 //	-------------------------------------------------
 .m-form {
@@ -516,19 +522,48 @@ footer {
 
 
 
-/*	400px	(400/16=25)			@media screen and (min-width: 25em)	*/
-/*	480px	(480/16=30)			@media screen and (min-width: 30em)	*/
-/*	600px	(600/16=37.5)		@media screen and (min-width: 37.5em)	*/
-/*	720px	(720/16=45)			@media screen and (min-width: 45em)	*/
-/*	840px	(840/16=52.5)		@media screen and (min-width: 52.5em)	*/
-/*	900px	(900/16=56.25)	@media screen and (min-width: 56.25em)	*/
-/*	1024px	(1024/16=64)	@media screen and (min-width: 64em)	*/
+/*	400px	(400/16=25)@media screen and (min-width: 25em)	*/
+/*	480px	(480/16=30)@media screen and (min-width: 30em)	*/
+/*	600px	(600/16=37.5)@media screen and (min-width: 37.5em)	*/
+/*	720px	(720/16=45)@media screen and (min-width: 45em)	*/
+/*	840px	(840/16=52.5)@media screen and (min-width: 52.5em)	*/
+/*	900px	(900/16=56.25)@media screen and (min-width: 56.25em)	*/
+/*	1024px	(1024/16=64)@media screen and (min-width: 64em)	*/
 /*	1080px	(1080/16=67.5)@media screen and (min-width: 67.5em)	*/
-/*	1120px	(1120/16=70)	@media screen and (min-width: 70em)	*/
-/*	1280px	(1280/16=80)	@media screen and (min-width: 80em)	*/
-/*	1408px	(1408/16=88)	@media screen and (min-width: 88em)	*/
-/*	1600px	(1600/16=100)	@media screen and (min-width: 100em)	*/
+/*	1120px	(1120/16=70)@media screen and (min-width: 70em)	*/
+/*	1280px	(1280/16=80)@media screen and (min-width: 80em)	*/
+/*	1408px	(1408/16=88)@media screen and (min-width: 88em)	*/
+/*	1600px	(1600/16=100)@media screen and (min-width: 100em)	*/
+/*	1800px	(1800/16=112.5)@media screen and (min-width: 112.5em)	*/
 /*	2080px	(2080/16=130)	@media screen and (min-width: 130em)	*/
+
+
+
+/* out of date browser alert styles
+--------------------------------------------------  */
+#buorg.buorg {
+	position: fixed !important;
+	height: 100% !important;
+	padding-top: 270px;
+	background: rgb(65,64,66) url(../img/alert.jpg) no-repeat center @2xl !important;
+	border: none !important;
+	text-align: center !important;
+	font-size: 16px !important;
+	overflow-y: hidden;
+	
+	& div {
+		width: 700px !important;
+		margin: 0 auto !important;
+		color: white !important;
+		
+		a {
+			color: #EF4136 !important;
+		}
+	}
+	
+	#buorgclose { display: none !important;}
+}
+
 
 
 
