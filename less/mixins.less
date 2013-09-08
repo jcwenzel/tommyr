@@ -367,7 +367,20 @@
 
 .btn--secondary {
 	&:extend(.btn);
-	background-color: @gray;
+	background-color: lighten(@gray-lht,15%);
+	#gradient > .vertical(100, 0%, 100%, .75, 0);
+	color: @gray-drker;
+	#text-shadow > .white(@1px, 0, 0, 0.8);
+	&:hover {
+		background-color: darken(@gray-lht,5%);
+		color: black;
+		#text-shadow > .white(@1px, 0, 0, 0.5);
+	}
+	&:active {
+		background-color: darken(@gray-lht,20%);
+		color: darken(@gray-drkest,20%);
+		#text-shadow > .white(@1px, 0, 0, 0.3);
+	}
 }
 
 .btn--blue {

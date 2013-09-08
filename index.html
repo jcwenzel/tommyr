@@ -105,11 +105,11 @@
 				<form class="m-form">
 					<h2 class="m-form__title">Get a free estimate for your event</h2>
 						<div class="m-form__object">
-							<label class="m-form__label">Email</label>
+							<label class="m-form__label" for="email">Email</label>
 							<input class="m-form__input" type="email" name="email" placeholder="Type your email..." autocomplete="on" required></input>
 						</div>
 						<div class="m-form__object">
-							<label class="m-form__label">About your event</label>
+							<label class="m-form__label" for="eventDescription">About your event</label>
 							<textarea class="m-form__textarea" type="text" name="eventDescription" placeholder="Tell us about your event..." required></textarea>
 						</div>
 							<button class="btn" type="submit">Get a Free Estimate</button>
@@ -208,9 +208,9 @@
 			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<div class="m-mod--footer l-left">
 				<h4 class="m-mod__title--footer">Contact</h4>
-				<button type="button" data-btn="contact form btn" class="btn--blue">Fill Out Our Form</button>
 				<a href="tel:630-323-1441" title="call us">630.323.1441</a>
 				<a href="mailto:info@tommyrs.com" title="email us">info@tommyrs.com</a>
+				<a href="#" title="Tommy's contact form">Contact Form</a>
 				<a href="#" title="view us on Twitter">Twitter</a>
 				<a href="#" title="view us on Facebook">Facebook</a>
 			</div>
@@ -220,10 +220,13 @@
 		<!-- e-newsletter signup in the footer
 		––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<div class="m-mod--footer--signup">
-			<h4 class="m-mod__title--footer">Join our email list to receive updates</h4>
-			<form class="m-signup">
-				<input class="m-signup__input" placeholder="Type your email..."></input>
-				<button class="btn--blue" type="submit" data-btn="signup-btn">Sign Me Up</button>
+			<form class="m-form">
+				<h2 class="m-form__title">Join our email list for updates</h2>
+				<div class="m-form__object">
+					<label class="m-form__label" for="email">Email</label>
+					<input class="m-form__input" placeholder="Type your email..."></input>
+				</div>
+				<button class="btn--secondary" type="submit" data-btn="signup-btn">Sign Me Up</button>
 			</form>
 		</div>
 	</footer>

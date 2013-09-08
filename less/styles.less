@@ -37,7 +37,7 @@ body {
 	}
 }
 
-header, article, footer, section, aside, div, button, form, input, span {
+header, article, footer, section, aside, div, button, form, input, textarea, span {
 	.box-sizing;
 }
 
@@ -291,32 +291,43 @@ ol {
 
 //	03.3 e-newsletter signup
 //	-------------------------------------------------
-.m-signup {
+.m-form {
 	width: 100%;
-	margin: @tiny 0 0;
 
-	@media screen and (min-width: 25em) {
-		margin: @sml 0 0;
-	}
-
-	& > .btn--blue {
+	& > .btn,
+	& > .btn--secondary {
 		margin: 0 auto;
 		text-align: center;
 	}
 }
 
-.m-signup__title {
-	color: @blue;
+.m-form__title {
+	text-align: center;
+	color: white;
 	#text-shadow > .black;
 }
 
-.m-signup__input {
+.m-form__label {
+	display: block;
+	margin-bottom: (@1px*4);
+	font-size: @med;
+	text-align: left;
+	color: @gray;
+}
+
+.m-form__input,
+.m-form__textarea {
+	display: block;
 	width: 100%;
 	height: @xl;
 	margin: 0 0 @sml;
 	padding: 0 @tiny;
 	line-height: @xl;
 	border: 1px solid fadeout(black, 50%);
+}
+
+.m-form__textarea {
+	height: @3xl;
 }
 
 
