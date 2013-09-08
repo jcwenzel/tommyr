@@ -21,16 +21,15 @@
 //
 // 01 - imports
 // -------------------------------------------------------------------------------------
-@import "variables"; //This imports the variables for the project
-@import "fonts"; //This imports the variables for the project
-@import "mixins"; //This imports the mixins for the project.
-@import "grid"; //This imports the grid.less file. How to use instructions can be found in the file.
+@import "variables";	//	This imports the variables for the project
+@import "fonts";			//	This imports the variables for the project
+@import "mixins";			//	This imports the mixins for the project.
+@import "grid";				//	This imports the grid.less file. How to use instructions can be found in the file.
 
 
 
 
-//
-// 02 - consistency fixes
+// overall resets
 // -------------------------------------------------------------------------------------
 body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, th, td, article, aside, figure, footer, header,hgroup, menu, nav, section {
 	margin: 0;
@@ -38,6 +37,13 @@ body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, f
 	border: 0;
 }
 
+ol {
+	list-style: none;
+}
+
+
+//	html & body specfic resets
+//	-------------------------------------------------
 html {
 	height: 100%; 
 	-webkit-text-size-adjust: 100%; 
@@ -50,10 +56,16 @@ body {
 	font-size: 100%;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, audio, canvas, video {
-	display: block;
+
+//	apply box-sizing to what is needed
+//	-------------------------------------------------
+header, article, footer, section, aside, div, button, form, input, textarea, span {
+	.box-sizing;
 }
 
+
+//	form elements resest
+//	-------------------------------------------------
 input, textarea, button, select {
 	margin: 0;
 	font-size: 100%;
@@ -83,6 +95,9 @@ table {
     border-spacing: 0;
 }
 
+
+//	clearfix
+//	-------------------------------------------------
 .clearfix {
   zoom: 1;
 	&:after {
@@ -95,10 +110,7 @@ table {
 }
 
 
-
-
-//
-// 03 - simple fluid media
+// simple fluid media
 // -------------------------------------------------------------------------------------
 figure {
 		position: relative;
@@ -114,10 +126,7 @@ img {
 }
 
 
-
-
-//
-// 04 - zoomable baseline font sizes
+// zoomable baseline font sizes
 // -------------------------------------------------------------------------------------
 body {
 	font-size: @em; // 1em - 16px - 100%
