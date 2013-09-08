@@ -1306,22 +1306,26 @@ nav:after {
   text-decoration: none;
 }
 /* line 101, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+.t-bold {
+  font-weight: 400;
+}
+/* line 107, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-form {
   width: 100%;
 }
-/* line 104, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 110, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-form > .btn,
 .m-form > .btn--secondary {
   margin: 0 auto;
   text-align: center;
 }
-/* line 111, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 117, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-form__title {
   text-align: center;
   color: white;
   text-shadow: 0 0.0625em 0 rgba(0, 0, 0, 0.3);
 }
-/* line 117, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 123, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-form__label {
   display: block;
   margin-bottom: 0.25em;
@@ -1329,7 +1333,7 @@ nav:after {
   text-align: left;
   color: #6a6d71;
 }
-/* line 125, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 131, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-form__input,
 .m-form__textarea {
   display: block;
@@ -1340,11 +1344,11 @@ nav:after {
   line-height: 2.25em;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
-/* line 136, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 142, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-form__textarea {
   height: 5.063em;
 }
-/* line 142, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 148, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -1355,7 +1359,7 @@ nav:after {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-/* line 153, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 159, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-email,
 .i-email:visited {
   padding: 0.125em;
@@ -1363,17 +1367,17 @@ nav:after {
   background: #8661ff;
   border: 0.0625em solid #5f2eff;
 }
-/* line 160, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 166, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-email:hover,
 .i-email:visited:hover {
   background: #ad94ff;
 }
-/* line 163, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 169, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-email:active,
 .i-email:visited:active {
   background: #997aff;
 }
-/* line 168, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 174, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-tweet,
 .i-tweet:visited {
   padding: 0.125em;
@@ -1381,17 +1385,17 @@ nav:after {
   background: #00aceb;
   border: 0.0625em solid #0087b8;
 }
-/* line 175, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 181, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-tweet:hover,
 .i-tweet:visited:hover {
   background: #1fc3ff;
 }
-/* line 178, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 184, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-tweet:active,
 .i-tweet:visited:active {
   background: #05bcff;
 }
-/* line 183, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 189, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-facebook,
 .i-facebook:visited {
   padding: 0.125em;
@@ -1399,17 +1403,17 @@ nav:after {
   background: #4c72dc;
   border: 0.0625em solid #2854cc;
 }
-/* line 190, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 196, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-facebook:hover,
 .i-facebook:visited:hover {
   background: #7794e4;
 }
-/* line 193, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 199, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .i-facebook:active,
 .i-facebook:visited:active {
   background: #6183e0;
 }
-/* line 202, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 208, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod,
 .m-mod--facebook,
 .m-mod--home,
@@ -1421,12 +1425,12 @@ nav:after {
   /*	600px	(600/16=37.5)	*/
 
 }
-/* line 206, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 212, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod:last-child {
   margin: 0;
 }
 @media screen and (min-width: 37.5em) {
-  /* line 211, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 217, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod,
   .m-mod--facebook,
   .m-mod--home,
@@ -1436,37 +1440,37 @@ nav:after {
     margin: 0;
   }
 }
-/* line 216, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 222, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__title {
   font-size: 1.5em;
   color: #282b2f;
   margin-bottom: 0.4446666666666667em;
   text-shadow: 0 0.0625em 0 rgba(255, 255, 255, 0.5);
 }
-/* line 223, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 229, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__sub-title {
   color: #4d4f51;
 }
-/* line 227, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 233, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__body > button {
   text-align: center;
   margin: 0 auto;
 }
-/* line 232, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 238, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__body__label {
   margin: 0 1em 0.8125em 0;
   color: #8f9399;
 }
-/* line 237, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 243, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__body__value {
   margin: 0 0 0.8125em 0;
 }
-/* line 241, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 247, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__note {
   font-size: 0.8125em;
   color: #8f9399;
 }
-/* line 249, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 255, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--facebook {
   -webkit-box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.7);
@@ -1478,13 +1482,13 @@ nav:after {
 
 }
 @media screen and (min-width: 56.25em) {
-  /* line 257, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 263, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--facebook {
     width: 33.333%;
     margin: 0;
   }
 }
-/* line 262, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 268, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--facebook > .m-mod__title {
   color: white;
   padding: 0.5416666666666666em 0 0 0.5416666666666666em;
@@ -1495,18 +1499,18 @@ nav:after {
 
 }
 @media screen and (min-width: 37.5em) {
-  /* line 268, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 274, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--facebook > .m-mod__title {
     padding: 1em 0 0 1em;
   }
 }
 @media screen and (min-width: 56.25em) {
-  /* line 273, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 279, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--facebook > .m-mod__title {
     padding: 0.6666666666666666em 0 0 0.6666666666666666em;
   }
 }
-/* line 279, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 285, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--home {
   /*	720px	(720/16=45)	*/
 
@@ -1520,23 +1524,23 @@ nav:after {
 
 }
 @media screen and (min-width: 45em) {
-  /* line 283, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 289, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home {
     width: 50%;
     padding-right: 2.25em;
   }
-  /* line 287, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 293, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home:last-of-type {
     padding-right: 0;
     padding-left: 2.25em;
   }
-  /* line 292, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 298, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home > .m-mod__title {
     text-align: center;
   }
 }
 @media screen and (min-width: 56.25em) {
-  /* line 298, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 304, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home {
     width: 33.333%;
     margin: 0;
@@ -1544,25 +1548,25 @@ nav:after {
   }
 }
 @media screen and (min-width: 67.5em) {
-  /* line 305, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 311, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home {
     width: 50%;
     padding: 0 0 0 3.375em;
   }
 }
 @media screen and (min-width: 80em) {
-  /* line 311, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 317, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home {
     width: 25%;
   }
 }
 @media screen and (min-width: 88em) {
-  /* line 316, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 322, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--home {
     width: 50%;
   }
 }
-/* line 323, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 329, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--highlight {
   padding: 0.667em 0.8125em;
   -webkit-box-shadow: inset 0 0 0.3125em rgba(0, 0, 0, 0.35), inset 0 0 0.3125em rgba(0, 0, 0, 0.35);
@@ -1582,37 +1586,37 @@ nav:after {
 
 }
 @media screen and (min-width: 25em) {
-  /* line 332, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 338, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--highlight {
     padding: 0.8125em 1em;
   }
 }
 @media screen and (min-width: 30em) {
-  /* line 337, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 343, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--highlight {
     padding: 1em 1.5em;
   }
 }
 @media screen and (min-width: 37.5em) {
-  /* line 342, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 348, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--highlight {
     margin: 0 auto 1.5em;
     padding: 1.5em 3.375em;
   }
 }
 @media screen and (min-width: 56.25em) {
-  /* line 348, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 354, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--highlight {
     width: 66.667%;
   }
 }
 @media screen and (min-width: 67.5em) {
-  /* line 353, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 359, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--highlight {
     width: 50%;
   }
 }
-/* line 359, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 365, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod_title--highlight {
   color: white;
   text-shadow: 0 0.0625em 0 rgba(0, 0, 0, 0.3);
@@ -1622,27 +1626,27 @@ nav:after {
 
 }
 @media screen and (min-width: 25em) {
-  /* line 364, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 370, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod_title--highlight {
     font-size: 2.25em;
   }
 }
 @media screen and (min-width: 56.25em) {
-  /* line 369, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 375, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod_title--highlight {
     font-size: 1.5em;
   }
 }
-/* line 374, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 380, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__content--highlight {
   color: #8f9399;
 }
-/* line 378, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 384, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--highlight > .btn {
   margin: 0 auto 2.25em;
   text-align: center;
 }
-/* line 385, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 391, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--footer,
 .m-mod--footer--signup,
 .m-mod--footer--signup {
@@ -1653,30 +1657,30 @@ nav:after {
 
 }
 @media screen and (min-width: 30em) {
-  /* line 390, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 396, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--footer,
   .m-mod--footer--signup {
     width: 33.333%;
   }
 }
 @media screen and (min-width: 45em) {
-  /* line 395, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 401, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--footer,
   .m-mod--footer--signup {
     padding: 0 0 0 2.25em;
   }
-  /* line 398, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 404, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--footer:first-of-type {
     padding: 0;
   }
 }
-/* line 404, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 410, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod__title--footer {
   margin: 0 0 0.25em 0;
   font-size: 1.5em;
   color: #3686e7;
 }
-/* line 410, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 416, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-mod--footer--signup {
   background: rgba(0, 0, 0, 0.85);
   padding: 0.8125em;
@@ -1688,25 +1692,25 @@ nav:after {
 
 }
 @media screen and (min-width: 30em) {
-  /* line 416, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 422, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--footer--signup {
     width: 100%;
   }
 }
 @media screen and (min-width: 37.5em) {
-  /* line 421, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 427, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--footer--signup {
     padding: 1.5em 3.375em;
   }
 }
 @media screen and (min-width: 52.5em) {
-  /* line 426, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 432, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-mod--footer--signup {
     width: 66.667%;
     margin: 0 auto;
   }
 }
-/* line 435, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 441, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-fb-feed {
   padding: 0 0.8125em 0.8125em;
   /*	600px	(600/16=37.5)	*/
@@ -1715,45 +1719,45 @@ nav:after {
 
 }
 @media screen and (min-width: 37.5em) {
-  /* line 439, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 445, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-fb-feed {
     padding: 0 1.5em 1.5em;
   }
 }
 @media screen and (min-width: 56.25em) {
-  /* line 444, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+  /* line 450, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
   .m-fb-feed {
     padding: 0 1em 1em;
   }
 }
-/* line 448, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 454, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-fb-feed p {
   margin: 0 0 0.8125em;
 }
-/* line 452, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 458, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-fb-feed span {
   color: #6a6d71;
 }
-/* line 456, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 462, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-fb-feed li {
   padding: 0.8125em 0;
 }
-/* line 459, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 465, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-fb-feed li:first-child {
   padding-top: 0;
   border-bottom: 1px solid #101213;
 }
-/* line 464, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 470, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .m-fb-feed li:last-child {
   padding-bottom: 0.25em;
 }
 /* 04 - state
 --------------------------------------------------  */
-/* line 475, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 481, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .s-is-hidden {
   display: none;
 }
-/* line 479, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 485, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 .s-is-visible {
   display: block;
 }
@@ -1761,12 +1765,12 @@ nav:after {
 --------------------------------------------------  */
 /* footer styles
 --------------------------------------------------  */
-/* line 494, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 500, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 footer {
   padding: 2.25em 7.142857142857143%;
   background: #282b2f;
 }
-/* line 498, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 504, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 footer a,
 footer a:visited {
   float: none;
@@ -1776,28 +1780,56 @@ footer a:visited {
   text-decoration: none;
   border: none;
 }
-/* line 506, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 512, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 footer a:hover,
 footer a:visited:hover,
 footer a:active,
 footer a:visited:active {
   border: none;
 }
-/* line 510, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+/* line 516, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
 footer a:first-child,
 footer a:visited:first-child {
   margin: 0 0 0.25em 0;
 }
-/*	400px	(400/16=25)			@media screen and (min-width: 25em)	*/
-/*	480px	(480/16=30)			@media screen and (min-width: 30em)	*/
-/*	600px	(600/16=37.5)		@media screen and (min-width: 37.5em)	*/
-/*	720px	(720/16=45)			@media screen and (min-width: 45em)	*/
-/*	840px	(840/16=52.5)		@media screen and (min-width: 52.5em)	*/
-/*	900px	(900/16=56.25)	@media screen and (min-width: 56.25em)	*/
-/*	1024px	(1024/16=64)	@media screen and (min-width: 64em)	*/
+/*	400px	(400/16=25)@media screen and (min-width: 25em)	*/
+/*	480px	(480/16=30)@media screen and (min-width: 30em)	*/
+/*	600px	(600/16=37.5)@media screen and (min-width: 37.5em)	*/
+/*	720px	(720/16=45)@media screen and (min-width: 45em)	*/
+/*	840px	(840/16=52.5)@media screen and (min-width: 52.5em)	*/
+/*	900px	(900/16=56.25)@media screen and (min-width: 56.25em)	*/
+/*	1024px	(1024/16=64)@media screen and (min-width: 64em)	*/
 /*	1080px	(1080/16=67.5)@media screen and (min-width: 67.5em)	*/
-/*	1120px	(1120/16=70)	@media screen and (min-width: 70em)	*/
-/*	1280px	(1280/16=80)	@media screen and (min-width: 80em)	*/
-/*	1408px	(1408/16=88)	@media screen and (min-width: 88em)	*/
-/*	1600px	(1600/16=100)	@media screen and (min-width: 100em)	*/
+/*	1120px	(1120/16=70)@media screen and (min-width: 70em)	*/
+/*	1280px	(1280/16=80)@media screen and (min-width: 80em)	*/
+/*	1408px	(1408/16=88)@media screen and (min-width: 88em)	*/
+/*	1600px	(1600/16=100)@media screen and (min-width: 100em)	*/
+/*	1800px	(1800/16=112.5)@media screen and (min-width: 112.5em)	*/
 /*	2080px	(2080/16=130)	@media screen and (min-width: 130em)	*/
+/* out of date browser alert styles
+--------------------------------------------------  */
+/* line 544, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+#buorg.buorg {
+  position: fixed !important;
+  height: 100% !important;
+  padding-top: 270px;
+  background: #414042 url(../img/alert.jpg) no-repeat center 3.375em !important;
+  border: none !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  overflow-y: hidden;
+}
+/* line 554, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+#buorg.buorg div {
+  width: 700px !important;
+  margin: 0 auto !important;
+  color: white !important;
+}
+/* line 559, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+#buorg.buorg div a {
+  color: #EF4136 !important;
+}
+/* line 564, /Users/jameswenzel/Documents/code/tommy-site/tommyr/less/styles.less */
+#buorg.buorg #buorgclose {
+  display: none !important;
+}
