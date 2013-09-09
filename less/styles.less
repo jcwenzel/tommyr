@@ -83,7 +83,9 @@ nav {
 	height: @em*5; // 80/16 = 5
 	margin: 0;
 	font-size: @med; // resets em to 1em
-	@media screen and (min-width: 49em) { // 784
+
+	/*	860px	(860/16=50.5)	*/
+	@media screen and (min-width: 53.75em) {
 		float: left;
 	}
 	& > a {
@@ -237,6 +239,11 @@ nav {
 	color: @gray-drker;
 	margin-bottom: @xsml/@lrg;
 	#text-shadow > .white;
+
+	/*	720px	(720/16=45)	*/
+	@media screen and (min-width: 45em) {
+		text-align: center;
+	}
 }
 
 .m-mod__sub-title {
@@ -306,10 +313,6 @@ nav {
 		&:last-of-type {
 			padding-right: 0;
 			padding-left: @xl;
-		}
-
-		& > .m-mod__title {
-			text-align: center;
 		}
 	}
 
