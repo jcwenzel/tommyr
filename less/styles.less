@@ -116,7 +116,27 @@ nav {
 }
 
 .m-overlay-wrapper {
-	
+	z-index: 10;
+	position: absolute;
+  left: 0%;
+  top: 0%;
+  background: hsla(0, 0%, 0%, 0.80);
+  .transition(all .25s);
+}
+
+.m-overlay {
+	position: relative;
+	.width(12);
+	padding: @xl @med @med;
+	background: white;
+	border: (@1px*2) solid black;
+	box-shadow: 0 0 0 (@1px*6) hsla(100, 0, 100%, 0.12);
+	text-align: center;
+	.transition(all .25s);
+}
+
+.m-overlay > a.btn {
+	margin: 0 auto @tiny;
 }
 
 .m-overlay__links {
@@ -144,6 +164,69 @@ nav {
 		}
 	}
 }
+
+.m-menu {
+	text-align: left;
+}
+
+.m-menu__title {
+	margin: 0 0 @tiny;
+	color: @gray-drk;
+	text-shadow: none;
+}
+
+.m-menu__section {
+	margin: 0 0 @lrg;
+	padding: 0 0 @lrg;
+	border: @1px solid @gray-lhtest;
+	border-width: 0 0 @1px;
+	.clearfix;
+}
+
+.m-menu__section__title {
+	color: @blue;
+}
+
+.m-menu__price {
+	//font-weight: 400;
+	color: @gray-lht;
+}
+
+.m-menu__item {
+	margin: 0 0 @sml;
+
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		float: left;
+		display: inline-block;
+		.width(6);
+		padding-right: @xl;
+		&:nth-child(even) {
+			padding-right: 0;
+		}
+	}
+
+		/*	900px	(900/16=56.25)	*/
+	@media screen and (min-width: 56.25em) {
+		padding-right: @3xl;
+	}
+
+	& > p {
+		line-height: (@med*1.2);
+		color: @gray-lht;
+	}
+}
+
+.m-menu__item__title {
+	font-weight: 400;
+	color: @gray-drkest;
+
+	/*	900px	(900/16=56.25)	*/
+	@media screen and (min-width: 56.25em) {
+		font-size: @lrg;
+	}
+}
+
 
 //	03.3 e-newsletter signup
 //	-------------------------------------------------
