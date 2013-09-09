@@ -220,6 +220,19 @@ nav {
 }
 
 .m-mod__title {
+	font-size: @xl;
+	color: @gray-drker;
+	margin-bottom: @xsml/@lrg;
+	#text-shadow > .white;
+
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		font-size: @2xl;
+	}
+}
+
+.m-mod__title--home {
+	&:extend(.m-mod__title);
 	font-size: @lrg;
 	color: @gray-drker;
 	margin-bottom: @xsml/@lrg;
@@ -322,6 +335,11 @@ nav {
 	@media screen and (min-width: 88em) {
 		.width(6);
 	}
+
+	/*	1800px	(1800/16=112.5)	*/
+	@media screen and (min-width: 112.5em) {
+		.width(4);
+	}
 }
 
 //	03.6 mod highlht
@@ -358,6 +376,11 @@ nav {
 	/*	1080px	(1080/16=67.5)	*/
 	@media screen and (min-width: 67.5em) {
 		.width(6);
+	}
+
+	/*	1800px	(1800/16=112.5)	*/
+	@media screen and (min-width: 112.5em) {
+		.width(4);
 	}
 }
 
