@@ -60,7 +60,6 @@ p {
 
 a, a:visited {
 	color: @link-color;
-	text-decoration: underline;
 	.transition(all .25s);
 	&:hover {
     color: darken(@link-color,15%);
@@ -139,15 +138,20 @@ nav {
 	margin: 0 auto @tiny;
 }
 
+.m-overlay__links__title {
+	font-size: @xl;
+	text-align: center;
+}
+
 .m-overlay__links {
 	font-size: @lrg;
 	text-align: center;
 	color: @blue;
-	text-decoration: underline;
 
 	& > li {
 		margin: 0 0 @tiny;
 		cursor: pointer;
+		text-decoration: underline;
 		.transition(all .25s);
 		&:hover {
 	    color: darken(@link-color,20%);
@@ -161,6 +165,11 @@ nav {
 
 		&:last-child {
 			margin: 0;
+		}
+
+		/*	900px	(900/16=56.25)	*/
+		@media screen and (min-width: 56.25em) {
+			font-size: @lrg;
 		}
 	}
 }
@@ -231,7 +240,8 @@ nav {
 //	03.3 e-newsletter signup
 //	-------------------------------------------------
 .m-form {
-	width: 100%;
+	.width(12);
+	text-align: center;
 
 	& > .btn,
 	& > .btn--secondary {
@@ -639,6 +649,19 @@ nav {
 .s-is-current {
 
 }
+
+.s-is-not-available,
+.s-is-not-available:visited,
+.s-is-not-available:hover,
+.s-is-not-available:active {
+	color: @gray-lht !important;
+	text-decoration: line-through !important;
+	cursor: default !important;
+}
+
+// a.s-is-not-available {
+// 	text-decoration: line-through !important;
+// }
 
 
 /* 05 - theme

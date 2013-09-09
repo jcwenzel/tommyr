@@ -87,6 +87,10 @@
 	float: left
 }
 
+.l-centered {
+	margin: 0 auto;
+}
+
 .l-inline {
 	display: inline-block;
 	margin: 0;
@@ -99,3 +103,16 @@
 		display: inline-block;
 	}
 }
+
+.l-width6 {
+	.width(12);
+	
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		.width(6);
+	}
+}
+
+
+
+
