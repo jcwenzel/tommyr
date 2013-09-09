@@ -56,3 +56,17 @@ window.onload=function(){
   e.setAttribute("src", "http://browser-update.org/update.js"); 
   document.body.appendChild(e); 
 } 
+
+$('#menu-corporate').on({
+  click: function(){
+    $('.m-overlay-wrapper').removeClass('s-is-hidden');
+    $('#_corporate-menu').removeClass('s-is-hidden');
+  }
+});
+
+$('.m-overlay').find('.btn--close').on({
+  click: function(){
+    $('.m-overlay-wrapper').addClass('s-is-hidden');
+    $('#_corporate-menu').addClass('s-is-hidden');
+  }
+});

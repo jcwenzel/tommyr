@@ -63,11 +63,11 @@ a, a:visited {
 	text-decoration: underline;
 	.transition(all .25s);
 	&:hover {
-    color: lighten(@link-color,10%);
+    color: darken(@link-color,15%);
 		text-decoration: none;
 	}
 	&:active {
-    color: lighten(@link-color,15%);
+    color: darken(@link-color,20%);
 		text-decoration: none;
 		.transition(all .25s);
 	}
@@ -109,6 +109,40 @@ nav {
 //	-------------------------------------------------
 .t-bold {
 	font-weight: @t-bold;
+}
+
+.t-center {
+	text-align: center;
+}
+
+.m-overlay-wrapper {
+	
+}
+
+.m-overlay__links {
+	font-size: @lrg;
+	text-align: center;
+	color: @blue;
+	text-decoration: underline;
+
+	& > li {
+		margin: 0 0 @tiny;
+		cursor: pointer;
+		.transition(all .25s);
+		&:hover {
+	    color: darken(@link-color,20%);
+			text-decoration: none;
+		}
+		&:active {
+	    color: darken(@link-color,20%);
+			text-decoration: none;
+			.transition(all .25s);
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
 }
 
 //	03.3 e-newsletter signup
