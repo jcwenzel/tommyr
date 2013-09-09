@@ -51,6 +51,13 @@ h1 {
 	text-align: center;
 }
 
+p {
+	/*	900px	(900/16=56.25) */
+	@media screen and (min-width: 56.25em) {
+		font-size: (@lrg);
+	}
+}
+
 a, a:visited {
 	color: @link-color;
 	text-decoration: underline;

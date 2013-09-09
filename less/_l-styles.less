@@ -21,6 +21,22 @@
 .l-wrapper--carousel {
 	&:extend(.l-wrapper);
 	padding-top: 0;
+
+	/*	600px	(600/16=37.5)	*/
+	@media screen and (min-width: 37.5em) {
+		padding: 0 @page-gutter @2xl;
+	}
+
+	/*	720px	(720/16=45)	*/
+	@media screen and (min-width: 45em) {
+		padding: 0 (@page-gutter*2) @2xl;
+	}
+
+	/*	1408px	(1408/16=88)	*/
+	@media screen and (min-width: 88em) {
+		max-width: 130em;
+		padding: 0 (@page-gutter*2.5) @3xl;
+	}
 }
 
 .l-wrapper--no-padding {

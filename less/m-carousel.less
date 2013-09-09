@@ -1,17 +1,18 @@
 .m-carousel-container {
   .width(12);
-  margin: 0 auto;
+  margin: 0 auto @med;
+  border: (@sml/2) solid white;
+  border-width: 0 (@sml/2) (@sml/2);
 
   /*  720px (720/16=45)   */
   @media screen and (min-width: 45em) {
-    .width(8);
-    border: (@sml/2) solid white;
-    border-width: 0 (@sml/2) (@sml/2);
+    //.width(8);
   }
 }
 
 .m-carousel-container--full {
   &:extend(.m-carousel-container);
+  margin: 0 auto;
   border-width: 0;
 
   & > .m-carousel {
@@ -44,13 +45,8 @@
   position: relative;
   .width(12);
   border: @1px solid @gray-drkest;
-  border-width: 0 0 @1px;
+  border-width: 0 @1px @1px;
   -ms-touch-action: pan-y;
-
-  /*  720px (720/16=45)   */
-  @media screen and (min-width: 45em) {
-    border-width: 0 @1px @1px;
-  }
 
   /*  1120px  (1120/16=70)  */
   @media screen and (min-width: 70em) {
