@@ -77,3 +77,11 @@ $('.m-overlay').find('.btn--close').on({
     $('#_corporate-menu, .m-overlay-wrapper').addClass('s-is-hidden');
   }
 });
+
+$('.m-nav__link--dropdown').on({
+  click: function(){
+    $(this).parent().children('.m-nav--sub-nav').toggleClass('s-is-visible');
+  }
+});
+
+
