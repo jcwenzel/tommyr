@@ -181,21 +181,32 @@ h1, h2, h3, h4, h5, h6, button, p, li {
 }
 
 h1,
+h2,
 .xl {
+	margin: 0 0 @xl/@xl; // 24 - based on @2xl; not 16
 	font-size: @xl;
 	line-height: 1.2;
-	margin: 0 0 @lrg/@xl; // 24 - based on @2xl; not 16
+	text-align: center;
+
+	/*	900px */
+	@media screen and (min-width: @bp-med-2) {
+		font-size: @2xl;
+	}
 }
 
-h2,
+h3,
 .large {
 	// 24
 	font-size: @lrg;
 	line-height: 1.2;
 	margin: 0 0 @med/@lrg; // 24 - based on 32; not 16
+
+	/*	900px */
+	@media screen and (min-width: @bp-med-2) {
+		font-size: @xl;
+	}
 }
 
-h3,
 h4,
 h5,
 h6,
