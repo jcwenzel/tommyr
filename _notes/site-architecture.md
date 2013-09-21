@@ -1,0 +1,31 @@
+- homepage (index)
+- menus (menus/)
+		- all menus (menus/)
+		- wedding menu (events/weddings/)
+		- corporate menu (events/corporate/)
+		- event menu (events/event/)
+		- holiday menu (menus/holiday/)
+		- togo menu (togo/)
+- events (events/)
+		- all events (events/)
+		- wedding events (events/weddings/)
+		- corporate events (events/corporate/)
+		- public events (events/public-events/)
+		- private events (events/private-events/)
+- about (about/)
+- contact (contact/)
+- togo (togo/)
+- venues (events/venues/)
+
+- tommyrs.com
+	- tommyrs.com/menus
+		- tommyrs.com/menus/holiday
+	- tommyrs.com/events
+		- tommyrs.com/events/weddings
+		- tommyrs.com/events/corporate
+		- tommyrs.com/events/public-events
+		- tommyrs.com/events/private-events
+		- tommyrs.com/events/venues
+	- tommyrs.com/togo
+	- tommyrs.com/about
+	- tommyrs.com/contact

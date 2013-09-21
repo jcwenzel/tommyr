@@ -795,7 +795,7 @@ p:last-child {
     z-index: 1;
     display: none;
     position: absolute;
-    top: 2.25em;
+    top: 2.1875em;
     left: 0;
     width: 11.391em;
     overflow: hidden;
@@ -890,40 +890,81 @@ p:last-child {
 .i-facebook:visited:visited:hover {
   color: #3686e7;
 }
+.m-nav__link:hover .s-has-arrow,
+.m-nav__link:visited:hover .s-has-arrow,
+.m-nav__link--sub-link:hover .s-has-arrow,
+.m-nav__link--sub-link:visited:hover .s-has-arrow,
+.i-email:hover .s-has-arrow,
+.i-email:visited:hover .s-has-arrow,
+.i-email:visited:hover .s-has-arrow,
+.i-email:visited:visited:hover .s-has-arrow,
+.i-tweet:hover .s-has-arrow,
+.i-tweet:visited:hover .s-has-arrow,
+.i-tweet:visited:hover .s-has-arrow,
+.i-tweet:visited:visited:hover .s-has-arrow,
+.i-facebook:hover .s-has-arrow,
+.i-facebook:visited:hover .s-has-arrow,
+.i-facebook:visited:hover .s-has-arrow,
+.i-facebook:visited:visited:hover .s-has-arrow {
+  border-top: 0.25em solid #3686e7;
+}
 .m-nav__link:active,
 .m-nav__link:visited:active,
-.m-nav__link.s-is-current,
-.m-nav__link:visited.s-is-current,
 .m-nav__link--sub-link:active,
 .m-nav__link--sub-link:visited:active,
-.m-nav__link--sub-link.s-is-current,
-.m-nav__link--sub-link:visited.s-is-current,
 .i-email:active,
 .i-email:visited:active,
-.i-email.s-is-current,
-.i-email:visited.s-is-current,
 .i-email:visited:active,
 .i-email:visited:visited:active,
-.i-email:visited.s-is-current,
-.i-email:visited:visited.s-is-current,
 .i-tweet:active,
 .i-tweet:visited:active,
-.i-tweet.s-is-current,
-.i-tweet:visited.s-is-current,
 .i-tweet:visited:active,
 .i-tweet:visited:visited:active,
-.i-tweet:visited.s-is-current,
-.i-tweet:visited:visited.s-is-current,
 .i-facebook:active,
 .i-facebook:visited:active,
-.i-facebook.s-is-current,
-.i-facebook:visited.s-is-current,
 .i-facebook:visited:active,
-.i-facebook:visited:visited:active,
-.i-facebook:visited.s-is-current,
-.i-facebook:visited:visited.s-is-current {
-  border-bottom: 0.0625em solid #64a1ed;
+.i-facebook:visited:visited:active {
   color: #64a1ed !important;
+  /*	860px	*/
+
+}
+.m-nav__link:active .s-has-arrow,
+.m-nav__link:visited:active .s-has-arrow,
+.m-nav__link--sub-link:active .s-has-arrow,
+.m-nav__link--sub-link:visited:active .s-has-arrow,
+.i-email:active .s-has-arrow,
+.i-email:visited:active .s-has-arrow,
+.i-email:visited:active .s-has-arrow,
+.i-email:visited:visited:active .s-has-arrow,
+.i-tweet:active .s-has-arrow,
+.i-tweet:visited:active .s-has-arrow,
+.i-tweet:visited:active .s-has-arrow,
+.i-tweet:visited:visited:active .s-has-arrow,
+.i-facebook:active .s-has-arrow,
+.i-facebook:visited:active .s-has-arrow,
+.i-facebook:visited:active .s-has-arrow,
+.i-facebook:visited:visited:active .s-has-arrow {
+  border-top: 0.25em solid #64a1ed;
+}
+@media screen and (min-width: 53.75em) {
+  .m-nav__link:active,
+  .m-nav__link:visited:active,
+  .m-nav__link--sub-link:active,
+  .m-nav__link--sub-link:visited:active,
+  .i-email:active,
+  .i-email:visited:active,
+  .i-email:visited:active,
+  .i-email:visited:visited:active,
+  .i-tweet:active,
+  .i-tweet:visited:active,
+  .i-tweet:visited:active,
+  .i-tweet:visited:visited:active,
+  .i-facebook:active,
+  .i-facebook:visited:active,
+  .i-facebook:visited:active,
+  .i-facebook:visited:visited:active {
+    border-bottom: 0.0625em solid #64a1ed;
+  }
 }
 .m-nav__link:first-child,
 .m-nav__link:visited:first-child,
@@ -1020,8 +1061,11 @@ p:last-child {
     border-top: ;
   }
   .m-nav__link--sub-link:hover {
-    color: white;
+    color: white !important;
     background: #3686e7;
+    border-bottom: none;
+  }
+  .m-nav__link--sub-link.s-is-current {
     border-bottom: none;
   }
 }
@@ -1889,6 +1933,23 @@ nav:after {
 .s-is-visible {
   display: block;
 }
+.s-is-current {
+  color: #101213;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+  /*	860px	*/
+
+}
+@media screen and (min-width: 53.75em) {
+  .s-is-current {
+    border-bottom: 0.0625em solid #dbe2eb;
+  }
+}
+.s-is-current .s-has-arrow {
+  border-top: 0.25em solid #101213;
+}
 .s-is-not-available,
 .s-is-not-available:visited,
 .s-is-not-available:hover,
@@ -1903,12 +1964,10 @@ nav:after {
   height: 0;
   margin: 0 0 0 0.5em;
   padding-top: 0.125em;
+  border-top: 0.25em solid #8f9399;
   border-left: 0.1875em solid transparent;
   border-right: 0.1875em solid transparent;
-  border-top: 0.25em solid #8f9399;
 }
-/* 05 - theme
---------------------------------------------------  */
 /* footer styles
 --------------------------------------------------  */
 footer {
