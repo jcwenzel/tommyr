@@ -587,7 +587,17 @@ nav {
 }
 
 .s-is-current {
+	color: @gray-drkest;
+	.transition(all .25s);
 
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
+		border-bottom: @1px solid @gray-lhtest;
+	}
+
+	.s-has-arrow {
+		border-top: (@1px*4) solid @gray-drkest;
+	}
 }
 
 .s-is-not-available,
@@ -605,19 +615,10 @@ nav {
 	height: 0;
 	margin: 0 0 0 @tiny;
 	padding-top: (@1px*2);
+	border-top: (@1px*4) solid @gray-lht;
 	border-left: (@1px*3) solid transparent;
 	border-right: (@1px*3) solid transparent;
-	
-	border-top: (@1px*4) solid @gray-lht;
 }
-
-// a.s-is-not-available {
-// 	text-decoration: line-through !important;
-// }
-
-
-/* 05 - theme
---------------------------------------------------  */
 
 
 /* footer styles
