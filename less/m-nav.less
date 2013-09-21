@@ -117,7 +117,7 @@
 		z-index: 1;
 		display: none;
 		position: absolute;
-		top: @xl;
+		top: (@xl - @1px);
 		left: 0;
 		width: @5xl;
 		overflow: hidden;
@@ -177,12 +177,23 @@
 
 	&:hover {
 		color: @link-color;
+
+		.s-has-arrow {
+			border-top: (@1px*4) solid @link-color;
+		}
 	}
 
-	&:active,
-	&.s-is-current {
-		border-bottom: @1px solid lighten(@link-color,10%);
+	&:active {
 		color: lighten(@link-color,10%) !important;
+
+		.s-has-arrow {
+			border-top: (@1px*4) solid lighten(@link-color,10%);
+		}
+
+		/*	860px	*/
+		@media screen and (min-width: @bp-med) {
+			border-bottom: @1px solid lighten(@link-color,10%);
+		}
 	}
 
 	&:first-child {
@@ -220,8 +231,12 @@
 		border-top: ;
 
 		&:hover {
-			color: white;
+			color: white !important;
 			background: @link-color;
+			border-bottom: none;
+		}
+
+		&.s-is-current {
 			border-bottom: none;
 		}
 	}
