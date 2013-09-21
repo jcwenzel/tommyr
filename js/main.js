@@ -4,9 +4,9 @@ $(document).ready(function() {
     baseClass: 'm-carousel',
     theme: 'm-carousel',
 
-    autoPlay: false,
-    slideSpeed : 600,
-    paginationSpeed : 400,
+    autoPlay: true,
+    slideSpeed : 1200,
+    paginationSpeed : 600,
 
     items : 1,
     itemsDesktop : false,
@@ -18,9 +18,9 @@ $(document).ready(function() {
     baseClass: 'm-carousel--full',
     theme: 'm-carousel--full',
 
-    autoPlay: false,
-    slideSpeed : 600,
-    paginationSpeed : 400,
+    autoPlay: true,
+    slideSpeed : 2400,
+    paginationSpeed : 1200,
 
     items : 1,
     itemsDesktop : false,
