@@ -12,8 +12,8 @@
 		width: 100%;
 		display: 100%;
 
-		/*	860px	(860/16=50.5)	*/
-		@media screen and (min-width: 53.75em) {
+		/*	860px	*/
+		@media screen and (min-width: @bp-med) {
 			display: inline-block !important;
 			width: auto !important;
 		}
@@ -34,8 +34,8 @@
   overflow: hidden;
   zoom: 1;
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		float: right;
 		position: relative;
 		width: auto;
@@ -94,8 +94,8 @@
 		}
 	}
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		display: none;
 	}
 }
@@ -103,8 +103,8 @@
 .m-nav {
 	border: @1px solid @gray-lhtest;
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		border: none;
 	}
 }
@@ -112,8 +112,8 @@
 .m-nav--sub-nav {
 	background: lighten(@gray-lhtest, 6%);
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		z-index: 1;
 		display: none;
 		position: absolute;
@@ -131,8 +131,8 @@
 	#box-shadow > .black(0);
 	display: none;
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		.l-absolute-right(-@med, 0);
 		display: block;
 		padding: @1px*6 @xsml;
@@ -146,8 +146,8 @@
 		border-top: none;
 	}
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		position: relative;
 		border-top: none;
 	}
@@ -156,8 +156,8 @@
 .m-nav--sub-nav > li {
 	border-top: @1px solid @gray-lhtest;
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		&:first-child {
 			border-top: none;
 		}
@@ -189,8 +189,8 @@
 		margin: 0;
 	}
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		display: inline-block;
 		width: auto;
 		margin: 0 0 0 @lrg;
@@ -212,8 +212,8 @@
 	&:extend(.m-nav__link all);
 	padding: 0 0 0 @lrg;
 
-	/*	860px	(860/16=50.5)	*/
-	@media screen and (min-width: 53.75em) {
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
 		width: 100%;
 		padding: 0 0 0 (@1px*4);
 		background: white;
