@@ -28,23 +28,33 @@
 				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 				<nav id="nav-js">
 					<ul class="m-nav">
-						<li><a class="m-nav__link" href="../menus/index.html" title="view our menus">Our Menus</a></li>
-						<li><a class="m-nav__link" href="../events/index.html" title="learn about our events">Types of Events</a></li>
-						<li><a class="m-nav__link s-is-current" href="#" title="learn more about Tommy">About Tommy R</a></li>
-						<li><a class="m-nav__link" href="../contact/index.html" title="drop us a line">Contact Us</a></li>
-						<li><a class="m-nav__link" href="../to-go/index.html" title="view our to-go menu">We Do <span class="t-bold">TO-GO</span></a></li>
+						<li>
+							<div id="menu-dropdown" class="m-nav__link m-nav__link--dropdown s-is-current" title="dropdown menus">Menus<span class="s-has-arrow"></span></div>
+							<ul class="m-nav--sub-nav">
+								<li><a class="m-nav__link--sub-link s-is-current" href="#" title="view a list of all our menus">All Menus</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/corporate/" title="view our corporate menu">Corporate Menu</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/weddings/" title="view a sample wedding menu">Sample Wedding Menu</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/public-events/" title="view a sample event menu">Sample Public Event Menu</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/private-events/" title="view a sample event menu">Sample Private Event Menu</a></li>
+								<li><a class="m-nav__link--sub-link" href="../togo/" title="view our to go menu">To Go Menu</a></li>
+								<li><a class="m-nav__link--sub-link" href="holiday/" title="view the holiday menu">Holiday Menu</a></li>
+							</ul>
+						</li>
+						<li>
+							<div id="events-dropdown" class="m-nav__link m-nav__link--dropdown" title="dropdown events">Types of Events<span class="s-has-arrow"></span></div>
+							<ul class="m-nav--sub-nav">
+								<li><a class="m-nav__link--sub-link" href="../events/" title="view a list of all our menus">All Events</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/weddings/" title="wedding events">Weddings</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/corporate/" title="corporate events">Corporate</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/public-events" title="public events">Public Events</a></li>
+								<li><a class="m-nav__link--sub-link" href="../events/private-events" title="private events">Private Events</a></li>
+							</ul>
+						</li>
+						<li><a class="m-nav__link" href="../about/" title="learn more about Tommy">About Tommy R</a></li>
+						<li><a class="m-nav__link" href="../contact/" title="drop us a line">Contact Us</a></li>
+						<li><a class="m-nav__link s-is-not-available" href="../togo/" title="view our to-go menu">We Do <span class="t-bold">TO-GO</span></a></li>
 					</ul>
 				</nav>
-
-
-				<!--	sharing navigation
-				––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="l-inline m-nav--share s-is-hidden">
-					<p class="m-nav__title">Share:</p>
-					<a class="m-nav__link--icon i-email" data-icon="&#xe00a;" href="#" title="Share in an email" aria-hidden="true"></a>
-					<a class="m-nav__link--icon i-tweet" data-icon="&#xe002;" href="#" title="Share on Twitter" aria-hidden="true"></a>
-					<a class="m-nav__link--icon i-facebook" data-icon="&#xe009;" href="#" title="Share on Facebook" aria-hidden="true"></a>
-				</div>
 			</header>
 		</div>
 
@@ -58,11 +68,19 @@
 			<div class="m-carousel-container">
 				<div id="m-carousel" class="m-carousel">
 	        <div class="item">
-		    		<img src="../img/about/slide1.jpg" />
+		    		<img src="../img/menus/1.jpg" />
 					</div>
 
 					<div class="item">
-		    		<img src="../img/about/slide2.jpg" />
+		    		<img src="../img/menus/2.jpg" />
+					</div>
+
+					<div class="item">
+		    		<img src="../img/menus/3.jpg" />
+					</div>
+
+					<div class="item">
+		    		<img src="../img/menus/4.jpg" />
 					</div>
 		    </div>
 		  </div>
@@ -70,7 +88,7 @@
 			<!--	site highlight main call-to-action
 			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<div class="m-mod">
-				<h1 class="m-mod__title">At Tommy R&rsquo;s Catering we customize the menu for you!</h1>
+				<h1 class="m-mod__title">Tommy R&rsquo;s Catering customizes the menu for you!</h1>
 
 				<p>Weddings, graduations, corporate lunches, brunches, sporting events, the Dew Tour, Rocktober Fest... you name it Tommy R&rsquo;s Catering has catered an event like it. We don&rsquo;t believe in cookie-cutter menus... how can you create an unforgetable event with those? Instead we work with you to create the perfect catering experience.</p>
 
@@ -96,10 +114,11 @@
 			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<div class="m-mod--footer l-left">
 				<h4 class="m-mod__title--footer">Main Nav</h4>
-				<a href="events/index.html" class="s-is-not-available" title="info on general events">Events</a>
-				<a href="to-go/index.html" class="s-is-not-available" title="info on Tommy's To-Go">To-Go</a>
-				<a href="weddings/index.html" class="s-is-not-available" title="info on wedding events">Weddings</a>
-				<a href="corporate/index.html" class="s-is-not-available" title="info on corporate events">Corporate</a>
+				<a href="../events/weddings/" class="s-is-not-available" title="info on wedding events">Weddings</a>
+				<a href="../events/corporate/" class="s-is-not-available" title="info on corporate events">Corporate</a>
+				<a href="../events/public-events/" class="s-is-not-available" title="info on public events">Public Events</a>
+				<a href="../events/private-events/" class="s-is-not-available" title="info on private events">Private Events</a../>
+				<a href="togo/" class="s-is-not-available" title="info on Tommy's To-Go">To-Go</a>
 			</div>
 
 
@@ -107,8 +126,9 @@
 			––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<div class="m-mod--footer l-left">
 				<h4 class="m-mod__title--footer">Other Links</h4>
-				<a href="menus/index.html" title="view all of our menus">Menus</a>
-				<a href="about/index.html" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
+				<a href="#" title="view all of our menus">Menus</a>
+				<a href="../about/" title="learn about the man the myth the legend">Tommy&rsquo;s Bio</a>
+				<a href="../events/venues/" title="view all of our menus">Venues</a>
 			</div>
 
 
@@ -118,7 +138,7 @@
 				<h4 class="m-mod__title--footer">Contact</h4>
 				<a href="tel:630-323-1441" title="call us">630.323.1441</a>
 				<a href="mailto:tommy@tommyrs.com" title="email us">tommy@tommyrs.com</a>
-				<a href="../contact/index.html" title="Tommy's contact form">Contact Form</a>	
+				<a href="../contact/" title="Tommy's contact form">Contact Form</a>
 				<a href="https://www.facebook.com/Catering.TommyRs" title="view us on Facebook" target="_blank">Facebook</a>
 			</div>
 		</div>
