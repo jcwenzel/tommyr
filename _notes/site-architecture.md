@@ -1,3 +1,4 @@
+# Site Navigation
 - homepage (index)
 - menus (menus/)
 		- all menus (menus/)
@@ -17,6 +18,7 @@
 - togo (togo/)
 - venues (events/venues/)
 
+# Site URLs for the above navigation
 - tommyrs.com
 	- tommyrs.com/menus
 		- tommyrs.com/menus/holiday
