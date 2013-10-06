@@ -1,0 +1,88 @@
+.m-button {
+    .box-sizing;
+    display: inline-block;
+    padding: 0 @med;
+    background-color: @red;
+    #gradient > .vertical(100, 0%, 100%, 0.15, 0);
+    line-height: (@xl*1.2);
+    #font > .font-book;
+    #text-shadow > .black(@1px, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+    @shadow: @1px @1px 0 hsla(0,0%,0%,0.25), -@1px -@1px 0 hsla(0,0%,0%,0.25);
+    #box-shadow > .custom(@shadow);
+    border: 1px solid fadeout(black, 50%);
+    .transition(all .35s);
+  &:visited {
+    color: darken(@red,38%) !important;
+    .transition(all .35s);
+  }
+  &:hover {
+    background-color: darken(@red,10%);
+    #gradient > .vertical(100, 0%, 100%, 0.20, 0);
+    color: white;
+    .transition(all .35s);
+  }
+  &:active {
+    background-color: darken(@red,15%);
+    #gradient > .vertical(100, 0%, 100%, 0.25, 0);
+    color: white;
+    .transition(all .15s);
+  }
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.m-button--secondary {
+  &:extend(.m-button);
+  background-color: lighten(@gray-lht,15%);
+  #gradient > .vertical(100, 0%, 100%, .75, 0);
+  color: @gray-drker;
+  #text-shadow > .white(@1px, 0, 0, 0.8);
+  &:hover {
+    background-color: darken(@gray-lht,5%);
+    color: black;
+    #text-shadow > .white(@1px, 0, 0, 0.5);
+  }
+  &:active {
+    background-color: darken(@gray-lht,20%);
+    color: darken(@gray-drkest,20%);
+    #text-shadow > .white(@1px, 0, 0, 0.3);
+  }
+}
+
+.m-button--blue {
+  &:extend(.m-button);
+  background-color: @blue;
+  #gradient > .vertical(100, 0%, 100%, 0.15, 0);
+  color: darken(@blue,38%);
+  #text-shadow > .white(@1px, 0, 0, 0.15);
+}
+
+.m-button--close {
+  position: absolute;
+  top: @tiny;
+  right: @tiny;
+  width: @xl;
+  height: @xl;
+  font-size: @med;
+  color: @gray-lht;
+  text-decoration: none;
+  .transition(all .35s);
+
+  &:visited {
+    color: darken(@gray-lht,10%);
+    .transition(all .35s);
+  }
+
+  &:hover {
+    color: darken(@gray-lht,20%);
+    .transition(all .35s);
+  }
+
+  &:active {
+    color: @gray-drkest;
+    .transition(all .15s);
+  }
+}
