@@ -1241,8 +1241,6 @@ p:last-child {
 .m-mod--home {
   /*  720px */
 
-  /*  900px */
-
   /*  1080px */
 
   /*  1280px  */
@@ -1260,12 +1258,6 @@ p:last-child {
   .m-mod--home:last-of-type {
     padding-right: 0;
     padding-left: 2.25em;
-  }
-}
-@media screen and (min-width: 56.25em) {
-  .m-mod--home {
-    width: 33.333%;
-    padding: 0 0 0 2.25em;
   }
 }
 @media screen and (min-width: 67.5em) {
@@ -1304,8 +1296,6 @@ p:last-child {
 
   /*  600px */
 
-  /*  900px */
-
   /*  1080px  */
 
   /*  1800px  */
@@ -1328,12 +1318,6 @@ p:last-child {
   .m-mod--highlight--interior {
     margin: 0 auto 2.25em;
     padding: 1.5em 3.375em;
-  }
-}
-@media screen and (min-width: 56.25em) {
-  .m-mod--highlight,
-  .m-mod--highlight--interior {
-    width: 66.667%;
   }
 }
 @media screen and (min-width: 67.5em) {
@@ -1442,6 +1426,7 @@ p:last-child {
   }
 }
 .m-mod__title--highlight {
+  margin-bottom: 0.5em;
   color: white;
   text-shadow: 0 0.0625em 0 rgba(0, 0, 0, 0.3);
   /*  400px */
@@ -1479,10 +1464,12 @@ p:last-child {
 }
 .m-mod__body__label {
   margin: 0 1em 0.8125em 0;
+  text-align: left;
   color: #8f9399;
 }
 .m-mod__body__value {
   margin: 0 0 0.8125em 0;
+  text-align: left;
 }
 .m-mod__note {
   font-size: 0.8125em;
@@ -2069,6 +2056,7 @@ footer a:visited:hover,
 footer a:active,
 footer a:visited:active {
   border: none;
+  color: white;
 }
 footer a:first-child,
 footer a:visited:first-child {
