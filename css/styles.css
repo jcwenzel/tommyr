@@ -688,6 +688,9 @@ p:last-child {
 .l-centered {
   margin: 0 auto;
 }
+.l-tight {
+  margin-bottom: 0;
+}
 .l-inline {
   display: inline-block;
   margin: 0;
@@ -1462,6 +1465,9 @@ nav:after {
 .t-center {
   text-align: center;
 }
+.t-small {
+  font-size: 0.8125em;
+}
 .m-overlay-wrapper {
   z-index: 10;
   position: absolute;
@@ -1528,19 +1534,10 @@ nav:after {
 .m-menu {
   text-align: left;
 }
-.m-menu__title {
-  margin: 0 0 0.5em;
-  color: #4d4f51;
-  text-shadow: none;
-}
-.m-menu__section {
-  margin: 0 0 1.5em;
-  padding: 0 0 1.5em;
-  border: 0.0625em solid #dbe2eb;
-  border-width: 0 0 0.0625em;
+.m-menu__sub-section {
   zoom: 1;
 }
-.m-menu__section:after {
+.m-menu__sub-section:after {
   display: block;
   visibility: hidden;
   height: 0;
@@ -1548,32 +1545,44 @@ nav:after {
   content: ".";
 }
 .m-menu__section__title {
+  margin-bottom: 0.5em;
   color: #3686e7;
-}
-.m-menu__price {
-  color: #8f9399;
 }
 .m-menu__item {
   margin: 0 0 0.8125em;
+  padding: 0.8125em;
+  text-align: left;
   /*	600px	*/
 
   /*	900px	*/
 
+}
+.m-menu__item:hover {
+  background: #f5f7f9;
 }
 @media screen and (min-width: 37.5em) {
   .m-menu__item {
     float: left;
     display: inline-block;
     width: 50%;
-    padding-right: 2.25em;
+    min-height: 11.391em;
+    padding: 1em 2.25em 1em 1em;
   }
-  .m-menu__item:nth-child(even) {
-    padding-right: 0;
+  .m-menu__item:nth-last-of-type(-n+2) {
+    min-height: 3.375em;
   }
 }
 @media screen and (min-width: 56.25em) {
   .m-menu__item {
-    padding-right: 5.063em;
+    width: 33.333%;
+    min-height: 11.391em;
+    padding-right: 1.5em;
+  }
+  .m-menu__item:nth-child(even) {
+    padding-right: 1.5em;
+  }
+  .m-menu__item:nth-last-of-type(-n+3) {
+    min-height: 11.391em;
   }
 }
 .m-menu__item > p {
@@ -1702,10 +1711,14 @@ nav:after {
 .m-mod--footer--signup {
   width: 100%;
   margin: 0 0 1.5em;
+  text-align: center;
   /*	600px	*/
 
   /*	860px	*/
 
+}
+.m-mod > p {
+  text-align: left;
 }
 .m-mod:last-of-type {
   margin-bottom: 0;
@@ -1886,10 +1899,18 @@ nav:after {
   padding: 0 0 1.5em;
   text-align: center;
   border-bottom: 0.0625em solid rgba(0, 0, 0, 0.04);
+  zoom: 1;
   /*	600px	*/
 
   /*	860px	*/
 
+}
+.m-mod__sub-mod:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
 }
 .m-mod__sub-mod:last-of-type {
   margin-bottom: 0;
