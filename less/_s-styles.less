@@ -1,0 +1,41 @@
+.s-is-hidden {
+  display: none;
+}
+
+.s-is-visible {
+  display: block;
+}
+
+.s-is-current {
+  color: @gray-drkest;
+  .transition(all .25s);
+
+  /*  860px */
+  @media screen and (min-width: @bp-med) {
+    border-bottom: @1px solid @gray-lhtest;
+  }
+
+  .s-has-arrow {
+    border-top: (@1px*4) solid @gray-drkest;
+  }
+}
+
+.s-is-not-available,
+.s-is-not-available:visited,
+.s-is-not-available:hover,
+.s-is-not-available:active {
+  color: @gray-lht !important;
+  text-decoration: line-through !important;
+  cursor: default !important;
+}
+
+.s-has-arrow {
+  display: inline-block;
+  width: 0; 
+  height: 0;
+  margin: 0 0 0 @tiny;
+  padding-top: (@1px*2);
+  border-top: (@1px*4) solid @gray-lht;
+  border-left: (@1px*3) solid transparent;
+  border-right: (@1px*3) solid transparent;
+}
