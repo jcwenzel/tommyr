@@ -342,6 +342,9 @@ nav {
 	.width(12);
 	margin: 0 0 @lrg;
 
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 	/*	600px	*/
 	@media screen and (min-width: @bp-sml-3) {
 		margin-bottom: @xl;
@@ -469,8 +472,28 @@ nav {
 
 .m-mod__sub-mod {
 	.width(12);
-	margin: 0 auto;
+	margin: 0 auto @lrg;
+	padding: 0 0 @lrg;
 	text-align: center;
+	border-bottom: @1px solid hsla(0, 0, 0, 0.04);
+
+	&:last-of-type {
+		margin-bottom: 0;
+		border: none;
+	}
+
+
+	/*	600px	*/
+	@media screen and (min-width: @bp-sml-3) {
+		margin-bottom: @xl;
+		padding-bottom: @xl;
+	}
+
+	/*	860px	*/
+	@media screen and (min-width: @bp-med) {
+		margin-bottom: @2xl;
+		padding-bottom: @2xl;
+	}
 }
 
 .m-mod__title {
@@ -561,6 +584,17 @@ nav {
 	}
 }
 
+
+
+.m-venue {
+	> ul {
+		margin: 0 0 @lrg;
+	}
+
+	> p {
+		text-align: left;
+	}
+}
 
 
 /* 04 - state
