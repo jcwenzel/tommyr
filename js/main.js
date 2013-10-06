@@ -72,7 +72,7 @@ $('#menu-corporate').on({
   }
 });
 
-$('.m-overlay').find('.btn--close').on({
+$('.m-overlay').find('.m-button--close').on({
   click: function(){
     $('#_corporate-menu, .m-overlay-wrapper').addClass('s-is-hidden');
   }
