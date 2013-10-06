@@ -2,10 +2,11 @@
 - homepage (index)
 - menus (menus/)
 		- all menus (menus/)
-		- wedding menu (events/weddings/)
+		- wedding menu (events/wedding/)
 		- corporate menu (events/corporate/)
 		- event menu (events/event/)
 		- holiday menu (menus/holiday/)
+		- brunch menu (menus/brunch/)
 		- togo menu (togo/)
 - events (events/)
 		- all events (events/)
@@ -22,6 +23,7 @@
 - tommyrs.com
 	- tommyrs.com/menus
 		- tommyrs.com/menus/holiday
+		- tommyrs.com/menus/brunch
 	- tommyrs.com/events
 		- tommyrs.com/events/weddings
 		- tommyrs.com/events/corporate
