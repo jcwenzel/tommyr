@@ -25,7 +25,7 @@
 
 .l-wrapper--alternate {
 	&:extend(.l-wrapper all);
-	background: lighten(@gray-lht, 10%);
+	background: white;
 }
 
 .l-wrapper--carousel {
@@ -85,6 +85,27 @@
 	padding: 0;
 	list-style-type: none;
 	> li { display: block;}
+	> a { display: block;}
+}
+
+.l-horizontal-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	.clearfix;
+
+	> li { 
+		display: inline-block;
+		margin: 0 (@tiny/2) 0 0;
+		padding: 0 @tiny 0 0;
+		border-right: @1px solid @gray-lhter;
+
+		&:last-of-type {
+			margin: 0;
+			padding: 0;
+			border-right: none;
+		}
+	}
 	> a { display: block;}
 }
 
